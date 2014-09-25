@@ -90,6 +90,7 @@
         echo "</table>";
         ?>                                    
     </div>
+    <!--FOOTER>-->
     <footer>
       <p>&copy; BuscandoLaU! 2014</p>
     </footer>
