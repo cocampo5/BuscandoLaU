@@ -66,11 +66,9 @@
       <!-- /.container-fluid -->
     </div>
     </div>
-    <?php
-      $search = $_POST["busqueda"];
-      echo ($search);
-      ?>
-    <div class="jumbotron" id="container">
+   
+    <div class="jumbotron" id="container" align = "center" >
+      <aside></aside>
       <?php
         $query = "SELECT *  FROM `universidad` ";
         $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());

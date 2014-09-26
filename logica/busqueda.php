@@ -67,7 +67,7 @@
     </div>
     </div>
     
-    <div class="jumbotron" id="container">
+    <div class="jumbotron" id="container" align="center">
       <?php
       $search = $_GET["busqueda"];
       //echo($search);
@@ -80,7 +80,7 @@
         echo "<table border='1'>
         <tr>
         <th>Nombre</th>
-        <th>Semestres</th>
+        <th>Direccion</th>
         </tr>"; 
         
         while($row = mysqli_fetch_array($result)){
