@@ -1,7 +1,7 @@
 <?php 
   require "conexion.php";
   $objeConexion = new Conexion();
-?>s
+?>
 <!DOCTYPE html>
 <html type="es">
 <head>
