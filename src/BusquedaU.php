@@ -42,14 +42,15 @@
 			<br>
 			
 <?php
-	$universidades = array("Universidad EAFIT", "Universidad Pontificia Bolivariana", "Universidad Autónoma Latinoamericana", "Escuela de Ingenieros de Antioquia");
+	$universidades = array("Universidad EAFIT", "Universidad Pontificia Bolivariana", 
+		"Universidad Autónoma Latinoamericana", "Escuela de Ingenieros de Antioquia");
 		if ($_POST['buscar']) {
 			//echo "busqueda:". $_POST['busqueda'];
 			$busqueda = strtolower($_POST['busqueda']);
 	
 			for ($i = 0; $i < count($universidades); $i++) {
 				$universidad = strtolower($universidades[$i]);
-				if($universidad==$busqueda){
+				if(ereg($busqueda,$universidad)){
 					echo "<div class='row'>
 					<div class='col-md-7 col-md-offset-4'>
 				    	<div class='panel panel-primary'>
