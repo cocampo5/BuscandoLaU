@@ -1,6 +1,7 @@
 <?php 
   require "conexion.php";
   $objeConexion = new Conexion();
+  $search;
 ?>
 <!DOCTYPE html>
 <html type="es">
@@ -46,19 +47,30 @@
 			<br>
 			
 <?php
+<<<<<<< HEAD
 	$universidades = array("Universidad EAFIT", "Universidad Pontificia Bolivariana", 
 		"Universidad Autónoma Latinoamericana", "Escuela de Ingenieros de Antioquia");
 		if ($_POST['buscar']) {
-			//echo "busqueda:". $_POST['busqueda'];
 			$busqueda = strtolower($_POST['busqueda']);
+=======
+>>>>>>> 4707e7e6ba2fd902c274e08359561912d146179f
 	
-			for ($i = 0; $i < count($universidades); $i++) {
-				$universidad = strtolower($universidades[$i]);
-				if(ereg($busqueda,$universidad)){
-					echo "<div class='row'>
+
+
+      $search = $_POST["busqueda"];
+      //echo($search);
+      echo("<br>");
+      ?>
+      <?php 
+        $query = "SELECT *  FROM `buscandolau`.`universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
+        $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());;
+        
+        while($row = mysqli_fetch_array($result)){
+               
+			echo "<div class='row'>
 					<div class='col-md-7 col-md-offset-4'>
 				    	<div class='panel panel-primary'>
-				    		<div class='panel-heading'>".$universidades[$i]."</div>
+				    		<div class='panel-heading'>".$row['nombre']."</div>
 				    			<div class='panel-body'>
 				    				<div class='row'>
 				    					<div class='col-xs-12'>
@@ -79,12 +91,7 @@
 						</div>
 					</div>
 				</div>";
-				}
-			}
-		
-		}else{
-			echo "Acceso No Permitido";
-		}
+	}
 	
 ?>
 
