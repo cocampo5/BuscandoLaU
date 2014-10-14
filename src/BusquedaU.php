@@ -29,8 +29,12 @@
     				<br>
     				<div class="row">
     					<div class="col-xs-7 col-md-offset-1">	
-    						<form action="test.php" method="post">
-								<input type="text" name="busqueda" class="form-control">	
+    						<form action="BusquedaU.php" method="post">
+    						<?php
+    						if ($_POST['buscar']) {
+    							echo "<input type='text' name='busqueda' value=".$_POST['busqueda']." class='form-control'>";
+    						}		
+							?>
     					</div>
     					<div class="col-xs-3">
     							<input type="submit" class="btn btn-primary center-block" name="buscar" value="Buscar" style="width:80%"> 
@@ -77,34 +81,7 @@
 				</div>";
 				}
 			}
-	
-		/*	for ($i = 0; $i < count($universidades); $i++) {
-	    		echo "<div class='row'>
-					<div class='col-md-7 col-md-offset-4'>
-				    	<div class='panel panel-primary'>
-				    		<div class='panel-heading'>".$universidades[$i]."</div>
-				    			<div class='panel-body'>
-				    				<div class='row'>
-				    					<div class='col-xs-12'>
-				    						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a suscipit erat, ut tempor est. Aenean tristique,non tempor orci odio vitae tortor. Quisque consectetur erat eget elit semper ipsum dolor sit amet, consectetur adipiscing elit. 
-				    					</div>
-				    				</div>
-				    				<br>
-					    			<div class='row'>
-					    				<div class='col-xs-5'>
-					    					<h6 class='text-left'>Sitio web:  <a href='www.google.com'>www.universidadx.edu.co</a> </h6>
-					    				</div>
-					    				<div class='col-xs-3 col-xs-offset-4'>
-					    					<input type='submit' class='btn btn-info' value='Mas informacion'>	
-					    				</div>
-					    			</div>
-					    			<br> 	
-				    			</div>		
-						</div>
-					</div>
-				</div>";
-			}*/
-	
+		
 		}else{
 			echo "Acceso No Permitido";
 		}
