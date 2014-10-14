@@ -49,7 +49,6 @@
 	$universidades = array("Universidad EAFIT", "Universidad Pontificia Bolivariana", 
 		"Universidad Autónoma Latinoamericana", "Escuela de Ingenieros de Antioquia");
 		if ($_POST['buscar']) {
-			//echo "busqueda:". $_POST['busqueda'];
 			$busqueda = strtolower($_POST['busqueda']);
 	
 			for ($i = 0; $i < count($universidades); $i++) {
