@@ -30,8 +30,12 @@
     				<br>
     				<div class="row">
     					<div class="col-xs-7 col-md-offset-1">	
-    						<form action="test.php" method="post">
-								<input type="text" name="busqueda" class="form-control">	
+    						<form action="BusquedaU.php" method="post">
+    						<?php
+    						if ($_POST['buscar']) {
+    							echo "<input type='text' name='busqueda' value=".$_POST['busqueda']." class='form-control'>";
+    						}		
+							?>
     					</div>
     					<div class="col-xs-3">
     							<input type="submit" class="btn btn-primary center-block" name="buscar" value="Buscar" style="width:80%"> 
@@ -80,6 +84,7 @@
 						</div>
 					</div>
 				</div>";
+<<<<<<< HEAD
 	}
 		/*	for ($i = 0; $i < count($universidades); $i++) {
 	    		echo "<div class='row'>
@@ -107,6 +112,14 @@
 					</div>
 				</div>";
 			}*/
+=======
+				}
+			}
+		
+		}else{
+			echo "Acceso No Permitido";
+		}
+>>>>>>> 30e8434867c396148dbb1e53110af9e175c04b24
 	
 ?>
 
