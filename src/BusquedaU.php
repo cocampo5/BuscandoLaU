@@ -1,6 +1,11 @@
+<?php 
+  require "conexion.php";
+  $objeConexion = new Conexion();
+?>s
 <!DOCTYPE html>
 <html type="es">
 <head>
+	<link href="Birrete.png" rel="icon" type="image/x-icon" />
    <title>BuscadoLaU</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
