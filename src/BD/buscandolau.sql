@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2014 a las 22:57:13
--- Versión del servidor: 5.6.20
--- Versión de PHP: 5.5.15
+-- Tiempo de generación: 15-10-2014 a las 01:14:31
+-- Versión del servidor: 5.5.39
+-- Versión de PHP: 5.4.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,31 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `buscandolau`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `hoja1`
+--
+
+CREATE TABLE IF NOT EXISTS `hoja1` (
+  `nombre` varchar(27) DEFAULT NULL,
+  `costo` int(7) DEFAULT NULL,
+  `descripcion` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `hoja1`
+--
+
+INSERT INTO `hoja1` (`nombre`, `costo`, `descripcion`) VALUES
+('Derecho', 2450000, 'Lorem Ipsum'),
+('Medicina', 8000000, 'Lorem Ipsum'),
+('Medicina Veterinaria', 4200000, 'Lorem Ipsum'),
+('Ingeniería de Sistemas', 2160000, 'Lorem Ipsum'),
+('Ingeniería Industrial', 1802300, 'Lorem Ipsum'),
+('Administración de Empresas', 2160000, 'Lorem Ipsum'),
+('Contaduría Publica', 2160000, 'Lorem Ipsum');
 
 -- --------------------------------------------------------
 
@@ -75,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `universidad` (
 `iduniversidad` int(100) NOT NULL,
   `nombre` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `ubicacion` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `descripcion` varchar(1000) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `descripcion` varchar(1000) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `tipo` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
 
