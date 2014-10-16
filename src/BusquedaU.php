@@ -37,6 +37,12 @@
     						}		
 							?>
     					</div>
+    					<br><br>
+                    	<div class="col-md-9 col-md-offset-1">
+                        	&nbsp; <b>¿Qué deseas buscar?</b>&nbsp;&nbsp;&nbsp;
+                       		<input type="radio" name="tipoBusqueda" checked="checked" value="Pregrados">&nbsp;&nbsp;Pregrados&nbsp;&nbsp;
+                     		<input type="radio" name="tipoBusqueda" value="Universidades">&nbsp;&nbsp;Universidades 
+                   		</div>
     					<div class="col-xs-3">
     							<input type="submit" class="btn btn-primary center-block" name="buscar" value="Buscar" style="width:80%"> 
 							</form>
@@ -82,7 +88,7 @@
 	}else{
 
 		$search = $_POST["busqueda"];
-        $query = "SELECT *  FROM `pregrado` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
+        $query = "SELECT *  FROM `hoja1` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
         $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());;
         
         while($row = mysqli_fetch_array($result)){
