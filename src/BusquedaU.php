@@ -49,7 +49,7 @@
 <?php
 	if($_POST["tipoBusqueda"]=="Universidades"){
       	$search = $_POST["busqueda"];
-        $query = "SELECT *  FROM `buscandolau`.`universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
+        $query = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
         $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());;
         
         while($row = mysqli_fetch_array($result)){
@@ -82,7 +82,7 @@
 	}else{
 
 		$search = $_POST["busqueda"];
-        $query = "SELECT *  FROM `buscandolau`.`hoja1` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
+        $query = "SELECT *  FROM `pregrado` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
         $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());;
         
         while($row = mysqli_fetch_array($result)){
