@@ -1,17 +1,17 @@
 <?php 
-  require "conexion.php";
+  require "../Controler/conexion.php";
   $objeConexion = new Conexion();
   $search;
 ?>
 <!DOCTYPE html>
 <html type="es">
 <head>
-	<link href="Birrete.png" rel="icon" type="image/x-icon" />
+	<link href="../web/imagenes/Birrete.png" rel="icon" type="image/x-icon" />
    <title>BuscadoLaU</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href="bootstrap-3.2.0-dist/css/bootstrap.css" rel="stylesheet">        
+        <link href="../web/bootstrap-3.2.0-dist/css/bootstrap.css" rel="stylesheet">        
     </head>
     <body>
 		<div class="container-fluid">
@@ -20,7 +20,7 @@
     			<div class="col-md-4">
 					<div class="row">
 						<div class="col-xs-12 col-md-offset-1">
-							<img src="imagenes/logo.png" width="100%" height="100%">	
+							<img src="../web/imagenes/logo.png" width="100%" height="100%">	
 						</div>
 					</div>
     			</div>
