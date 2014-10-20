@@ -1,7 +1,10 @@
 <?php 
-  require "../Controler/conexion.php";
-  $objeConexion = new Conexion();
-  $search;
+	/*
+	Se incluye el archivo de la conexión y se instancia una nueva
+	*/
+	require "../Controler/conexion.php";
+  	$objeConexion = new Conexion();
+  	$search;
 ?>
 <!DOCTYPE html>
 <html type="es">
@@ -53,6 +56,9 @@
 			<br>
 			
 <?php
+	/*
+	Esta sentencia if-else define que se va a buscar, si una universidad o un pregrado
+	*/
 	if($_POST["tipoBusqueda"]=="Universidades"){
       	$search = $_POST["busqueda"];
         $query = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";

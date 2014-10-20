@@ -1,4 +1,8 @@
+
 <?php 
+		/*
+		Esta clase maneja la conexión con la base de datos
+		*/
 		class Conexion{
 			var $host;
 			var $usuario;
