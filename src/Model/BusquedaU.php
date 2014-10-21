@@ -1,9 +1,18 @@
 <?php 
+<<<<<<< HEAD
   require "../Controler/conexion.php";
   require "Universidad.php";
   require "ModalU.php";
   $objeConexion = new Conexion();
   $search;
+=======
+	/*
+	Se incluye el archivo de la conexión y se instancia una nueva
+	*/
+	require "../Controler/conexion.php";
+  	$objeConexion = new Conexion();
+  	$search;
+>>>>>>> 0c7f124fc636439335d1ee6ba13fde8736f2cebe
 ?>
 <!DOCTYPE html>
 <html type="es">
@@ -56,6 +65,9 @@
 			<br>
 			
 <?php
+	/*
+	Esta sentencia if-else define que se va a buscar, si una universidad o un pregrado
+	*/
 	if($_POST["tipoBusqueda"]=="Universidades"){
       	$search = $_POST["busqueda"];
         $query = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
