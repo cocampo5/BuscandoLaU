@@ -1,20 +1,20 @@
 <?php 
-		class Universidad{
+		class Pregrado{
 			var $id;
 			var $nombre;
-			var $ubicacion;
+			var $costo;
 			var $descripcion;
-			var $tipo;
-			var $web;
+			var $duracion;
+			var $idUniversidad;
 			
 
-			function Universidad($id,$nombre,$ubicacion,$descripcion,$tipo,$web){
+			function Universidad($id,$nombre,$costo,$descripcion,$duracion,$idUniversidad){
 				$this->id = $id; 
 				$this->nombre = utf8_encode($nombre); 
-				$this->ubicacion = utf8_encode($ubicacion); 
+				$this->costo = $costo; 
 				$this->descripcion = utf8_encode($descripcion);
-				$this->tipo = $tipo;
-				$this->web = $web;
+				$this->duracion = $duracion;
+				$this-$idUniversidad = $idUniversidad;
 			}
 
 			function getId(){

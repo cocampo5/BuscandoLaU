@@ -1,18 +1,11 @@
 <?php 
-<<<<<<< HEAD
-  require "../Controler/conexion.php";
-  require "Universidad.php";
-  require "ModalU.php";
-  $objeConexion = new Conexion();
-  $search;
-=======
-	/*
-	Se incluye el archivo de la conexión y se instancia una nueva
-	*/
-	require "../Controler/conexion.php";
-  	$objeConexion = new Conexion();
-  	$search;
->>>>>>> 0c7f124fc636439335d1ee6ba13fde8736f2cebe
+require "Universidad.php";
+/*
+Se incluye el archivo de la conexión y se instancia una nueva
+*/
+require "../Controler/conexion.php";
+$objeConexion = new Conexion();
+$search;
 ?>
 <!DOCTYPE html>
 <html type="es">
@@ -80,50 +73,6 @@
         for ($i=0; $i<count($universidades);$i++) {
         	$universidades[$i]->mostrarInicial();
                
-		/*	echo "<div class='row'>
-					<div class='col-md-7 col-md-offset-4'>
-				    	<div class='panel panel-primary'>
-				    		<div class='panel-heading'>".$universidades[$i]->getNombre()."</div>
-				    			<div class='panel-body'>
-				    					<div class='row'>
-				    					<div class='col-xs-12'>
-				    						".$universidades[$i]->getDescripcion()." 
-				    					</div>
-				    				</div>
-				    				<br>
-					    			<div class='row'>
-					    				<div class='col-xs-5'>
-					    					<h6 class='text-left'>Sitio web:  <a href='".$universidades[$i]->getWeb()."'>".$universidades[$i]->getNombre()."</a> </h6>
-					    				</div>
-					    				<div class='col-xs-3 col-xs-offset-4'>
-					    					<input type='submit' class='btn btn-info' id='".$universidades[$i]->getId()."' value='Mas información' data-toggle='modal' data-target='#".$universidades[$i]->getNombre()."'>
-					    				</div>
-					    			</div>
-					    			<br> 	
-				    			</div>		
-						</div>
-					</div>
-				</div>
-
-		<div class='modal fade' id='".$universidades[$i]->getNombre()."' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
-		  <div class='modal-dialog'>
-		    <div class='modal-content'>
-		      <div class='modal-header'>
-		        <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>
-		        <h4 class='modal-title' id='myModalLabel'>".$universidades[$i]->getNombre()."</h4>
-		      </div>
-		      <div class='modal-body'>
-		        ".$universidades[$i]->getDescripcion()."
-		      </div>
-		      <div class='modal-footer'>
-		        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
-		        <button type='button' class='btn btn-primary'>Save changes</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>;
-*/
-
 		}
 	}else{
 

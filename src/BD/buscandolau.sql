@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-10-2014 a las 01:14:31
+-- Tiempo de generación: 22-10-2014 a las 00:02:06
 -- Versión del servidor: 5.5.39
 -- Versión de PHP: 5.4.31
 
@@ -101,21 +101,21 @@ CREATE TABLE IF NOT EXISTS `universidad` (
   `nombre` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `ubicacion` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `descripcion` varchar(1000) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
-  `tipo` tinyint(1) DEFAULT NULL
+  `tipo` tinyint(1) DEFAULT NULL,
+  `web` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
 
 --
 -- Volcado de datos para la tabla `universidad`
 --
 
-INSERT INTO `universidad` (`iduniversidad`, `nombre`, `ubicacion`, `descripcion`, `tipo`) VALUES
-(2, 'Escuela de Ingenieria de Antioquia', 'Km 2 + 200 Via al Aeropuerto Jose Maria Cordova, Envigado', 'La Escuela de Ingeniería de Antioquia es una institución privada, de educación superior, sin fines lucrativos, cuya misión es la formación integral de profesionales de la más alta calidad en sus programas de pregrado y postgrado, el fomento a la investigación aplicada y la interacción con el entorno, con lo cual procura el desarrollo tecnológico, económico, cultural y social de la nación.\r\n\r\nComo comunidad académica propicia la visión global, la creatividad, el trabajo en equipo, el mejoramiento de la calidad de vida y el respeto por el medio natural, atendiendo los principios de la ética y la justicia.', 1),
-(3, 'Universidad EAFIT', 'Carrera 49 # 7 Sur - 50, Medellin', 'La Universidad EAFIT tiene la Misión de contribuir al progreso social, económico, científico y cultural del país, mediante el desarrollo de programas de pregrado y de posgrado -en un ambiente de pluralismo ideológico y de excelencia académica- para la formación de personas competentes internacionalmente; y con la realización de procesos de investigación científica y aplicada, en interacción permanente con los sectores empresarial, gubernamental y académico.', 1),
-(4, 'Universidad de Antioquia', 'Calle 67 Numero 53 - 108, Medellin', 'Somos una universidad pública que en ejercicio pleno de su autonomía se compromete con la formación integral del talento humano, con criterios de excelencia, la generación y difusión del conocimiento en los diversos campos del saber y la preservación y revitalización del patrimonio cultural.', 0),
-(5, 'Corporacion Universitaria Remington', 'Calle 51 # 51-27, Medellin', 'La Corporación Universitaria Remington es una institución de educación superior privada, profesionalizante, orientada a la docencia, que cumple en términos de alta calidad, con las funciones de docencia, investigación y extensión, con cobertura nacional y proyección internacional de programas académicos en las modalidades presencial, a distancia y virtual, en los diferentes niveles de la educación superior para la formación integral de la persona con competencias profesionales, visión global y valores éticos, morales, políticos, económicos, ambientales y culturales.', 1),
-(6, 'Universidad Autonoma Latinoamericana', 'Carrera 55A # 49-51. Medellin', 'UNAULA, desde sus principios fundacionales, como son la autonomía, el cogobierno, el pluralismo, la libre cátedra y la investigación, se compromete con visión global, en la formación integral de la comunidad académica y la difusión del saber, desde la docencia, la proyección y la investigación para contribuir al desarrollo en el contexto nacional e internacional.', 1),
-(7, 'Universidad de Medellin', 'Carrera 87 # 30 - 65 Medellin', 'Fundamentada en su lema de Ciencia y Libertad, la Universidad de Medellín tiene como misión la promoción de la cultura y la formación integral de profesionales que contribuyan a la solución de problemas en las áreas de los saberes propios, mediante la docencia, el fomento de la investigación y la interacción con la sociedad.', 1),
-(8, 'Universidad CES', 'Calle 10 A No. 22 - 04', 'La Universidad CES es una institución de educación superior que, comprometida con la excelencia, adelanta acciones en docencia, investigación y extensión con el propósito de aportar al desarrollo de la sociedad y a la formación de seres humanos libres, autónomos, éticos, científicos y competentes en un mundo globalizado.', 1);
+INSERT INTO `universidad` (`iduniversidad`, `nombre`, `ubicacion`, `descripcion`, `tipo`, `web`) VALUES
+(2, 'Escuela de Ingenieria de Antioquia', 'Km 2 + 200 Via al Aeropuerto Jose Maria Cordova, Envigado', 'La Escuela de Ingeniería de Antioquia es una institución privada, de educación superior, sin fines lucrativos, cuya misión es la formación integral de profesionales de la más alta calidad en sus programas de pregrado y postgrado, el fomento a la investigación aplicada y la interacción con el entorno, con lo cual procura el desarrollo tecnológico, económico, cultural y social de la nación.\r\n\r\nComo comunidad académica propicia la visión global, la creatividad, el trabajo en equipo, el mejoramiento de la calidad de vida y el respeto por el medio natural, atendiendo los principios de la ética y la justicia.', 1, 'http://www.eia.edu.co'),
+(3, 'Universidad EAFIT', 'Carrera 49 # 7 Sur - 50, Medellin', 'Una institucion privada con 21 pregrados mucha facilidad para obtener empleo al terminar tu carrera, la cuarta mejor institución privada del país.', 1, 'http://www.eafit.edu.co'),
+(4, 'Universidad de Antioquia', 'Calle 67 Numero 53 - 108, Medellin', 'Somos una universidad pública que en ejercicio pleno de su autonomía se compromete con la formación integral del talento humano, con criterios de excelencia, la generación y difusión del conocimiento en los diversos campos del saber y la preservación y revitalización del patrimonio cultural.', 0, 'http://www.udea.edu.co'),
+(6, 'Universidad Autonoma Latinoamericana', 'Carrera 55A # 49-51. Medellin', 'UNAULA, desde sus principios fundacionales, como son la autonomía, el cogobierno, el pluralismo, la libre cátedra y la investigación, se compromete con visión global, en la formación integral de la comunidad académica y la difusión del saber, desde la docencia, la proyección y la investigación para contribuir al desarrollo en el contexto nacional e internacional.', 1, 'http://www.unaula.edu.co'),
+(7, 'Universidad de Medellin', 'Carrera 87 # 30 - 65 Medellin', 'Fundamentada en su lema de Ciencia y Libertad, la Universidad de Medellín tiene como misión la promoción de la cultura y la formación integral de profesionales que contribuyan a la solución de problemas en las áreas de los saberes propios, mediante la docencia, el fomento de la investigación y la interacción con la sociedad.', 1, 'http://www.udem.edu.co'),
+(8, 'Universidad CES', 'Calle 10 A No. 22 - 04', 'La Universidad CES es una institución de educación superior que, comprometida con la excelencia, adelanta acciones en docencia, investigación y extensión con el propósito de aportar al desarrollo de la sociedad y a la formación de seres humanos libres, autónomos, éticos, científicos y competentes en un mundo globalizado.', 1, 'http://www.ces.edu.co');
 
 -- --------------------------------------------------------
 
