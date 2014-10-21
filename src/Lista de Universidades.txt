@@ -1,0 +1,12 @@
+Lista de Universidades
+
+Universidad EAFIT:http://www.eafit.edu.co/Paginas/index.aspx
+Universidad Nacional:http://www.medellin.unal.edu.co/
+Universidad de Antioqui:http://www.udea.edu.co/
+Instituto Tecnologico Metropolitano: http://www.itm.edu.co/
+Escuela de Ingeniería de Antioquia:http://www.eia.edu.co/
+Universidad Pontificia Bolivariana:http://www.upb.edu.co/portal/page?_pageid=954,1&_dad=portal&_schema=PORTAL
+CES: http://www.ces.edu.co/
+Universidad de Medellin: http://www.udem.edu.co/
+Universidad Autonoma Latinoamericana:http://www.unaula.edu.co/
+Politecnico Jaime Isaza Cadavid: http://www.politecnicojic.edu.co/
