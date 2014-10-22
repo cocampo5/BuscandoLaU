@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-10-2014 a las 00:02:06
+-- Tiempo de generación: 22-10-2014 a las 06:05:04
 -- Versión del servidor: 5.5.39
 -- Versión de PHP: 5.4.31
 
@@ -23,31 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `hoja1`
---
-
-CREATE TABLE IF NOT EXISTS `hoja1` (
-  `nombre` varchar(27) DEFAULT NULL,
-  `costo` int(7) DEFAULT NULL,
-  `descripcion` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `hoja1`
---
-
-INSERT INTO `hoja1` (`nombre`, `costo`, `descripcion`) VALUES
-('Derecho', 2450000, 'Lorem Ipsum'),
-('Medicina', 8000000, 'Lorem Ipsum'),
-('Medicina Veterinaria', 4200000, 'Lorem Ipsum'),
-('Ingeniería de Sistemas', 2160000, 'Lorem Ipsum'),
-('Ingeniería Industrial', 1802300, 'Lorem Ipsum'),
-('Administración de Empresas', 2160000, 'Lorem Ipsum'),
-('Contaduría Publica', 2160000, 'Lorem Ipsum');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `pregrado`
 --
 
@@ -56,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `pregrado` (
   `nombre` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `costo` decimal(8,0) NOT NULL,
   `duracion` int(2) NOT NULL,
-  `descripcion` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `titulo` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `iduniversidad` int(100) NOT NULL,
   `pensum` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
@@ -65,8 +40,8 @@ CREATE TABLE IF NOT EXISTS `pregrado` (
 -- Volcado de datos para la tabla `pregrado`
 --
 
-INSERT INTO `pregrado` (`idpregrado`, `nombre`, `costo`, `duracion`, `descripcion`, `iduniversidad`, `pensum`) VALUES
-(1, 'Ingenieria de Sistemas', '6500000', 9, '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 4, '');
+INSERT INTO `pregrado` (`idpregrado`, `nombre`, `costo`, `duracion`, `titulo`, `iduniversidad`, `pensum`) VALUES
+(1, 'Mercadeo', '6978838', 9, 'Profesional en Mercadeo\r\n', 1, '');
 
 -- --------------------------------------------------------
 
@@ -103,19 +78,23 @@ CREATE TABLE IF NOT EXISTS `universidad` (
   `descripcion` varchar(1000) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `tipo` tinyint(1) DEFAULT NULL,
   `web` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `universidad`
 --
 
 INSERT INTO `universidad` (`iduniversidad`, `nombre`, `ubicacion`, `descripcion`, `tipo`, `web`) VALUES
-(2, 'Escuela de Ingenieria de Antioquia', 'Km 2 + 200 Via al Aeropuerto Jose Maria Cordova, Envigado', 'La Escuela de Ingeniería de Antioquia es una institución privada, de educación superior, sin fines lucrativos, cuya misión es la formación integral de profesionales de la más alta calidad en sus programas de pregrado y postgrado, el fomento a la investigación aplicada y la interacción con el entorno, con lo cual procura el desarrollo tecnológico, económico, cultural y social de la nación.\r\n\r\nComo comunidad académica propicia la visión global, la creatividad, el trabajo en equipo, el mejoramiento de la calidad de vida y el respeto por el medio natural, atendiendo los principios de la ética y la justicia.', 1, 'http://www.eia.edu.co'),
-(3, 'Universidad EAFIT', 'Carrera 49 # 7 Sur - 50, Medellin', 'Una institucion privada con 21 pregrados mucha facilidad para obtener empleo al terminar tu carrera, la cuarta mejor institución privada del país.', 1, 'http://www.eafit.edu.co'),
-(4, 'Universidad de Antioquia', 'Calle 67 Numero 53 - 108, Medellin', 'Somos una universidad pública que en ejercicio pleno de su autonomía se compromete con la formación integral del talento humano, con criterios de excelencia, la generación y difusión del conocimiento en los diversos campos del saber y la preservación y revitalización del patrimonio cultural.', 0, 'http://www.udea.edu.co'),
-(6, 'Universidad Autonoma Latinoamericana', 'Carrera 55A # 49-51. Medellin', 'UNAULA, desde sus principios fundacionales, como son la autonomía, el cogobierno, el pluralismo, la libre cátedra y la investigación, se compromete con visión global, en la formación integral de la comunidad académica y la difusión del saber, desde la docencia, la proyección y la investigación para contribuir al desarrollo en el contexto nacional e internacional.', 1, 'http://www.unaula.edu.co'),
-(7, 'Universidad de Medellin', 'Carrera 87 # 30 - 65 Medellin', 'Fundamentada en su lema de Ciencia y Libertad, la Universidad de Medellín tiene como misión la promoción de la cultura y la formación integral de profesionales que contribuyan a la solución de problemas en las áreas de los saberes propios, mediante la docencia, el fomento de la investigación y la interacción con la sociedad.', 1, 'http://www.udem.edu.co'),
-(8, 'Universidad CES', 'Calle 10 A No. 22 - 04', 'La Universidad CES es una institución de educación superior que, comprometida con la excelencia, adelanta acciones en docencia, investigación y extensión con el propósito de aportar al desarrollo de la sociedad y a la formación de seres humanos libres, autónomos, éticos, científicos y competentes en un mundo globalizado.', 1, 'http://www.ces.edu.co');
+(1, 'Universidad EAFIT', ' Carrera 49 # 7 sur  50.', 'Una institucion privada con 21 pregrados mucha facilidad para obtener empleo al terminar tu carrera, la cuarta mejor institución privada del país.', NULL, 'http://www.eafit.edu.co'),
+(2, 'Universidad Pontificia Bolivariana (UPB) ', 'Circular 1 No. 70-01\r\n', 'La UPB seguramente tiene una carrera disponible para que la estudies, y una gran variedad de deducciones al costo de tus estudios disponibles.', NULL, 'http://www.upb.edu.co/'),
+(3, 'Universidad Autónoma Latinoamericana (UNAULA)', 'Carrera 55A N° 49-5\r\n', 'Un lugar para estudiar muy respetado, un graduado de allí es muy admirado por el reconocimiento que tienen varios de sus pregrados y su precio es muy bueno para ser una Universidad Privada.', NULL, 'http://www.unaula.edu.co/'),
+(4, 'Universidad CES', 'Calle 10 A No. 22 - 04 ', 'La excelencia de las Ciencias de la Salud y aprovechando esto cada nueva carrera que saca sigue con la misma calidad y esta ampliando su numero de pregrados.', NULL, 'http://www.ces.edu.co/'),
+(5, 'Escuela de Ingeniería de Antioquia (EIA)', 'Km 2 + 200 Vía al Aeropuerto José María Córdova Envigado.', 'La Escuela de Ingenieros tiene una gran historia, la mayoría de grandes empresarios  de la región relacionados con el area de la ingeniería pertenece al gremio de egresados de la EIA y la Universidad aunque exigente en su nivel academico, muestra que esto es necesario para sacar profesionales prestigiosos.', NULL, 'http://www.eia.edu.co/'),
+(6, 'Universidad Nacional', 'Calle 59A No 63 - 20\r\n', 'La Institución de educación Publica por tradición del país, con una gran diversidad cultural, y amplia historia, y un ambiente que te hace sentir cada día una experiencia Universitaria completa, la Universidad Nacional de Colombia, sede Medellín es el centro de la ciencia, el arte, y las humanidades, muchas son las actividades extracurriculares para que no solo estudies sino vivas tu profesión..', NULL, 'http://www.medellin.unal.edu.co/'),
+(7, 'Universidad de Antioquia', ' calle 67 No. 53 - 108 \r\n', 'El Alma Mater de la ciudad,la cantidad y diversidad de gente que se ve todos los dias, que al fin y al cabo a la hora de salir a trabajar es muy util. Los profesores de la Univesidad de Antioquia son eminencias academicas.', NULL, 'http://www.udea.edu.co/'),
+(8, 'Universidad de Medellin', 'Carrera 87 N° 30 - 65 Medellín.', 'La Universidad de Medellin es privilegiada porque tiene muchas cosas que la hacen atractiva, su privilegiada ubicación, ser pionera en muchos campos y el hecho de cobrar dependiendo de tu situación economico-social, eso quiere decir desde que el momento en que te matriculas la Universidad de Medellín te trata de manera unica y personalizada, la Universidad esta diseñada para formarte a ti de manera única\r\n', NULL, 'http://www.udem.edu.co/'),
+(9, 'ITM', 'Calle 73 No 76A \r\n', 'El Instituto Tecnologico Metropolitano ofrece un modo de estudio interesante para aquellos que no saben si quieren dedicar los proximos cinco años de su vida, para tener un titulo como profesional, la mayoría de sus pregrados permiten primero hacer un estudio tecnico o tecnologico, y luego si te parece lo mas adecuado estudiar un poco más para tener tu titulo profesional.', NULL, 'http://www.itm.edu.co/'),
+(10, 'Politécnico Jaime Isaza Cadavid', 'Carrera 48No7-151\r\n', 'El Politecnico Jaime Isaza Cadavid, hace parte del grupo de Universidades con una gran calidad, y que las empresas tienen como buena referencia, con un enfoque hacia lo practico, y a enseñar lo que es la vida profesional.', NULL, 'http://www.politecnicojic.edu.co/');
 
 -- --------------------------------------------------------
 
@@ -176,7 +155,7 @@ MODIFY `idpregrado` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT de la tabla `universidad`
 --
 ALTER TABLE `universidad`
-MODIFY `iduniversidad` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+MODIFY `iduniversidad` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --

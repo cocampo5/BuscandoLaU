@@ -89,13 +89,7 @@ $search;
         $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());
 
         while($row = mysqli_fetch_array($result)){
-        	$objeConexion2 = new Conexion();
-        	$search2 = $row['iduniversidad'];
-			$query2 = "SELECT *  FROM `universidad` WHERE `iduniversidad` == $search2";
-			$result2 = mysqli_query($objeConexion2->conectarse(), $query2) or die(mysqli_error());
-			$row2 = mysqli_fetch_array($result2);
-			$U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
-        	$pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['costo'],$row['titulo'],$row['duracion'],$U);
+        	$pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['costo'],$row['titulo'],$row['duracion'],$row['iduniversidad']);
 		}
 
 		for ($i=0; $i<count($pregrados);$i++) {
