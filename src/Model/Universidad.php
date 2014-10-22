@@ -49,7 +49,7 @@
 				    			<div class='panel-body'>
 				    				<div class='row'>
 				    					<div class='col-xs-3'>
-				    						<img src='../web/imagenes/eafit1.jpg' width='100%' height='100%'>
+				    						<img src='../web/imagenes/".$this->id."1.png' width='100%' height='100%'>
 				    					</div>
 				    					<div class='col-xs-9'>
 				    						".$this->descripcion." 
@@ -81,8 +81,7 @@
 		        ".$this->descripcion."
 		      </div>
 		      <div class='modal-footer'>
-		        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
-		        <button type='button' class='btn btn-primary'>Save changes</button>
+		        <button type='button' class='btn btn-info' data-dismiss='modal'>Ver Página Completa</button>
 		      </div>
 		    </div>
 		  </div>

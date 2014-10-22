@@ -1,5 +1,6 @@
-<?php 
+<?php
 require "Universidad.php";
+require "Pregrado.php";
 /*
 Se incluye el archivo de la conexión y se instancia una nueva
 */
@@ -72,44 +73,29 @@ $search;
 
         for ($i=0; $i<count($universidades);$i++) {
         	$universidades[$i]->mostrarInicial();
-               
 		}
 	}else{
 
 		$search = $_POST["busqueda"];
-        $query = "SELECT *  FROM `hoja1` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
+        $query = "SELECT *  FROM `pregrado` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
         $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());
 
         while($row = mysqli_fetch_array($result)){
-               
-			echo "<div class='row'>
-					<div class='col-md-7 col-md-offset-4'>
-				    	<div class='panel panel-primary'>
-				    		<div class='panel-heading'>".$row['nombre']."</div>
-				    			<div class='panel-body'>
-				    				<div class='row'>
-				    					<div class='col-xs-12'>
-				    						".utf8_encode($row['descripcion'])." 
-				    					</div>
-				    				</div>
-				    				<br>
-					    			<div class='row'>
-					    				<div class='col-xs-5'>
-					    					<h6 class='text-left'>Sitio web:  <a href='www.google.com'>www.universidadx.edu.co/".$row['nombre']."</a> </h6>
-					    				</div>
-					    				<div class='col-xs-3 col-xs-offset-4'>
-					    					<input type='submit' class='btn btn-info' value='Mas informacion'>	
-					    				</div>
-					    			</div>
-					    			<br> 	
-				    			</div>		
-						</div>
-					</div>
-				</div>";
-		}	
+        	$objeConexion2 = new Conexion();
+        	$search2 = $row['iduniversidad'];
+			$query2 = "SELECT *  FROM `universidad` WHERE `iduniversidad` == $search2";
+			$result2 = mysqli_query($objeConexion2->conectarse(), $query2) or die(mysqli_error());
+			$row2 = mysqli_fetch_array($result2);
+			$U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
+
+        	$pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['costo'],$row['titulo'],$row['duracion'],$U);
+		}
+
+		for ($i=0; $i<count($pregrados);$i++) {
+        	$pregrados[$i]->mostrarInicial();
+		}
 
 	}
-	//include_once('test.php');
 ?>
 
 

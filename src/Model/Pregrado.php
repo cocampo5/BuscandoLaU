@@ -3,18 +3,17 @@
 			var $id;
 			var $nombre;
 			var $costo;
-			var $descripcion;
+			var $titulo;
 			var $duracion;
-			var $idUniversidad;
-			
+			var $universidad;
 
-			function Universidad($id,$nombre,$costo,$descripcion,$duracion,$idUniversidad){
+			function Pregrado($id,$nombre,$costo,$titulo,$duracion,$universidad){
 				$this->id = $id; 
 				$this->nombre = utf8_encode($nombre); 
 				$this->costo = $costo; 
-				$this->descripcion = utf8_encode($descripcion);
+				$this->titulo = utf8_encode($titulo);
 				$this->duracion = $duracion;
-				$this-$idUniversidad = $idUniversidad;
+				$this->$universidad = $universidad;
 			}
 
 			function getId(){
@@ -25,20 +24,20 @@
 				return $this->nombre;
 			}
 
-			function getUbicacion(){
-				return $this->ubicacion;
+			function getCosto(){
+				return $this->costo;
 			}
 
-			function getDescripcion(){
-				return $this->descripcion;
+			function getTitulo(){
+				return $this->titulo;
 			}
 
-			function getTipo(){
-				return $this->tipo;
+			function getDuracion(){
+				return $this->duracion;
 			}
 
-			function getWeb(){
-				return $this->web;
+			function getIdUniversidad(){
+				return $this->universidad;
 			}
 			function mostrarInicial(){
 				echo "
@@ -48,17 +47,18 @@
 				    		<div class='panel-heading'>".$this->nombre."</div>
 				    			<div class='panel-body'>
 				    				<div class='row'>
-				    					<div class='col-xs-3'>
-				    						<img src='../web/imagenes/eafit1.jpg' width='100%' height='100%'>
+				    					<div class='col-xs-6'>
+				    						<b>Título:</b> ".$this->titulo." <br><br>
+				    						<b>Duración:</b> ".$this->duracion." Semestres
 				    					</div>
-				    					<div class='col-xs-9'>
-				    						".$this->descripcion." 
+				    					<div class='col-xs-6'>
+				    						<b>Costo:</b> ".$this->costo." $<br><br>
 				    					</div>
 				    				</div>
 				    				<br>
 					    			<div class='row'>
 					    				<div class='col-xs-5'>
-					    					<h6 class='text-left'>Sitio web:  <a href='".$this->web."'>'".$this->nombre."'</a> </h6>
+					    					 
 					    				</div>
 					    				<div class='col-xs-3 col-xs-offset-4'>
 					    					<input type='submit' class='btn btn-info' value='Mas informacion' data-toggle='modal' data-target='#modalU".$this->id."'>
@@ -78,17 +78,14 @@
 		        <h4 class='modal-title' id='myModalLabel'>".$this->nombre."</h4>
 		      </div>
 		      <div class='modal-body'>
-		        ".$this->descripcion."
+		        ".$this->titulo."
 		      </div>
 		      <div class='modal-footer'>
-		        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
-		        <button type='button' class='btn btn-primary'>Save changes</button>
+		        <button type='button' class='btn btn-info' data-dismiss='modal'>Ver Página Completa</button>
 		      </div>
 		    </div>
 		  </div>
 		</div>
-
-
 				";
 			}
 
