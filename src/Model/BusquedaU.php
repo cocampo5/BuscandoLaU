@@ -46,8 +46,16 @@ $search;
     						}
     										?>
 							&nbsp; <b>¿Qué deseas buscar?</b>&nbsp;&nbsp;&nbsp;
-                        	<input type="radio" name="tipoBusqueda" checked="checked" value="Pregrados">&nbsp;&nbsp;Pregrados&nbsp;&nbsp;
-                        	<input type="radio" name="tipoBusqueda" value="Universidades">&nbsp;&nbsp;Universidades 
+							<?php 
+								if($_POST["tipoBusqueda"]=="Universidades"){
+									echo "<input type='radio' name='tipoBusqueda' value='Pregrados'>&nbsp;&nbsp;Pregrados&nbsp;&nbsp;
+                        	<input type='radio' name='tipoBusqueda' checked='checked' value='Universidades'>&nbsp;&nbsp;Universidades";
+								}else{
+									echo "<input type='radio' name='tipoBusqueda' checked='checked' value='Pregrados'>&nbsp;&nbsp;Pregrados&nbsp;&nbsp;
+                        	<input type='radio' name='tipoBusqueda' value='Universidades'>&nbsp;&nbsp;Universidades";
+								}
+							?>
+                        	 
     					</div>
     					<div class="col-xs-3">
     							<input type="submit" class="btn btn-primary center-block" name="buscar" value="Buscar" style="width:80%">
@@ -87,7 +95,6 @@ $search;
 			$result2 = mysqli_query($objeConexion2->conectarse(), $query2) or die(mysqli_error());
 			$row2 = mysqli_fetch_array($result2);
 			$U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
-
         	$pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['costo'],$row['titulo'],$row['duracion'],$U);
 		}
 

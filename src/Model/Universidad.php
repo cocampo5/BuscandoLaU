@@ -57,10 +57,10 @@
 				    				</div>
 				    				<br>
 					    			<div class='row'>
-					    				<div class='col-xs-5'>
+					    				<div class='col-xs-7'>
 					    					<h6 class='text-left'>Sitio web:  <a href='".$this->web."'>'".$this->nombre."'</a> </h6>
 					    				</div>
-					    				<div class='col-xs-3 col-xs-offset-4'>
+					    				<div class='col-xs-3 col-xs-offset-2'>
 					    					<input type='submit' class='btn btn-info' value='Mas informacion' data-toggle='modal' data-target='#modalU".$this->id."'>
 					    				</div>
 					    			</div>
