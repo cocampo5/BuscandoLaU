@@ -12,8 +12,33 @@
          <script src="http://code.jquery.com/jquery.js"></script>
         <script src="../web/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
         <script type="text/javascript">
-            function dormir() {
-                document.getElementById("demo").innerHTML = "Paragraph changed";
+            function Campo1() {
+                this.descartar = false;
+            }
+
+            Campo1.prototype.pregunta = function() {
+                 document.getElementById("test").innerHTML = "<center>1.) ¿Cuál es tú color favorito? <br><br></center>"+
+                    "<div class='col-md-8 col-md-offset-4'><input type='radio' name='co'>&nbsp;&nbsp;&nbsp;Amarillo<br>"+
+                    "<input type='radio' name='co'>&nbsp;&nbsp;&nbsp;Rojo<br><input type='radio' name='co'>&nbsp;&nbsp;&nbsp;Verde<br>"+
+                    "<input type='radio' name='co'>&nbsp;&nbsp;&nbsp;Azul<br><br></div>"+
+                    "<button class='btn btn-primary center-block' type='button' onclick='preguntar();'>Siguiente</button>";
+            };
+
+            var c1 = new Campo1();
+            var c = 0;
+            function preguntar(){
+
+                var elementos = document.getElementsByName("co");
+                if(c==1){
+                    c++;
+                     document.getElementById("test").innerHTML = "Jmmmmmm";
+                 for(var i=0; i<elementos.length; i++) {
+                       alert(" Elemento: " + elementos[i].value + "\n Seleccionado: " + elementos[i].checked);
+                    }
+                }else{
+                    c++;
+                    //c1.pregunta();
+                }
             }
         </script>
 
@@ -35,39 +60,11 @@
             <br>
             <br>
             <br>
-            <br>
-            <br>
             <div class="row">
-                <center><div id="test" class="col-md-12">
-                    1.) ¿Cuál es tú color favorito? <br><br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <input type='radio' name='tipoBusqueda'>&nbsp;&nbsp;&nbsp;Amarillo
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <input type='radio' name='tipoBusqueda'>&nbsp;&nbsp;&nbsp;Rojo
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <input type='radio' name='tipoBusqueda'>&nbsp;&nbsp;&nbsp;Azul
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <input type='radio' name='tipoBusqueda'>&nbsp;&nbsp;&nbsp;Verde
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br><center>
-                    <button class="btn btn-primary" type="button" onclick="dormir();">Siguiente</button>
+                <div id="test" class="col-md-4 col-md-offset-4">
+                    A conticuación responderás unas preguntas: <br>
+                    <button class="btn btn-primary center-block" type="button" onclick="c1.pregunta();">Empezar</button>
                 </div>
             </div>
-        </div>
     </body>
 </html>
