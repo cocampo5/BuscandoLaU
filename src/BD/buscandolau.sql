@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-10-2014 a las 06:05:04
+-- Tiempo de generación: 22-10-2014 a las 06:35:00
 -- Versión del servidor: 5.5.39
 -- Versión de PHP: 5.4.31
 
@@ -34,14 +34,31 @@ CREATE TABLE IF NOT EXISTS `pregrado` (
   `titulo` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `iduniversidad` int(100) NOT NULL,
   `pensum` varchar(100) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=19 ;
 
 --
 -- Volcado de datos para la tabla `pregrado`
 --
 
 INSERT INTO `pregrado` (`idpregrado`, `nombre`, `costo`, `duracion`, `titulo`, `iduniversidad`, `pensum`) VALUES
-(1, 'Mercadeo', '6978838', 9, 'Profesional en Mercadeo\r\n', 1, '');
+(1, 'Mercadeo', '6978838', 9, 'Profesional en Mercadeo\r\n', 1, ''),
+(2, 'Sicología', '6978838', 9, 'Profesional en Psicología\r\n', 1, ''),
+(3, 'Administrador de Negocios', '6978838', 9, 'Administrador de Negocios\r\n', 1, ''),
+(4, 'Diseño Grafico', '6488000', 10, 'Diseñador Gráfico\r\n', 2, ''),
+(5, 'Arquitectura', '6575000', 10, 'Arquitecto\r\n', 2, ''),
+(6, 'Diseño Industrial', '6488000', 10, 'Diseñador Industrial\r\n', 2, ''),
+(7, 'Ingeniería Informatica', '1950000', 10, 'Ingeniero Informático\r\n', 3, ''),
+(8, 'Derecho', '1950000', 10, 'Abogado', 3, ''),
+(9, 'Ingeniería Industrial', '1950000', 10, 'Ingeniero Industrial\r\n', 3, ''),
+(10, 'Odontología', '8013000', 10, 'Odontólogo\r\n', 4, ''),
+(11, 'Biologia', '8013000', 10, 'Biologo\r\n', 4, ''),
+(12, 'Medicina', '11234000', 12, 'Médico y Cirujano\r\n', 4, ''),
+(13, 'Ingeniería Administrativa', '6540000', 10, 'Ingeniero Administrativo\r\n', 5, ''),
+(14, 'Ingeniería Ambiental', '6540000', 10, 'Ingeniero Ambiental\r\n', 5, ''),
+(15, 'Ingeniería Civil', '6540000', 10, 'Ingeniero Civil\r\n', 5, ''),
+(16, 'Administración de Empresas', '0', 10, 'Administrador de empresas\r\n', 6, ''),
+(17, 'Antropología', '0', 10, 'Antropologo\r\n', 6, ''),
+(18, 'Ingeniería Agropecuaria', '0', 10, 'Ingeniero Agropecuario', 6, '');
 
 -- --------------------------------------------------------
 
@@ -150,7 +167,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `pregrado`
 --
 ALTER TABLE `pregrado`
-MODIFY `idpregrado` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `idpregrado` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT de la tabla `universidad`
 --
