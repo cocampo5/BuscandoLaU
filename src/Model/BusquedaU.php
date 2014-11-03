@@ -27,7 +27,7 @@ $search;
     			<div class="col-md-4">
 					<div class="row">
 						<div class="col-xs-12 col-md-offset-1">
-							<img src="../web/imagenes/logo.png" width="100%" height="100%">	
+                            <a href="../../index.html"><img src="../web/imagenes/logo.png" width="100%" height="100%"></a>
 						</div>
 					</div>
     			</div>
@@ -92,7 +92,8 @@ $search;
         	$objeConexion2 = new Conexion();
         	$search2 = $row['iduniversidad'];
 			$query2 = "SELECT *  FROM `universidad` WHERE CAST(`iduniversidad` AS varchar) == $search2";
-			$result2 = mysqli_query($objeConexion2->conectarse(), $query2) or die(mysqli_error());
+            $conex = $objeConexion2->conectarse();
+			$result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
 			$row2 = mysqli_fetch_array($result2);
 			$U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
         	$pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['costo'],$row['titulo'],$row['duracion'],$row['iduniversidad']);

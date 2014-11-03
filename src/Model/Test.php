@@ -41,7 +41,8 @@
             <br>
             <div class="row">
                 <div class = "col-md-6">
-                    <img src="../web/imagenes/logo.png" width="100%" height="100%">
+                    <a href="../../index.html"><img src="../web/imagenes/logo.png" width="100%" height="100%"></a>
+
                 </div>
                 <div class="col-md-6">
                     <h1 class="text-right">TEST DE APTITUD</h1>
