@@ -42,9 +42,9 @@ $search;
     						if ($_POST['buscar']) {
     							echo "<input type='text' name='busqueda' value=".$_POST['busqueda']." class='form-control'>";
     						}	else{
-    							echo "<input type='text' name='busqueda' class='form-control' value=''>";
+    							echo "<input type='text' name='busqueda' value='' class='form-control'>";
     						}
-    										?>
+    						?>
 							&nbsp; <b>¿Qué deseas buscar?</b>&nbsp;&nbsp;&nbsp;
 							<?php 
 								if($_POST["tipoBusqueda"]=="Universidades"){
@@ -96,9 +96,10 @@ $search;
 			$result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
 			$row2 = mysqli_fetch_array($result2);
 			$U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
-        	$pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['costo'],$row['titulo'],$row['duracion'],$row['iduniversidad']);
+        	$pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['costo'],$row['titulo'],$row['duracion'],$row['iduniversidad'],$row['pensum']);
+            echo ($row['pensum']);    
 		}
-
+        
 		for ($i=0; $i<count($pregrados);$i++) {
         	$pregrados[$i]->mostrarInicial();
 		}

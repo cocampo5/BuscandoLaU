@@ -6,14 +6,16 @@
 			var $titulo;
 			var $duracion;
 			var $universidad;
+			var $pensum;
 
-			function Pregrado($id,$nombre,$costo,$titulo,$duracion,$universidad){
+			function Pregrado($id,$nombre,$costo,$titulo,$duracion,$universidad,$pensum){
 				$this->id = $id; 
 				$this->nombre = utf8_encode($nombre); 
 				$this->costo = $costo; 
 				$this->titulo = utf8_encode($titulo);
 				$this->duracion = $duracion;
 				$this->$universidad = $universidad;
+				$this->pensum = $pensum;
 			}
 
 			function getId(){
@@ -38,6 +40,10 @@
 
 			function getIdUniversidad(){
 				return $this->universidad;
+			}
+
+			function getPensum(){
+				return $this->pensum;
 			}
 			function mostrarInicial(){
 				echo "
@@ -79,6 +85,7 @@
 		      </div>
 		      <div class='modal-body'>
 		        ".$this->titulo."
+		        ".$this->pensum."
 		      </div>
 		      <div class='modal-footer'>
 		        <button type='button' class='btn btn-info' data-dismiss='modal'>Ver Página Completa</button>

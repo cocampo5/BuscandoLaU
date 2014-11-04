@@ -60,7 +60,7 @@
   //para intentar enviar el mensaje, cada intento se hara 5 segundos despues 
   //del anterior, para ello se usa la funcion sleep	
   $intentos=1; 
-  while ((!$exito) && ($intentos < 5)) {
+  while ((!$exito) && ($intentos < 6)) {
 	sleep(5);
      	//echo $mail->ErrorInfo;
      	$exito = $mail->Send();
