@@ -13,6 +13,231 @@
         <script src="../web/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
         <script type="text/javascript">
 
+            var pregrado1 = {
+                descarte : false,
+                nombre : "Planeación y desarrollo social",
+                c1 : false,
+                c2 : true,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : true,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : true,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : true,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado2 = {
+                descarte : false,
+                nombre : "Administración de Empresas turísticas",
+                c1 : false,
+                c2 : false,
+                c3 : true,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : true,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado3 = {
+                descarte : false,
+                nombre : "Ingeniería Ambiental",
+                c1 : false,
+                c2 : true,
+                c3 : false,
+                c4 : false,
+                c5 : true,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : true,
+                c10 : true,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : true,
+                c15 : false,
+                c16 : true,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : true,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado4 = {
+                descarte : false,
+                nombre : "Planeación y desarrollo social",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado5 = {
+                descarte : false,
+                nombre : "Planeación y desarrollo social",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado6 = {
+                descarte : false,
+                nombre : "Planeación y desarrollo social",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado7 = {
+                descarte : false,
+                nombre : "Planeación y desarrollo social",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+
             var campo1 = {
                 descarte : false,
                 nombre : "Debatir y Liderazgo",
@@ -75,7 +300,7 @@
                  document.getElementById("a").innerHTML ="No me acuerdo ni de el mío";
                  document.getElementById("b").innerHTML ="Me se de los de mi familia";
                  document.getElementById("c").innerHTML ="Me se hasta los de los gatos de la vecina";
-                 document.getElementById("d").innerHTML ="No sabe/ No responde";
+                 document.getElementById("d").innerHTML ="A duras penas recuerdo el mío y el de mis padres";
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -101,7 +326,8 @@
                 descarte : false,
                 nombre : "Temor a la sangre",
                 preguntar : function(c) {
-                    document.getElementById("enunciado").innerHTML = "¿La siguiente imagen que le causa?";
+                    document.getElementById("enunciado").innerHTML = "¿La siguiente imagen que le causa?<br><br>"+
+                    "<img src='../web/imagenes/mano.jpg' width='30%' height='30%'>";
                  document.getElementById("a").innerHTML ="Ganas de desmayarse";
                  document.getElementById("b").innerHTML ="Repulsión y asco";
                  document.getElementById("c").innerHTML ="Interes por lo que pudo haber causado esa lesión";
@@ -137,8 +363,9 @@
 "tan brusco no esta para su estilo de vida";
                  document.getElementById("b").innerHTML ="Lo intentaría pero probablemente sea de los que cause mas accidentes"+
 "porque le cuesta asimilar la nueva norma";
-                 document.getElementById("c").innerHTML ="No le molestaría en absoluto y se adaptaría rapidamente";
-                 document.getElementById("d").innerHTML ="No sabe no responde";
+                 document.getElementById("c").innerHTML ="No me molestaría en absoluto y se adaptaría rapidamente";
+                 document.getElementById("d").innerHTML ="Sería sorprendente, y la adaptación tardaría su tiempo, "+
+                 "pero nada del otro mundo";
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -294,7 +521,7 @@
                  document.getElementById("a").innerHTML ="311211";
                  document.getElementById("b").innerHTML ="13112221";
                  document.getElementById("c").innerHTML ="32211321";
-                 document.getElementById("d").innerHTML ="133221";
+                 document.getElementById("d").innerHTML ="No lo quiero hacer";
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -323,8 +550,9 @@
                     document.getElementById("enunciado").innerHTML = "Si viajas a otro país y tienes que aprender otro idioma";
                  document.getElementById("a").innerHTML ="No te molestaría";
                  document.getElementById("b").innerHTML ="Preferiría ir a un país donde se hable español";
-                 document.getElementById("c").innerHTML ="No sabe";
-                 document.getElementById("d").innerHTML ="No responde";
+                 document.getElementById("c").innerHTML ="Me encantaría, uno si va a viajar es para conocer "+
+                 "culturas completamente distintas";
+                 document.getElementById("d").innerHTML ="Si el idioma es fácil pues me parecería hasta divertido";
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -378,16 +606,16 @@
             };
 
             var campo13 = {
-                nombre : "Indoor Outdoors",
+                nombre : "Indoor",
                 descarte : false,
                 preguntar : function(c) {
-                    document.getElementById("enunciado").innerHTML = "De las siguientes opciones, ¿Cuál prefieres?";
-                 document.getElementById("a").innerHTML ="Prefieres estar en casa, trabajar en una empresa en una oficina"+
-"tranquilo no te molesta un cubículo y hasta te parece agradable(Indoor)";
-                 document.getElementById("b").innerHTML ="Te gusta estar en un lugar activo y moviendote preferiblemente"+
-                 "al aire libre (Outdoor)";
-                 document.getElementById("c").innerHTML ="No sabe";
-                 document.getElementById("d").innerHTML ="No responde";
+                    document.getElementById("enunciado").innerHTML = "Tienes que trabajar en una oficina todos "+
+                    "los días y con un horario fijo...";
+                 document.getElementById("a").innerHTML ="Pues ese es el ideal,¿No?";
+                 document.getElementById("b").innerHTML ="Me mato, no puedo estar encerrado";
+                 document.getElementById("c").innerHTML ="No me mataría, sólo tendría estrés pero es "+
+                 "lo normal, cualquier rutina cansa";
+                 document.getElementById("d").innerHTML ="En una empresa sí, pero sentado todo el día NO, necesito algo activo";
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -410,6 +638,39 @@
             };
 
             var campo14 = {
+                nombre : "Outdoor",
+                descarte : false,
+                preguntar : function(c) {
+                    document.getElementById("enunciado").innerHTML = "Te ofrecen el empleo de la vida nada de "+
+                    "ofcinas, todo es afuera, ya sea naturaleza o en la ciudad en los barrios; ¿Qué opinas?";
+                 document.getElementById("a").innerHTML ="Excelente, Nada mejor que explorar el mundo y andarlo mientras trabajo";
+                 document.getElementById("b").innerHTML ="Como el Doctor Sheldon Cooper dijo 'Si afuera es tan bueno,"+
+                 "¿por qué la humanidad ha pasado miles de años tratando de perfeccionar el interior?'";
+                 document.getElementById("c").innerHTML ="Sería bonito pero no para siempre hay que tener un equilibrio";
+                 document.getElementById("d").innerHTML ="Preferiblemente oficina todos los días de la semana"+
+                 " menos uno, ese día trabajar afuera sería bonito";
+                },
+                evaluar : function(c) { 
+                    var elementos = document.getElementsByName("opciones");
+    
+                    for(var i=0; i<elementos.length; i++) {
+                      if((elementos[i].checked)&(i==0)){
+                        //this.descarte = true;
+                      }else if((elementos[i].checked)&(i==1)){
+                        //this.descarte = true;
+                      }else if((elementos[i].checked)&(i==2)){
+    
+                      }else if((elementos[i].checked)&(i==3)){
+    
+                        }
+                    }
+                },
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var campo15 = {
                 descarte : false,
                 nombre : "Oratoria",
                 preguntar : function(c) {
@@ -441,7 +702,7 @@
                 }
             };
 
-            var campo15 = {
+            var campo16 = {
                 descarte : false,
                 nombre : "Naturaleza",
                 preguntar : function(c) {
@@ -449,38 +710,8 @@
                  document.getElementById("a").innerHTML ="Si, me encantaría es mi trabajo ideal";
                  document.getElementById("b").innerHTML ="No, preferiblemente mientras este en una ciudad sería feliz";
                  document.getElementById("c").innerHTML ="No me molestaría, pero tampoco es mi sueño";
-                 document.getElementById("d").innerHTML ="No sabe / No responde";
-                },
-                evaluar : function(c) { 
-                    var elementos = document.getElementsByName("opciones");
-    
-                    for(var i=0; i<elementos.length; i++) {
-                      if((elementos[i].checked)&(i==0)){
-                        
-                      }else if((elementos[i].checked)&(i==1)){
-                        this.descarte = true;
-                      }else if((elementos[i].checked)&(i==2)){
-    
-                      }else if((elementos[i].checked)&(i==3)){
-    
-                        }
-                    }
-                },
-                getNombre : function(c) {
-                    return this.nombre;
-                }
-            };
-
-            var campo16 = {
-                nombre : "Deporte",
-                descarte : false,
-                preguntar : function(c) {
-                    document.getElementById("enunciado").innerHTML = "¿Eres bueno (como para nivel semi o profesional)"+
-                    " en algun deporte?";
-                 document.getElementById("a").innerHTML ="Si";
-                 document.getElementById("b").innerHTML ="No";
-                 document.getElementById("c").innerHTML ="No sabe";
-                 document.getElementById("d").innerHTML ="No responde";
+                 document.getElementById("d").innerHTML ="Ciudad o campo soy una persona que se adapta a la condición"+
+                 " que sea ya sea de safari o de corbata";
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -503,14 +734,48 @@
             };
 
             var campo17 = {
+                nombre : "Deporte",
+                descarte : false,
+                preguntar : function(c) {
+                    document.getElementById("enunciado").innerHTML = "¿Eres bueno (como para nivel semi o profesional)"+
+                    " en algun deporte?";
+                 document.getElementById("a").innerHTML ="Ni a nivel semi o profesional pero me interesan los deportes";
+                 document.getElementById("b").innerHTML ="Mi cara es un imán de balones vivientes (y raquetas,y puñetazos)"+
+                 " y por eso le corro (irónicamente) a los deportes";
+                 document.getElementById("c").innerHTML ="He sido incluso considerado para jugar en la selección"+
+                 " regional o nacional de un equipo";
+                 document.getElementById("d").innerHTML ="Aunque sea bueno, soy muy perezoso o no me "+
+                 "imagino toda la vida practicando un deporte";
+                },
+                evaluar : function(c) { 
+                    var elementos = document.getElementsByName("opciones");
+    
+                    for(var i=0; i<elementos.length; i++) {
+                      if((elementos[i].checked)&(i==0)){
+                        
+                      }else if((elementos[i].checked)&(i==1)){
+                        this.descarte = true;
+                      }else if((elementos[i].checked)&(i==2)){
+    
+                      }else if((elementos[i].checked)&(i==3)){
+    
+                        }
+                    }
+                },
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var campo18 = {
                 nombre : "Habilidades Artisticas",
                 descarte : false,
                 preguntar : function(c) {
-                    document.getElementById("enunciado").innerHTML = "¿Haces alguna de las siguientes cosas o tienes interes en ellas?"+"(marca todas las que sí)";
-                 document.getElementById("a").innerHTML ="Dibujo,Pintura,Dise~no, Arquitectua";
-                 document.getElementById("b").innerHTML ="Música,Canto,Baile";
-                 document.getElementById("c").innerHTML ="Escritura, Poesía, Oratoria";
-                 document.getElementById("d").innerHTML ="Fotografía,Historietas, Actuación";
+                    document.getElementById("enunciado").innerHTML = "A la hora de usar su tiempo de ocio, ¿qué preferiria hacer?";
+                 document.getElementById("a").innerHTML ="Dibujar o Tocar algun Instrumento Mu  sical";
+                 document.getElementById("b").innerHTML ="Leer las noticias o un buen libro";
+                 document.getElementById("c").innerHTML ="Practicar un deporte";
+                 document.getElementById("d").innerHTML ="Crear algo mecánico";
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -532,7 +797,7 @@
                 }
             };
 
-            var campo18 = {
+            var campo19 = {
                 nombre : "Empresarismo",
                 descarte : false,
                 preguntar : function(c) {
@@ -564,15 +829,17 @@
                 }
             };
 
-            var campo = {
+            var campo20 = {
+                nombre : "Praxis",
                 descarte : false,
                 preguntar : function(c) {
-                    document.getElementById("enunciado").innerHTML = "Es el primer día de la Universidad y hacen una mesa redonda"+
-                    "para conocercen mejor. ¿En esa mesa usted quien sería?";
-                 document.getElementById("a").innerHTML ="La primera persona que hable";
-                 document.getElementById("b").innerHTML ="Preferiría no hacerlo";
-                 document.getElementById("c").innerHTML ="No me encantaría, pero no me molestaria hacerlo";
-                 document.getElementById("d").innerHTML ="Si lo veo adecuado participaría activamente";
+                    document.getElementById("enunciado").innerHTML = "Tu profesor de física te pone de tarea hacer un avioncito"+
+                    " de papel y que vuele; ¿Qué es lo primero que harías?";
+                 document.getElementById("a").innerHTML ="Investigar sobre las propiedades del papel que vas a usar,"+
+                 " la aerodinámica, estudias sobre caida libre y demás";
+                 document.getElementById("b").innerHTML ="Harías el avioncito de papel una y otra vez hasta que vuele";
+                 document.getElementById("c").innerHTML ="Le dirías a un amigo que te haga uno";
+                 document.getElementById("d").innerHTML ="Ninguna de las anteriores";
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -594,15 +861,17 @@
                 }
             };
 
-            var campo = {
+
+            var campo21 = {
+                nombre : "Redacción",
                 descarte : false,
                 preguntar : function(c) {
-                    document.getElementById("enunciado").innerHTML = "Es el primer día de la Universidad y hacen una mesa redonda"+
-                    "para conocercen mejor. ¿En esa mesa usted quien sería?";
-                 document.getElementById("a").innerHTML ="La primera persona que hable";
-                 document.getElementById("b").innerHTML ="Preferiría no hacerlo";
-                 document.getElementById("c").innerHTML ="No me encantaría, pero no me molestaria hacerlo";
-                 document.getElementById("d").innerHTML ="Si lo veo adecuado participaría activamente";
+                    document.getElementById("enunciado").innerHTML = "Cuando escribes algo, ¿la reacción de la gente que"+
+                    " lo lee es?";
+                 document.getElementById("a").innerHTML ="Dicen que serás el próximo Nobel de Literatura";
+                 document.getElementById("b").innerHTML ="Nunca he escrito o lo hago pocas veces";
+                 document.getElementById("c").innerHTML ="Les gusta tu manera de escribir";
+                 document.getElementById("d").innerHTML ="Dicen que deberías mejorar tu manera de escribir";
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -622,6 +891,132 @@
                 getNombre : function(c) {
                     return this.nombre;
                 }
+            };
+
+            var campo22 = {
+                nombre : "Literatura",
+                descarte : false,
+                preguntar : function(c) {
+                    document.getElementById("enunciado").innerHTML = "Es viernes en la noche y ha sido una dura semana de estudio,"+
+                    " pero antes de hacer eso que disfrutas, te frustras y te das cuenta que te vas a tener que quedar leyendo un"+
+                    " libro/documento de 200 paginas y en seguida tu...";
+                 document.getElementById("a").innerHTML ="En primer lugar, ¿Por qué me frustraría?, si leer era mi plan original"+
+                 " y si no lo era pues leer no es un poblema";
+                 document.getElementById("b").innerHTML ="Si hay que hacerlo, pues no hay mas remedio, pero más 200 paginas?,"+
+                 " ¿No es un poco largo?";
+                 document.getElementById("c").innerHTML ="¿Por qué habría de leer un libro de 200 paginas en un día,"+
+                 " para que me serviría?";
+                 document.getElementById("d").innerHTML ="Quemas el libro";
+                },
+                evaluar : function(c) { 
+                    var elementos = document.getElementsByName("opciones");
+    
+                    for(var i=0; i<elementos.length; i++) {
+                      if((elementos[i].checked)&(i==0)){
+                        this.descarte = true;
+                      }else if((elementos[i].checked)&(i==1)){
+                        this.descarte = true;
+                      }else if((elementos[i].checked)&(i==2)){
+    
+                      }else if((elementos[i].checked)&(i==3)){
+    
+                        }
+                    }
+                },
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var campo23 = {
+                nombre : "Economía Finanzas Negocios",
+                descarte : false,
+                preguntar : function(c) {
+                    document.getElementById("enunciado").innerHTML = "¿Invertirías en la bolsa, o te gustaría trabajar en ella?"+
+                    ", o ¿Qué te parecería aprender sobre finanzas?";
+                 document.getElementById("a").innerHTML ="Suena interesante pero no es mi pasión";
+                 document.getElementById("b").innerHTML ="Sueño con ello desde siempre";
+                 document.getElementById("c").innerHTML ="¿Qué es la bolsa?";
+                 document.getElementById("d").innerHTML ="Podría ser una opción";
+                },
+                evaluar : function(c) { 
+                    var elementos = document.getElementsByName("opciones");
+    
+                    for(var i=0; i<elementos.length; i++) {
+                      if((elementos[i].checked)&(i==0)){
+                        this.descarte = true;
+                      }else if((elementos[i].checked)&(i==1)){
+                        this.descarte = true;
+                      }else if((elementos[i].checked)&(i==2)){
+    
+                      }else if((elementos[i].checked)&(i==3)){
+    
+                        }
+                    }
+                },
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var campo24 = {
+                nombre : "Sistemas",
+                descarte : false,
+                preguntar : function(c) {
+                    document.getElementById("enunciado").innerHTML = "Ahora, en el tema de computadoras usted...";
+                 document.getElementById("a").innerHTML ="Quisiera saber como funcionan los programas que usa y"+
+                 " hacer sus propios programas";
+                 document.getElementById("b").innerHTML ="Es muy bueno en computadoras pero no se interesa "+
+                 "en hacer, sólo en usar programas";
+                 document.getElementById("c").innerHTML ="Es pésimo usando computadoras";
+                 document.getElementById("d").innerHTML ="Las usa y no es pésimo, pero no quiere dedicar su vida a ellas";
+                },
+                evaluar : function(c) { 
+                    var elementos = document.getElementsByName("opciones");
+    
+                    for(var i=0; i<elementos.length; i++) {
+                      if((elementos[i].checked)&(i==0)){
+                        this.descarte = true;
+                      }else if((elementos[i].checked)&(i==1)){
+                        this.descarte = true;
+                      }else if((elementos[i].checked)&(i==2)){
+    
+                      }else if((elementos[i].checked)&(i==3)){
+    
+                        }
+                    }
+                },
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+
+            var respuestas = {
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
             };
 
             function evaluar(){
@@ -779,16 +1174,30 @@
                 }else if(con==17){
                     con++;
                     campo18.evaluar();
-                    //campo19.preguntar();
-                    evaluar();
+                    campo19.preguntar();
                 }else if(con==18){
                     con++;
-                    //campo19.evaluar();
-                   // campo20.preguntar();
+                    campo19.evaluar();
+                    campo20.preguntar();
                 }else if(con==19){
-                   // con++;
-                   // campo20.evaluar();
-                   // campo.preguntar();
+                    con++;
+                    campo20.evaluar();
+                    campo21.preguntar();
+                }else if(con==20){
+                    con++;
+                    campo21.evaluar();
+                    campo22.preguntar();
+                }else if(con==21){
+                    con++;
+                    campo22.evaluar();
+                    campo23.preguntar();
+                }else if(con==22){
+                    con++;
+                    campo23.evaluar();
+                    campo24.preguntar();
+                }else if(con==23){
+                    con++;
+                    evaluar();
                 }
             }
 
@@ -810,11 +1219,10 @@
             <br>
             <br>
             <br>
-            <br>
             <div class="row">
                 <div id="test" class="col-md-7   col-md-offset-3">
-                        <center><div id="enunciado">Supón que en tu colegio hay una niña que está embarazada 
-                            y va a ser expulsada. ¿Qué harías?</div>
+                        <center><b><div id="enunciado">Supón que en tu colegio hay una niña que está embarazada 
+                            y va a ser expulsada. ¿Qué harías?</div></b>
                         <br></center>
                         <div class='col-md-8 col-md-offset-2'>
                         <ol type="a">

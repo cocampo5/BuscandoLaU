@@ -42,7 +42,11 @@ $search;
     						if ($_POST['buscar']) {
     							echo "<input type='text' name='busqueda' value=".$_POST['busqueda']." class='form-control'>";
     						}	else{
+<<<<<<< HEAD
     							echo "<input type='text' name='busqueda' value='' class='form-control'>";
+=======
+    							echo "<input type='text' name='busqueda'>";
+>>>>>>> 6d4fab364a1c70ab495d24318738ba16f92b55c2
     						}
     						?>
 							&nbsp; <b>¿Qué deseas buscar?</b>&nbsp;&nbsp;&nbsp;
