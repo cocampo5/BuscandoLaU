@@ -844,9 +844,133 @@
                     return this.nombre;
                 }
             };
-            var pregrado = {
+            var pregrado28 = {
                 descarte : false,
-                nombre : "Planeación y desarrollo social",
+                nombre : "Ingeniería civil",
+                c1 : true,
+                c2 : true,
+                c3 : true,
+                c4 : false,
+                c5 : true,
+                c6 : true,
+                c7 : false,
+                c8 : true,
+                c9 : true,
+                c10 : true,
+                c11 : true,
+                c12 : false,
+                c13 : false,
+                c14 : true,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : true,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+            var pregrado29 = {
+                descarte : false,
+                nombre : "Ingeniería financiera",
+                c1 : true,
+                c2 : false,
+                c3 : true,
+                c4 : false,
+                c5 : true,
+                c6 : true,
+                c7 : false,
+                c8 : true,
+                c9 : true,
+                c10 : true,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+            var pregrado30 = {
+                descarte : false,
+                nombre : "Ingeniería geológica",
+                c1 : true,
+                c2 : false,
+                c3 : true,
+                c4 : false,
+                c5 : true,
+                c6 : true,
+                c7 : false,
+                c8 : true,
+                c9 : true,
+                c10 : true,
+                c11 : true,
+                c12 : false,
+                c13 : false,
+                c14 : true,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+            var pregrado31 = {
+                descarte : false,
+                nombre : "Ingeniería mecánica",
+                c1 : true,
+                c2 : false,
+                c3 : true,
+                c4 : false,
+                c5 : true,
+                c6 : true,
+                c7 : false,
+                c8 : true,
+                c9 : true,
+                c10 : true,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : true,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+            var pregrado32 = {
+                descarte : false,
+                nombre : "Ingeniería Mecatrónica",
                 c1 : false,
                 c2 : false,
                 c3 : false,
@@ -875,108 +999,108 @@
                     return this.nombre;
                 }
             };
-            var pregrado = {
+            var pregrado33 = {
                 descarte : false,
-                nombre : "Planeación y desarrollo social",
+                nombre : "Mercadeo",
                 c1 : false,
-                c2 : false,
-                c3 : false,
+                c2 : true,
+                c3 : true,
                 c4 : false,
                 c5 : false,
                 c6 : false,
-                c7 : false,
+                c7 : true,
                 c8 : false,
-                c9 : false,
+                c9 : true,
                 c10 : false,
                 c11 : false,
                 c12 : false,
-                c13 : false,
+                c13 : true,
                 c14 : false,
                 c15 : false,
                 c16 : false,
                 c17 : false,
                 c18 : false,
-                c19 : false,
+                c19 : true,
                 c20 : false,
                 c21 : false,
                 c22 : false,
-                c23 : false,
+                c23 : true,
                 c24 : false,
                 getNombre : function(c) {
                     return this.nombre;
                 }
             };
-            var pregrado = {
+            var pregrado34 = {
                 descarte : false,
-                nombre : "Planeación y desarrollo social",
-                c1 : false,
+                nombre : "Administración financiera",
+                c1 : true,
                 c2 : false,
-                c3 : false,
+                c3 : true,
                 c4 : false,
-                c5 : false,
-                c6 : false,
+                c5 : true,
+                c6 : true,
                 c7 : false,
-                c8 : false,
-                c9 : false,
+                c8 : true,
+                c9 : true,
                 c10 : false,
-                c11 : false,
+                c11 : true,
                 c12 : false,
-                c13 : false,
+                c13 : true,
                 c14 : false,
                 c15 : false,
                 c16 : false,
                 c17 : false,
                 c18 : false,
-                c19 : false,
+                c19 : true,
                 c20 : false,
                 c21 : false,
                 c22 : false,
-                c23 : false,
+                c23 : true,
                 c24 : false,
                 getNombre : function(c) {
                     return this.nombre;
                 }
             };
-            var pregrado = {
+            var pregrado35 = {
                 descarte : false,
-                nombre : "Planeación y desarrollo social",
-                c1 : false,
+                nombre : "Administración de Sistemas Informáticos",
+                c1 : true,
                 c2 : false,
-                c3 : false,
+                c3 : true,
                 c4 : false,
-                c5 : false,
-                c6 : false,
+                c5 : true,
+                c6 : true,
                 c7 : false,
-                c8 : false,
-                c9 : false,
+                c8 : true,
+                c9 : true,
                 c10 : false,
-                c11 : false,
+                c11 : true,
                 c12 : false,
-                c13 : false,
+                c13 : true,
                 c14 : false,
                 c15 : false,
                 c16 : false,
                 c17 : false,
                 c18 : false,
-                c19 : false,
+                c19 : true,
                 c20 : false,
                 c21 : false,
                 c22 : false,
-                c23 : false,
-                c24 : false,
+                c23 : true,
+                c24 : true,
                 getNombre : function(c) {
                     return this.nombre;
                 }
             };
-            var pregrado = {
+            var pregrado36 = {
                 descarte : false,
-                nombre : "Planeación y desarrollo social",
+                nombre : "Fisioterapia",
                 c1 : false,
-                c2 : false,
+                c2 : true,
                 c3 : false,
-                c4 : false,
-                c5 : false,
-                c6 : false,
+                c4 : true,
+                c5 : true,
+                c6 : true,
                 c7 : false,
                 c8 : false,
                 c9 : false,
@@ -984,137 +1108,13 @@
                 c11 : false,
                 c12 : false,
                 c13 : false,
-                c14 : false,
+                c14 : true,
                 c15 : false,
                 c16 : false,
-                c17 : false,
-                c18 : false,
+                c17 : true,
+                c18 : true,
                 c19 : false,
-                c20 : false,
-                c21 : false,
-                c22 : false,
-                c23 : false,
-                c24 : false,
-                getNombre : function(c) {
-                    return this.nombre;
-                }
-            };
-            var pregrado = {
-                descarte : false,
-                nombre : "Planeación y desarrollo social",
-                c1 : false,
-                c2 : false,
-                c3 : false,
-                c4 : false,
-                c5 : false,
-                c6 : false,
-                c7 : false,
-                c8 : false,
-                c9 : false,
-                c10 : false,
-                c11 : false,
-                c12 : false,
-                c13 : false,
-                c14 : false,
-                c15 : false,
-                c16 : false,
-                c17 : false,
-                c18 : false,
-                c19 : false,
-                c20 : false,
-                c21 : false,
-                c22 : false,
-                c23 : false,
-                c24 : false,
-                getNombre : function(c) {
-                    return this.nombre;
-                }
-            };
-            var pregrado = {
-                descarte : false,
-                nombre : "Planeación y desarrollo social",
-                c1 : false,
-                c2 : false,
-                c3 : false,
-                c4 : false,
-                c5 : false,
-                c6 : false,
-                c7 : false,
-                c8 : false,
-                c9 : false,
-                c10 : false,
-                c11 : false,
-                c12 : false,
-                c13 : false,
-                c14 : false,
-                c15 : false,
-                c16 : false,
-                c17 : false,
-                c18 : false,
-                c19 : false,
-                c20 : false,
-                c21 : false,
-                c22 : false,
-                c23 : false,
-                c24 : false,
-                getNombre : function(c) {
-                    return this.nombre;
-                }
-            };
-            var pregrado = {
-                descarte : false,
-                nombre : "Planeación y desarrollo social",
-                c1 : false,
-                c2 : false,
-                c3 : false,
-                c4 : false,
-                c5 : false,
-                c6 : false,
-                c7 : false,
-                c8 : false,
-                c9 : false,
-                c10 : false,
-                c11 : false,
-                c12 : false,
-                c13 : false,
-                c14 : false,
-                c15 : false,
-                c16 : false,
-                c17 : false,
-                c18 : false,
-                c19 : false,
-                c20 : false,
-                c21 : false,
-                c22 : false,
-                c23 : false,
-                c24 : false,
-                getNombre : function(c) {
-                    return this.nombre;
-                }
-            };
-            var pregrado = {
-                descarte : false,
-                nombre : "Planeación y desarrollo social",
-                c1 : false,
-                c2 : false,
-                c3 : false,
-                c4 : false,
-                c5 : false,
-                c6 : false,
-                c7 : false,
-                c8 : false,
-                c9 : false,
-                c10 : false,
-                c11 : false,
-                c12 : false,
-                c13 : false,
-                c14 : false,
-                c15 : false,
-                c16 : false,
-                c17 : false,
-                c18 : false,
-                c19 : false,
-                c20 : false,
+                c20 : true,
                 c21 : false,
                 c22 : false,
                 c23 : false,
@@ -1287,13 +1287,15 @@
  
                 for(var i=0; i<elementos.length; i++) {
                   if((elementos[i].checked)&(i==0)){
-                    this.descarte = true;
+                    //this.descarte = true;
+                    respuestas.c1 = false;
                   }else if((elementos[i].checked)&(i==1)){
-                    this.descarte = true;
+                    //this.descarte = true;
+                    respuestas.c1 = false;
                   }else if((elementos[i].checked)&(i==2)){
-                   this.descarte = false;
+                   //this.descarte = false;
                   }else if((elementos[i].checked)&(i==3)){
-                    this.descarte = false;
+                    //this.descarte = false;
                   }
                 }
                 },
@@ -1320,9 +1322,10 @@
                       if((elementos[i].checked)&(i==0)){
                         
                       }else if((elementos[i].checked)&(i==1)){
-                        this.descarte = true;
+                        //this.descarte = true;
+                        respuestas.c2 = false;
                       }else if((elementos[i].checked)&(i==2)){
-    
+                        respuestas.c2 = false;
                       }else if((elementos[i].checked)&(i==3)){
     
                         }
@@ -1348,13 +1351,14 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
-                        this.descarte = true;
+                        //this.descarte = true;
+                        respuestas.c3 = false;
                       }else if((elementos[i].checked)&(i==1)){
     
                       }else if((elementos[i].checked)&(i==2)){
     
                       }else if((elementos[i].checked)&(i==3)){
-    
+                          respuestas.c3 = false;
                         }
                     }
                 },
@@ -1379,9 +1383,11 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
-                        this.descarte = true;
+                       // this.descarte = true;
+                       respuestas.c4 = false;
                       }else if((elementos[i].checked)&(i==1)){
-                        this.descarte = true;
+                        //this.descarte = true;
+                        respuestas.c4 = false;
                       }else if((elementos[i].checked)&(i==2)){
     
                       }else if((elementos[i].checked)&(i==3)){
@@ -1413,11 +1419,12 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
-                        this.descarte = true;
+                        //this.descarte = true;
                       }else if((elementos[i].checked)&(i==1)){
-                        this.descarte = true;
+                        //this.descarte = true;
+                        respuestas.c5 = false;
                       }else if((elementos[i].checked)&(i==2)){
-    
+                          respuestas.c5 = false;
                       }else if((elementos[i].checked)&(i==3)){
     
                         }
@@ -1444,13 +1451,14 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
-                        this.descarte = true;
+                        //this.descarte = true;
+                        respuestas.c6 = false;
                       }else if((elementos[i].checked)&(i==1)){
-                        this.descarte = true;
+                        //this.descarte = true;
                       }else if((elementos[i].checked)&(i==2)){
     
                       }else if((elementos[i].checked)&(i==3)){
-    
+                        respuestas.c6 = false;   
                         }
                     }
                 },
@@ -1476,9 +1484,11 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
-                        this.descarte = true;
+                        //this.descarte = true;
+                        respuestas.c7 = false;
                       }else if((elementos[i].checked)&(i==1)){
-                        this.descarte = true;
+                        //this.descarte = true;
+                        respuestas.c7 = false;
                       }else if((elementos[i].checked)&(i==2)){
 
                       }else if((elementos[i].checked)&(i==3)){
@@ -1509,11 +1519,13 @@
                       if((elementos[i].checked)&(i==0)){
 
                       }else if((elementos[i].checked)&(i==1)){
-                        this.descarte = true;
+                        //this.descarte = true;
+                        respuestas.c8 = false;
                       }else if((elementos[i].checked)&(i==2)){
     
                       }else if((elementos[i].checked)&(i==3)){
-                        this.descarte = true;
+                       // this.descarte = true;
+                        respuestas.c8 = false;
                         }
                     }
                 },
@@ -1538,8 +1550,11 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
-                        this.descarte = true;
+                        //this.descarte = true;
+                        respuestas.c9 = false;
+
                       }else if((elementos[i].checked)&(i==1)){
+                        respuestas.c9 = false;
                         
                       }else if((elementos[i].checked)&(i==2)){
     
@@ -1575,7 +1590,7 @@
                       }else if((elementos[i].checked)&(i==2)){
     
                       }else if((elementos[i].checked)&(i==3)){
-    
+                        respuestas.c10 = false; 
                         }
                     }
                 },
@@ -1593,7 +1608,7 @@
                  document.getElementById("b").innerHTML ="Preferiría ir a un país donde se hable español";
                  document.getElementById("c").innerHTML ="Me encantaría, uno si va a viajar es para conocer "+
                  "culturas completamente distintas";
-                 document.getElementById("d").innerHTML ="Si el idioma es fácil pues me parecería hasta divertido";
+                 document.getElementById("d").innerHTML ="Si el idioma es fácil puede que lo haga";
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -1603,9 +1618,12 @@
 
                       }else if((elementos[i].checked)&(i==1)){
                         this.descarte = true;
+                        respuestas.c11 = false;
+
                       }else if((elementos[i].checked)&(i==2)){
     
                       }else if((elementos[i].checked)&(i==3)){
+                        respuestas.c11 = false;
     
                         }
                     }
@@ -1621,10 +1639,10 @@
                 preguntar : function(c) {
                     document.getElementById("enunciado").innerHTML = "¿Tienes facilidad y te gustaría trabajar en un empleo"+
                     " que tengas que tratar con niños?";
-                 document.getElementById("a").innerHTML ="Si";
-                 document.getElementById("b").innerHTML ="No";
-                 document.getElementById("c").innerHTML ="quizás";
-                 document.getElementById("d").innerHTML ="No sabe, no responde";
+                 document.getElementById("a").innerHTML ="Si, amo los niños";
+                 document.getElementById("b").innerHTML ="No, no soy bueno tratando con ellos y no me gustan";
+                 document.getElementById("c").innerHTML ="Aunque me gustan sería un fracaso trabajando con ellos";
+                 document.getElementById("d").innerHTML ="Lo intentaría, ¿Por qué no hacerlo?";
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -1634,8 +1652,10 @@
                         
                       }else if((elementos[i].checked)&(i==1)){
                         this.descarte = true;
+                        respuestas.c12 = false;
+
                       }else if((elementos[i].checked)&(i==2)){
-    
+                        respuestas.c12 = false;
                       }else if((elementos[i].checked)&(i==3)){
     
                         }
@@ -1665,11 +1685,14 @@
                       if((elementos[i].checked)&(i==0)){
                         //this.descarte = true;
                       }else if((elementos[i].checked)&(i==1)){
-                        //this.descarte = true;
+                        this.descarte = true;
+                        respuestas.c13 = false;
+
                       }else if((elementos[i].checked)&(i==2)){
     
                       }else if((elementos[i].checked)&(i==3)){
-    
+                        respuestas.c13 = false;
+                      
                         }
                     }
                 },
@@ -1698,10 +1721,13 @@
                       if((elementos[i].checked)&(i==0)){
                         //this.descarte = true;
                       }else if((elementos[i].checked)&(i==1)){
-                        //this.descarte = true;
+                        this.descarte = true;
+                        respuestas.c14 = false;
+
                       }else if((elementos[i].checked)&(i==2)){
     
                       }else if((elementos[i].checked)&(i==3)){
+                        respuestas.c14 = false;
     
                         }
                     }
@@ -1729,7 +1755,10 @@
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
                         this.descarte = true;
+                        respuestas.c15 = false;
+
                       }else if((elementos[i].checked)&(i==1)){
+                        respuestas.c15 = false;
                         
                       }else if((elementos[i].checked)&(i==2)){
     
@@ -1762,7 +1791,10 @@
                         
                       }else if((elementos[i].checked)&(i==1)){
                         this.descarte = true;
+                        respuestas.c16 = false;
+
                       }else if((elementos[i].checked)&(i==2)){
+                        respuestas.c16 = false;
     
                       }else if((elementos[i].checked)&(i==3)){
     
@@ -1793,9 +1825,12 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
+                        respuestas.c17 = false;
                         
                       }else if((elementos[i].checked)&(i==1)){
                         this.descarte = true;
+                        respuestas.c17 = false;
+
                       }else if((elementos[i].checked)&(i==2)){
     
                       }else if((elementos[i].checked)&(i==3)){
@@ -1824,12 +1859,15 @@
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
                         //this.descarte = true;
+
                       }else if((elementos[i].checked)&(i==1)){
                         //this.descarte = true;
                       }else if((elementos[i].checked)&(i==2)){
+                        respuestas.c18 = false;
     
                       }else if((elementos[i].checked)&(i==3)){
-    
+                        respuestas.c18 = false;
+                        
                         }
                     }
                 },
@@ -1855,13 +1893,18 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
-                        this.descarte = true;
+                        //this.descarte = true;
+
                       }else if((elementos[i].checked)&(i==1)){
                         this.descarte = true;
+                        respuestas.c19 = false;
+
                       }else if((elementos[i].checked)&(i==2)){
                         
                       }else if((elementos[i].checked)&(i==3)){
                         this.descarte = true;
+                        respuestas.c19 = false;
+
                         }
                     }
                 },
@@ -1887,13 +1930,15 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
-                        this.descarte = true;
+                        //this.descarte = true;
                       }else if((elementos[i].checked)&(i==1)){
-                        this.descarte = true;
+                        //this.descarte = true;
                       }else if((elementos[i].checked)&(i==2)){
-    
+                        respuestas.c20 = false;
+                          
                       }else if((elementos[i].checked)&(i==3)){
-    
+                        respuestas.c20 = false;
+                          
                         }
                     }
                 },
@@ -1919,13 +1964,16 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
-                        this.descarte = true;
+                        //this.descarte = true;
                       }else if((elementos[i].checked)&(i==1)){
-                        this.descarte = true;
+                        //this.descarte = true;
+                        respuestas.c21 = false;
+
                       }else if((elementos[i].checked)&(i==2)){
     
                       }else if((elementos[i].checked)&(i==3)){
-    
+                        respuestas.c21 = false;
+                          
                         }
                     }
                 },
@@ -1954,13 +2002,16 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
-                        this.descarte = true;
+                        //this.descarte = true;
                       }else if((elementos[i].checked)&(i==1)){
                         this.descarte = true;
+                        respuestas.c22 = false;
+
                       }else if((elementos[i].checked)&(i==2)){
     
                       }else if((elementos[i].checked)&(i==3)){
-    
+                        respuestas.c22 = false;
+                        
                         }
                     }
                 },
@@ -1986,10 +2037,13 @@
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
                         this.descarte = true;
+                        respuestas.c23 = false;
+
                       }else if((elementos[i].checked)&(i==1)){
-                        this.descarte = true;
+                        //this.descarte = true;
                       }else if((elementos[i].checked)&(i==2)){
-    
+                        respuestas.c23 = false;
+                  
                       }else if((elementos[i].checked)&(i==3)){
     
                         }
@@ -2017,10 +2071,13 @@
     
                     for(var i=0; i<elementos.length; i++) {
                       if((elementos[i].checked)&(i==0)){
-                        this.descarte = true;
+                        //this.descarte = true;
                       }else if((elementos[i].checked)&(i==1)){
                         this.descarte = true;
+                        respuestas.c24 = false;
+
                       }else if((elementos[i].checked)&(i==2)){
+                        respuestas.c24 = false;
     
                       }else if((elementos[i].checked)&(i==3)){
     
@@ -2060,86 +2117,186 @@
                 c24 : true,
             };
 
+            
+                var pregrados = [pregrado1, pregrado2, pregrado3, pregrado4, pregrado5, pregrado6, pregrado7, pregrado8, pregrado9, pregrado10, 
+                pregrado11, pregrado12, pregrado13, pregrado14, pregrado15, pregrado16, pregrado17, pregrado18, pregrado19, pregrado20, pregrado21,
+                pregrado22, pregrado23, pregrado24, pregrado25, pregrado26, pregrado27, pregrado28, pregrado29, pregrado30, pregrado31, pregrado32,
+                pregrado33, pregrado34, pregrado35, pregrado36];
+
+                var interseccion = [];
+
             function evaluar(){
-                var descartados = [];
+
                 var i = 0;
-                if(campo1.descarte){
-                    descartados[i] = campo1.getNombre();
+                var n = [];
+                for(var j=0; j<pregrados.length; j++) {
+                  var f = 0;
+                  if(pregrados[j].c1){
+                    f++;
+                  }
+                  if(pregrados[j].c2){
+                    f++;
+                  }if(pregrados[j].c3){
+                    f++;
+                  }if(pregrados[j].c4){
+                    f++;
+                  }if(pregrados[j].c5){
+                    f++;
+                  }if(pregrados[j].c6){
+                    f++;
+                  }if(pregrados[j].c7){
+                    f++;
+                  }if(pregrados[j].c8){
+                    f++;
+                  }if(pregrados[j].c9){
+                    f++;
+                  }if(pregrados[j].c10){
+                    f++;
+                  }if(pregrados[j].c11){
+                    f++;
+                  }if(pregrados[j].c12){
+                    f++;
+                  }if(pregrados[j].c13){
+                    f++;
+                  }if(pregrados[j].c14){
+                    f++;
+                  }if(pregrados[j].c15){
+                    f++;
+                  }if(pregrados[j].c16){
+                    f++;
+                  }if(pregrados[j].c17){
+                    f++;
+                  }if(pregrados[j].c18){
+                    f++;
+                  }if(pregrados[j].c19){
+                    f++;
+                  }if(pregrados[j].c20){
+                    f++;
+                  }if(pregrados[j].c21){
+                    f++;
+                  }if(pregrados[j].c22){
+                    f++;
+                  }if(pregrados[j].c23){
+                    f++;
+                  }if(pregrados[j].c24){
+                    f++;
+                  }
+                  n[j] = f;
+                }
+               
+                for(var j=0; j<pregrados.length; j++) {
+                  var f = 0;
+                  if((pregrados[j].c1)&(respuestas.c1)){
+                    //interseccion[i] = pregrados[j];
+                    //i++;
+                    f++;
+                  }
+                  if((pregrados[j].c2)&(respuestas.c2)){
+                    //interseccion[i] = pregrados[j];
+                    f++;
+                    //i++; 
+                  }if((pregrados[j].c3)&(respuestas.c3)){
+                    //interseccion[i] = pregrados[j];
+                    f++;
+                    //i++; 
+                  }if((pregrados[j].c4)&(respuestas.c4)){
+                    //interseccion[i] = pregrados[j];
+                    f++;
+                    //i++; 
+                  }if((pregrados[j].c5)&(respuestas.c5)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                   // i++; 
+                  }if((pregrados[j].c6)&(respuestas.c6)){
+                    //interseccion[i] = pregrados[j];
+                    f++;
+                   // i++; 
+                  }if((pregrados[j].c7)&(respuestas.c7)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                   // i++; 
+                  }if((pregrados[j].c8)&(respuestas.c8)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                    //i++; 
+                  }if((pregrados[j].c9)&(respuestas.c9)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                   // i++; 
+                  }if((pregrados[j].c10)&(respuestas.c10)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                   // i++; 
+                  }if((pregrados[j].c11)&(respuestas.c11)){
+                    f++;
+                   // interseccion[i] = pregrados[j];
+                   // i++; 
+                  }if((pregrados[j].c12)&(respuestas.c12)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                   // i++; 
+                  }if((pregrados[j].c13)&(respuestas.c13)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                   // i++; 
+                  }if((pregrados[j].c14)&(respuestas.c14)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                    //i++; 
+                  }if((pregrados[j].c15)&(respuestas.c15)){
+                   // interseccion[i] = pregrados[j];
+                   // i++; 
+                    f++;
+
+                  }if((pregrados[j].c16)&(respuestas.c16)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                   // i++; 
+                  }if((pregrados[j].c17)&(respuestas.c17)){
+                    //interseccion[i] = pregrados[j];
+                    f++;
+                   // i++; 
+                  }if((pregrados[j].c18)&(respuestas.c18)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                    //i++; 
+                  }if((pregrados[j].c19)&(respuestas.c19)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                   // i++; 
+                  }if((pregrados[j].c20)&(respuestas.c20)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                    //i++; 
+                  }if((pregrados[j].c21)&(respuestas.c21)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                   // i++; 
+                  }if((pregrados[j].c22)&(respuestas.c22)){
+                   // interseccion[i] = pregrados[j];
+                    f++;
+                    //i++; 
+                  }if((pregrados[j].c23)&(respuestas.c23)){
+                    //interseccion[i] = pregrados[j];
+                    f++;
+                    //i++; 
+                  }if((pregrados[j].c24)&(respuestas.c24)){
+                    //interseccion[i] = pregrados[j];
+                    f++;
+                    //i++; 
+                  }
+                  if(f>=(n[j]-2)){
+                    interseccion[i] = pregrados[j];
                     i++;
+                  }
                 }
-                if(campo2.descarte){
-                    descartados[i] = campo2.getNombre();
-                    i++;
+                var te = "<b>Los pregrados son:</b><br><br> ";
+                for(var j=0; j<interseccion.length; j++) {
+                  te = te + interseccion[j].getNombre()+"<br>";
                 }
-                if(campo3.descarte){
-                    descartados[i] = campo3.getNombre();
-                    i++;
-                }
-                if(campo4.descarte){
-                    descartados[i] = campo4.getNombre();
-                    i++;
-                }
-                if(campo5.descarte){
-                    descartados[i] = campo5.getNombre();
-                    i++;
-                }
-                if(campo6.descarte){
-                    descartados[i] = campo6.getNombre();
-                    i++;
-                }
-                if(campo7.descarte){
-                    descartados[i] = campo7.getNombre();
-                    i++;
-                }
-                if(campo8.descarte){
-                    descartados[i] = campo8.getNombre();
-                    i++;
-                }
-                if(campo9.descarte){
-                    descartados[i] = campo9.getNombre();
-                    i++;
-                }
-                if(campo10.descarte){
-                    descartados[i] = campo10.getNombre();
-                    i++;
-                }
-                if(campo11.descarte){
-                    descartados[i] = campo11.getNombre();
-                    i++;
-                }
-                if(campo12.descarte){
-                    descartados[i] = campo12.getNombre();
-                    i++;
-                }
-                if(campo13.descarte){
-                    descartados[i] = campo13.getNombre();
-                    i++;
-                }
-                if(campo14.descarte){
-                    descartados[i] = campo14.getNombre();
-                    i++;
-                }
-                if(campo15.descarte){
-                    descartados[i] = campo15.getNombre();
-                    i++;
-                }
-                if(campo16.descarte){
-                    descartados[i] = campo16.getNombre();
-                    i++;
-                }
-                if(campo17.descarte){
-                    descartados[i] = campo17.getNombre();
-                    i++;
-                }
-                if(campo18.descarte){
-                    descartados[i] = campo18.getNombre();
-                    i++;
-                }
-                var text = "Se descartaron: ";
-                for (j=0;j<descartados.length;j++) { 
-                    text = text +" - "+ descartados[j]+" ";
-                }
-                document.getElementById("test").innerHTML = text;
+                 document.getElementById("test").innerHTML = te;
+
+
             }
 
             var con = 0;
@@ -2240,6 +2397,7 @@
                     con++;
                     evaluar();
                 }
+
             }
 
         </script>
