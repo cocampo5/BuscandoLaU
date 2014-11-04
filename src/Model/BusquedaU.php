@@ -91,7 +91,7 @@ $search;
         while($row = mysqli_fetch_array($result)){
         	$objeConexion2 = new Conexion();
         	$search2 = $row['iduniversidad'];
-			$query2 = "SELECT *  FROM `universidad` WHERE CAST(`iduniversidad` AS varchar) == $search2";
+			$query2 = "SELECT *  FROM `universidad` WHERE `iduniversidad` = $search2";
             $conex = $objeConexion2->conectarse();
 			$result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
 			$row2 = mysqli_fetch_array($result2);
