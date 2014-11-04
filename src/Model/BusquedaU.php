@@ -101,7 +101,7 @@ $search;
 			$row2 = mysqli_fetch_array($result2);
 			$U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
         	$pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['costo'],$row['titulo'],$row['duracion'],$row['iduniversidad'],$row['pensum']);
-            echo ($row['pensum']);    
+              
 		}
         
 		for ($i=0; $i<count($pregrados);$i++) {
