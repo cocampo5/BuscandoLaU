@@ -101,7 +101,8 @@
                 descarte : false,
                 nombre : "Temor a la sangre",
                 preguntar : function(c) {
-                    document.getElementById("enunciado").innerHTML = "¿La siguiente imagen que le causa?";
+                    document.getElementById("enunciado").innerHTML = "¿La siguiente imagen que le causa?<br><br>"+
+                    "<img src='../web/imagenes/mano.jpg' width='30%' height='30%'>";
                  document.getElementById("a").innerHTML ="Ganas de desmayarse";
                  document.getElementById("b").innerHTML ="Repulsión y asco";
                  document.getElementById("c").innerHTML ="Interes por lo que pudo haber causado esa lesión";
@@ -810,11 +811,10 @@
             <br>
             <br>
             <br>
-            <br>
             <div class="row">
                 <div id="test" class="col-md-7   col-md-offset-3">
-                        <center><div id="enunciado">Supón que en tu colegio hay una niña que está embarazada 
-                            y va a ser expulsada. ¿Qué harías?</div>
+                        <center><b><div id="enunciado">Supón que en tu colegio hay una niña que está embarazada 
+                            y va a ser expulsada. ¿Qué harías?</div></b>
                         <br></center>
                         <div class='col-md-8 col-md-offset-2'>
                         <ol type="a">
