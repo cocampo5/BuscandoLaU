@@ -10,7 +10,8 @@ Trabajo en equipo
 Razonamiento Matematico
 Idiomas
 Niños 
-Indoor Outdoors
+Indoor
+Outdoors
 Oratoria
 Naturaleza
 Deporte
@@ -18,3 +19,6 @@ Habilidades Artisticas
 Empresarismo
 Praxis
 Redacción
+Literatura
+Economía Finanzas Negocios
+Sistemas
