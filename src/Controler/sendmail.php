@@ -44,6 +44,6 @@
       }
   }
 
-  $sender = new sendmail();
+  //$sender = new sendmail();
   
 ?>
