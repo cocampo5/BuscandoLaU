@@ -4,26 +4,32 @@
   
   class sendmail{
 
+    var $mail;
+
       function sendmail(){
           
-          $mail = new phpmailer();
-          $mail->PluginDir = "src/Controler/phpmailer/";
-          $mail->Mailer = "smtp";
-          $mail->Port = "2525";
-          $mail->Host = "mx1.hostinger.co";
-          $mail->SMTPAuth = true;
-          $mail->Username = "webmaster@buscandolau.wc.lt"; 
-          $mail->Password = "eafit2014";
-          $mail->From = "webmaster@buscandolau.wc.lt";
-          $mail->FromName = "BuscandoLaU - Admin";
-          $mail->Timeout=30;
-          $mail->AddAddress("cocampo5@eafit.edu.co");
-          $mail->Subject = "Contacto";
-          $mail->Body = "<b>Titulo Correo</b>
+          $this->$mail = new phpmailer();
+          $this->$mail->PluginDir = "src/Controler/phpmailer/";
+          $this->$mail->Mailer = "smtp";
+          $this->$mail->Port = "2525";
+         $this->$mail->Host = "mx1.hostinger.co";
+          $this->$mail->SMTPAuth = true;
+          $this->$mail->Username = "webmaster@buscandolau.wc.lt"; 
+          $this->$mail->Password = "eafit2014";
+          $this->$mail->From = "webmaster@buscandolau.wc.lt";
+          $this->$mail->FromName = "BuscandoLaU - Admin";
+          $this->$mail->Timeout=30;
+          $this->$mail->AddAddress("andressmateo@hotmail.com");
+          $this->$mail->Subject = "Contacto";
+          $this->$mail->Body = "<b>BuscandoLaU</b>
                             <br>
-                            Muchas gracias por contactarnos, recibiras respuesta dentro de 24 horas
+                            Muchas gracias por contactarnos, recibirás respuesta en un plazo máximo de 24 horas
                         ";
-          $mail->AltBody = "Titulo correo. Muchas gracias por contactarnos, recibiras respuesta dentro de 24 horas";
+         
+      }
+
+      function enviar(){
+        $mail->AltBody = "Muchas gracias por contactarnos, recibirás respuesta en un plazo máximo de 24 horas";
           $exito = $mail->Send();
           $intentos=1; 
           while ((!$exito) && ($intentos < 6)) {
@@ -40,10 +46,14 @@
           else
           {
             echo "Mensaje enviado correctamente";
+            //header("Location:../index.html");
           } 
+
+        $sender = new sendmail();
+        $sender.enviar();
       }
   }
 
-  //$sender = new sendmail();
+  //
   
 ?>

@@ -1,6 +1,4 @@
 <?php 
-require "../Controler/sendmail.php";
-
 		class Universidad{
 			var $id;
 			var $nombre;
@@ -72,17 +70,6 @@ require "../Controler/sendmail.php";
 					</div>
 				</div>
 
-				<script>
-					function enviar(){
-						document.getElementById('cuerpo').innerHTML ='<div class='row'>
-    					<div class='col-md-10'>
-        <input id='correo' type='text' placeholder='Escribe aquí tu correo'><br>
-        Ingresa aquí tu inquietud o la información que deseas solicitar:
-        <textarea name='duda' rows='5' cols='40'></textarea>
-        </div>
-</div>';
-					}
-				</script>
 
 	<div class='modal fade' id='modalU".$this->id."' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
 		  <div class='modal-dialog'>
