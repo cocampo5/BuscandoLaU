@@ -1887,9 +1887,329 @@
                 }
             };
 
-            var pregrado43 = {
+            var pregrado61 = {
                 descarte : false,
-                nombre : "Diseño Visual",
+                nombre : "Comunicación Organizacional",
+                c1 : true,
+                c2 : true,
+                c3 : true,
+                c4 : false,
+                c5 : true,
+                c6 : true,
+                c7 : true,
+                c8 : false,
+                c9 : true,
+                c10 : false,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : true,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+                var pregrado62 = {
+                descarte : false,
+                nombre : "Administración Comercial y de Mercadeo",
+                c1 : false,
+                c2 : true,
+                c3 : true,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : true,
+                c8 : false,
+                c9 : true,
+                c10 : false,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+                var pregrado63 = {
+                descarte : false,
+                nombre : "Gestión Empresarial",
+                c1 : false,
+                c2 : true,
+                c3 : true,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : true,
+                c8 : false,
+                c9 : true,
+                c10 : false,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+                var pregrado64 = {
+                descarte : false,
+                nombre : "Gestión de Negocios Internacionales",
+                c1 : false,
+                c2 : true,
+                c3 : true,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : true,
+                c8 : false,
+                c9 : true,
+                c10 : false,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+                var pregrado65 = {
+                descarte : false,
+                nombre : "Artes Visuales",
+                c1 : false,
+                c2 : true,
+                c3 : true,
+                c4 : false,
+                c5 : true,
+                c6 : false,
+                c7 : false,
+                c8 : true,
+                c9 : true,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : true,
+                c16 : false,
+                c17 : false,
+                c18 : true,
+                c19 : false,
+                c20 : true,
+                c21 : false,
+                c22 : true,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+                var pregrado66 = {
+                descarte : false,
+                nombre : "Ingeniería de Producción",
+                c1 : true,
+                c2 : false,
+                c3 : true,
+                c4 : false,
+                c5 : true,
+                c6 : false,
+                c7 : false,
+                c8 : true,
+                c9 : true,
+                c10 : true,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : true,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+                var pregrado67 = {
+                descarte : false,
+                nombre : "Administración Tecnologica",
+                c1 : false,
+                c2 : true,
+                c3 : true,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : true,
+                c8 : false,
+                c9 : true,
+                c10 : false,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+                var pregrado68 = {
+                descarte : false,
+                nombre : "Planeación y Desarrollo Administración de Empresas Agropecuarias",
+                c1 : false,
+                c2 : true,
+                c3 : true,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : true,
+                c8 : false,
+                c9 : true,
+                c10 : false,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+                var pregrado69 = {
+                descarte : false,
+                nombre : "Comunicación Audiovisual",
+                c1 : false,
+                c2 : true,
+                c3 : true,
+                c4 : false,
+                c5 : true,
+                c6 : false,
+                c7 : false,
+                c8 : true,
+                c9 : true,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : true,
+                c16 : false,
+                c17 : false,
+                c18 : true,
+                c19 : false,
+                c20 : true,
+                c21 : false,
+                c22 : true,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+                var pregrado70 = {
+                descarte : false,
+                nombre : "Ingeniería en Instrumentación y Control",
+                c1 : true,
+                c2 : false,
+                c3 : true,
+                c4 : false,
+                c5 : true,
+                c6 : true,
+                c7 : false,
+                c8 : true,
+                c9 : true,
+                c10 : false,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+                var pregrado = {
+                descarte : false,
+                nombre : "",
                 c1 : false,
                 c2 : false,
                 c3 : false,
