@@ -1,0 +1,10 @@
+diff a/src/Controler/sendmail.php b/src/Controler/sendmail.php	(rejected hunks)
+@@ -44,6 +44,6 @@
+       }
+   }
+ 
+-  $sender = new sendmail();
++  //$sender = new sendmail();
+   
+ ?>
+\ No newline at end of file
