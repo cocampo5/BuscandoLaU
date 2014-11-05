@@ -1503,37 +1503,6 @@
                 }
             };
 
-            var pregrado49 = {
-                descarte : false,
-                nombre : "Gastronomía",
-                c1 : false,
-                c2 : false,
-                c3 : false,
-                c4 : false,
-                c5 : false,
-                c6 : false,
-                c7 : false,
-                c8 : false,
-                c9 : false,
-                c10 : false,
-                c11 : false,
-                c12 : false,
-                c13 : false,
-                c14 : false,
-                c15 : false,
-                c16 : false,
-                c17 : false,
-                c18 : false,
-                c19 : false,
-                c20 : false,
-                c21 : false,
-                c22 : false,
-                c23 : false,
-                c24 : false,
-                getNombre : function(c) {
-                    return this.nombre;
-                }
-            };
 
             var pregrado50 = {
                 descarte : false,
@@ -2207,7 +2176,327 @@
                 }
             };
 
-                var pregrado = {
+                var pregrado71 = {
+                descarte : false,
+                nombre : "Ingeniería en Higiene y Seguridad Ocupacional",
+                c1 : true,
+                c2 : false,
+                c3 : true,
+                c4 : true,
+                c5 : true,
+                c6 : true,
+                c7 : false,
+                c8 : true,
+                c9 : true,
+                c10 : true,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado72 = {
+                descarte : false,
+                nombre : "Profesional en Criminalística",
+                c1 : true,
+                c2 : false,
+                c3 : true,
+                c4 : false,
+                c5 : true,
+                c6 : true,
+                c7 : false,
+                c8 : true,
+                c9 : true,
+                c10 : true,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : true,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : true,
+                c24 : true,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado = {
+                descarte : false,
+                nombre : "",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado = {
+                descarte : false,
+                nombre : "",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado = {
+                descarte : false,
+                nombre : "",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado = {
+                descarte : false,
+                nombre : "",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado = {
+                descarte : false,
+                nombre : "",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado = {
+                descarte : false,
+                nombre : "",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado = {
+                descarte : false,
+                nombre : "",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado = {
+                descarte : false,
+                nombre : "",
+                c1 : false,
+                c2 : false,
+                c3 : false,
+                c4 : false,
+                c5 : false,
+                c6 : false,
+                c7 : false,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : false,
+                c12 : false,
+                c13 : false,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : false,
+                c21 : false,
+                c22 : false,
+                c23 : false,
+                c24 : false,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+
+            var pregrado = {
                 descarte : false,
                 nombre : "",
                 c1 : false,
