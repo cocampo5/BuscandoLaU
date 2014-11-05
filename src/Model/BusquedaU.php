@@ -39,13 +39,11 @@ $search;
     					<div class="col-xs-7 col-md-offset-1">	
     						<form action="BusquedaU.php" method="post">
     						<?php
-    						if ($_POST['buscar']) {
+    						if ($_POST['buscar'] && ($_POST["busqueda"]!="")) {
     							echo "<input type='text' name='busqueda' value=".$_POST['busqueda']." class='form-control'>";
     						}	else{
 
     							echo "<input type='text' name='busqueda' value='' class='form-control'>";
-
-    							echo "<input type='text' name='busqueda'>";
 
     						}
     						?>
