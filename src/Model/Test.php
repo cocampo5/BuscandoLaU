@@ -1123,7 +1123,38 @@
                     return this.nombre;
                 }
             };
-            var pregrado = {
+            var pregrado37 = {
+                descarte : false,
+                nombre : "Fonoaudiología",
+                c1 : false,
+                c2 : false,
+                c3 : true,
+                c4 : false,
+                c5 : false,
+                c6 : true,
+                c7 : true,
+                c8 : false,
+                c9 : false,
+                c10 : false,
+                c11 : true,
+                c12 : false,
+                c13 : true,
+                c14 : false,
+                c15 : false,
+                c16 : false,
+                c17 : false,
+                c18 : false,
+                c19 : false,
+                c20 : true,
+                c21 : true,
+                c22 : true,
+                c23 : false,
+                c24 : true,
+                getNombre : function(c) {
+                    return this.nombre;
+                }
+            };
+            var pregrado38 = {
                 descarte : false,
                 nombre : "Planeación y desarrollo social",
                 c1 : false,
@@ -1247,6 +1278,7 @@
                     return this.nombre;
                 }
             };
+
             var pregrado = {
                 descarte : false,
                 nombre : "Planeación y desarrollo social",
@@ -1642,7 +1674,8 @@
                  document.getElementById("a").innerHTML ="Si, amo los niños";
                  document.getElementById("b").innerHTML ="No, no soy bueno tratando con ellos y no me gustan";
                  document.getElementById("c").innerHTML ="Aunque me gustan sería un fracaso trabajando con ellos";
-                 document.getElementById("d").innerHTML ="Lo intentaría, ¿Por qué no hacerlo?";
+                 document.getElementById("d").innerHTML ="Lo intentaría, ¿Por qué no hacerlo?"
+                 ;
                 },
                 evaluar : function(c) { 
                     var elementos = document.getElementsByName("opciones");
@@ -2121,7 +2154,7 @@
                 var pregrados = [pregrado1, pregrado2, pregrado3, pregrado4, pregrado5, pregrado6, pregrado7, pregrado8, pregrado9, pregrado10, 
                 pregrado11, pregrado12, pregrado13, pregrado14, pregrado15, pregrado16, pregrado17, pregrado18, pregrado19, pregrado20, pregrado21,
                 pregrado22, pregrado23, pregrado24, pregrado25, pregrado26, pregrado27, pregrado28, pregrado29, pregrado30, pregrado31, pregrado32,
-                pregrado33, pregrado34, pregrado35, pregrado36];
+                pregrado33, pregrado34, pregrado35, pregrado36, pregrado37];
 
                 var interseccion = [];
 
