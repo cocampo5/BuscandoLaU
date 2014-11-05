@@ -1,4 +1,6 @@
 <?php 
+require "../Controler/sendmail.php";
+
 		class Universidad{
 			var $id;
 			var $nombre;
@@ -70,6 +72,18 @@
 					</div>
 				</div>
 
+				<script>
+					function enviar(){
+						document.getElementById('cuerpo').innerHTML ='<div class='row'>
+    					<div class='col-md-10'>
+        <input id='correo' type='text' placeholder='Escribe aquí tu correo'><br>
+        Ingresa aquí tu inquietud o la información que deseas solicitar:
+        <textarea name='duda' rows='5' cols='40'></textarea>
+        </div>
+</div>';
+					}
+				</script>
+
 	<div class='modal fade' id='modalU".$this->id."' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
 		  <div class='modal-dialog'>
 		    <div class='modal-content'>
@@ -77,11 +91,11 @@
 		        <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>
 		        <h4 class='modal-title' id='myModalLabel'>".$this->nombre."</h4>
 		      </div>
-		      <div class='modal-body'>
+		      <div id='cuerpo' class='modal-body'>
 		        ".$this->descripcion."
 		      </div>
 		      <div class='modal-footer'>
-		        <button type='button' class='btn btn-info' data-dismiss='modal'>Ver Página Completa</button>
+		        <button type='button' onclick='enviar();' class='btn btn-info'>Contacto</button>
 		      </div>
 		    </div>
 		  </div>

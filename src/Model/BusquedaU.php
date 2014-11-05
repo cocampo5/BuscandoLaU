@@ -109,7 +109,14 @@ $search;
 	}
 ?>
 
-
+<script>
+       function enviar(){
+          document.getElementById('cuerpo').innerHTML ="<div class='row'><div class='col-md-9'col-md-offset-2>"+
+          "&nbsp;&nbsp;&nbsp<input class='form-control' id='correo' type='text' placeholder='Escribe aquí tu correo'><br>Ingresa aquí "+
+          "tu inquietud o la información que deseas solicitar:<br>&nbsp;&nbsp;&nbsp<textarea class='form-control' name='duda' rows='5' cols='40'></textarea><br><br>"+
+          "<button type='button' onclick='enviar();' class='btn btn-primary center-block'>Enviar</button></div></div>";
+      }
+</script>
 
 		</div>	
 	</body>
