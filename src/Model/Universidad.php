@@ -58,7 +58,7 @@
 				    				<br>
 					    			<div class='row'>
 					    				<div class='col-xs-7'>
-					    					<h6 class='text-left'>Sitio web:  <a href='".$this->web."'>'".$this->nombre."'</a> </h6>
+					    					<h6 class='text-left'>Sitio web:  <a href='".$this->web."'>".$this->nombre."</a> </h6>
 					    				</div>
 					    				<div class='col-xs-3 col-xs-offset-2'>
 					    					<input type='submit' class='btn btn-info' value='Mas informacion' data-toggle='modal' data-target='#modalU".$this->id."'>
@@ -82,14 +82,60 @@
 		        ".$this->descripcion."
 		      </div>
 		      <div class='modal-footer'>
-		        <button type='button' onclick='enviar();' class='btn btn-info'>Contacto</button>
+		        <input type='submit' class='btn btn-info' value='Contacto' data-toggle='modal' data-target='#modalC".$this->id."'>
 		      </div>
 		    </div>
 		  </div>
 		</div>
 
+		<div class='modal fade' id='modalC".$this->id."' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+		  <div class='modal-dialog'>
+		    <div class='modal-content'>
+		      <div class='modal-header'>
+		        <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>
+		        <h4 class='modal-title' id='myModalLabel'>".$this->nombre."</h4>
+		      </div>
+		      <div id='cuerpoCorreo".$this->id."' class='modal-body'>
+		        <div class='row'>
+					<div class='col-md-12'>
+						<form id='correo".$this->id."'>
+							&nbsp;&nbsp;&nbsp;<input class='form-control' name='email' type='text' placeholder='Escribe aquí tu correo'>
+							<br>Escribe aquí tu inquietud o la información que deseas solicitar:<br>
+          					<textarea class='form-control' name='duda' rows='5' cols='40'></textarea>
 
-				";
+    				</div>
+				</div>
+		      </div>
+		      <div id='pie".$this->id."' class='modal-footer'>	      	
+		        	<input type='submit' class='btn btn-primary' id='enviar".$this->id."' value='Enviar'>
+		       	</form>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+<script>
+    $(function(){
+        $('#correo".$this->id."').submit(function(){
+        	document.getElementById('enviar".$this->id."').value ='Enviando...';
+            var url = '../Controler/enviarCorreo.php'; 
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: $('#correo".$this->id."').serialize(),
+                success: function(data){
+                  $('#cuerpoCorreo".$this->id."').html(data);
+                  document.getElementById('enviar".$this->id."').value ='Aceptar';
+                }
+             });
+		
+		//$('#modalC".$this->id."').modal('hide');
+        return false;
+        });
+    });
+</script>
+
+		";
 			}
 
 		}

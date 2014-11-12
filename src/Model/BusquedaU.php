@@ -1,7 +1,6 @@
 <?php
 require "Universidad.php";
 require "Pregrado.php";
-require "../Controler/sendmail.php";
 /*
 Se incluye el archivo de la conexión y se instancia una nueva
 */
@@ -60,7 +59,7 @@ $search;
 							?>
                         	 
     					</div>
-    					<div class="col-xs-3">
+    					<div id="b" class="col-xs-3">
     							<input type="submit" class="btn btn-primary center-block" name="buscar" value="Buscar" style="width:80%">
 							</form>
     					</div>
@@ -110,27 +109,24 @@ $search;
 	}
 ?>
 
-<?php
-    function enviarCorreo(){
-        $sender = new sendmail();
-        $sender.enviar();
-    }
-?>
-
 <script>
-
-        function enviar(){
-          document.getElementById('cuerpo').innerHTML ="<div class='row'><div class='col-md-9'col-md-offset-2>"+
-          "&nbsp;&nbsp;&nbsp<input class='form-control' id='correo' type='text' placeholder='Escribe aquí tu correo'><br>Ingresa aquí "+
-          "tu inquietud o la información que deseas solicitar:<br>&nbsp;&nbsp;&nbsp<textarea class='form-control' name='duda' rows='5' cols='40'></textarea><br><br>"+
-          "<button type='button' onclick='correo();' data-dismiss='modal' class='btn btn-primary center-block'>Enviar</button></div></div>";
-      }
-
-
-      function correo(){
-        var v = "<? echo enviarCorreo()?>";
-        document.write(v);
-      }
+ function enviar(){
+    $(function(){
+        $('#correo').submit(function(){
+            var url = "t.php"; // El script a dónde se realizará la petición.
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $("#correo").serialize(), // Adjuntar los campos del formulario enviado.
+                success: function(data){
+                  $("#cuerpoCorreo").html(data); // Mostrar la respuestas del script PHP.
+                }
+             });
+    
+        return false; // Evitar ejecutar el submit del formulario.
+        });
+    });
+}
 </script>
 
 		</div>	
