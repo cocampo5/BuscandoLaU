@@ -43,9 +43,17 @@
 			function mostrarInicial(){
 				echo "
 				<div class='row'>
-					<div class='col-md-7 col-md-offset-4'>
+					<div class='col-md-11'>
 				    	<div class='panel panel-primary'>
-				    		<div class='panel-heading'>".$this->nombre."</div>
+				    		<div class='panel-heading'>
+				    		<div class='row'>
+				    			<div class='col-md-8'>".$this->nombre." </div> <div class='col-md-1 col-md-offset-3'>
+				    			<button type='button' class='btn btn-primary'id='".$this->id."' onclick='pegar".$this->id."();' aria-label='Left Align'>
+  									<span class='glyphicon glyphicon-pushpin' aria-hidden='true'></span>
+								</button>
+							</div>
+							</div>	
+				    		</div>
 				    			<div class='panel-body'>
 				    				<div class='row'>
 				    					<div class='col-xs-3'>
@@ -133,7 +141,15 @@
         return false;
         });
     });
+	
+
+function pegar".$this->id."(){
+	var s = document.getElementById('intereses').innerHTML;
+	document.getElementById('intereses').innerHTML =s+'<li class=\'list-group-item\'>".$this->nombre."</li>';
+}
+
 </script>
+
 
 		";
 			}

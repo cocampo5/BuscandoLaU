@@ -37,7 +37,7 @@ $search;
     				<br>
     				<div class="row">
     					<div class="col-xs-7 col-md-offset-1">	
-    						<form action="BusquedaU.php" method="post">
+    						<form action="BusquedaU.php" id="buscando" method="post">
     						<?php
     						if ($_POST['buscar'] && ($_POST["busqueda"]!="")) {
     							echo "<input type='text' name='busqueda' value=".$_POST['busqueda']." class='form-control'>";
@@ -60,73 +60,87 @@ $search;
                         	 
     					</div>
     					<div id="b" class="col-xs-3">
-    							<input type="submit" class="btn btn-primary center-block" name="buscar" value="Buscar" style="width:80%">
+    							<input type="submit" class="btn btn-primary center-block" id="buscar" name="buscar" value="Buscar" style="width:80%">
 							</form>
     					</div>
     				</div>
     			</div>
     		</div>
 			<br>
-			
+			<div class="row">
+                <div class="col-md-4">
+                    <br><br>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Lo que te interesa</div>
+                        <ul class="list-group" id="intereses">
+                            <!--<br><br><p class="text-center">
+                            Aquí apareceran los pregrados que vayas seleccionando.</p>
+                            <br><br>-->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-8" id="resultados">
+                    
+                
+
 <?php
-	/*
-	Esta sentencia if-else define que se va a buscar, si una universidad o un pregrado
-	*/
-	if($_POST["tipoBusqueda"]=="Universidades"){
-      	$search = $_POST["busqueda"];
+if($_POST["tipoBusqueda"]=="Universidades"){
+        $search = $_POST["busqueda"];
         $query = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
         $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());
 
         while($row = mysqli_fetch_array($result)){
-        	$universidades[] = new Universidad($row['iduniversidad'],$row['nombre'],$row['ubicacion'],$row['descripcion'],$row['tipo'], $row['web']);
+            $universidades[] = new Universidad($row['iduniversidad'],$row['nombre'],$row['ubicacion'],$row['descripcion'],$row['tipo'], $row['web']);
         }
 
         for ($i=0; $i<count($universidades);$i++) {
-        	$universidades[$i]->mostrarInicial();
-		}
-	}else{
+            $universidades[$i]->mostrarInicial();
+        }
+    }else{
 
-		$search = $_POST["busqueda"];
+        $search = $_POST["busqueda"];
         $query = "SELECT *  FROM `pregrado` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
         $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());
 
         while($row = mysqli_fetch_array($result)){
-        	$objeConexion2 = new Conexion();
-        	$search2 = $row['iduniversidad'];
-			$query2 = "SELECT *  FROM `universidad` WHERE `iduniversidad` = $search2";
+            $objeConexion2 = new Conexion();
+            $search2 = $row['iduniversidad'];
+            $query2 = "SELECT *  FROM `universidad` WHERE `iduniversidad` = $search2";
             $conex = $objeConexion2->conectarse();
-			$result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
-			$row2 = mysqli_fetch_array($result2);
-			$U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
-        	$pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['costo'],$row['titulo'],$row['duracion'],$row['iduniversidad'],$row['pensum']);
+            $result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
+            $row2 = mysqli_fetch_array($result2);
+            $U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
+            $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['costo'],$row['titulo'],$row['duracion'],$row['iduniversidad'],$row['pensum']);
               
-		}
+        }
         
-		for ($i=0; $i<count($pregrados);$i++) {
-        	$pregrados[$i]->mostrarInicial();
-		}
+        for ($i=0; $i<count($pregrados);$i++) {
+            $pregrados[$i]->mostrarInicial();
+        }
 
-	}
+    }
 ?>
-
+</div>
+</div>
 <script>
- function enviar(){
     $(function(){
-        $('#correo').submit(function(){
-            var url = "t.php"; // El script a dónde se realizará la petición.
+        $('#buscando').submit(function(){
+            document.getElementById('buscar').value ='Buscando...';
+            var url = 'busqueda.php'; 
             $.ajax({
-                type: "POST",
+                type: 'POST',
                 url: url,
-                data: $("#correo").serialize(), // Adjuntar los campos del formulario enviado.
+                data: $('#buscando').serialize(),
                 success: function(data){
-                  $("#cuerpoCorreo").html(data); // Mostrar la respuestas del script PHP.
+                  $('#resultados').html(data);
+                  document.getElementById('buscar').value ='Buscar';
                 }
              });
-    
-        return false; // Evitar ejecutar el submit del formulario.
+        return false;
         });
     });
-}
+
 </script>
 
 		</div>	
