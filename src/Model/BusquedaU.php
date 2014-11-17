@@ -78,6 +78,9 @@ $search;
                             <br><br>-->
                         </ul>
                     </div>
+                    <div class='modal-footer'>
+                        <button class="btn btn-primary center-block" id="comparar" type="button" onclick="">Comparar</button>
+                    </div>
                 </div>
 
                 <div class="col-md-8" id="resultados">
@@ -140,7 +143,6 @@ if($_POST["tipoBusqueda"]=="Universidades"){
         return false;
         });
     });
-
 </script>
 
 		</div>	
