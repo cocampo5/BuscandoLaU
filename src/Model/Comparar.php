@@ -1,20 +1,19 @@
 <?php
 	//if (!$_REQUEST['comparar']){
         $esta = false;    
-        $intereses[];
+        static $intereses;
         $id = $_REQUEST['id'];
         for ($i=0; $i<count($intereses);$i++) {
             if($intereses[$i]==$id){
                 $esta = true;
             }
+            $esta = true;
         }
         if(!$esta){
             $intereses[] = $_REQUEST['id'];
-            echo "true";
+            echo "True ".$_REQUEST['id'];
         }else{
-            echo "false";
-        }
-	/*}else{
+            echo "Yeni False";
+        } 
 
-    }*/
-?>
+?>  

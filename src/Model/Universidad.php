@@ -150,7 +150,7 @@ function pegar".$this->id."(){
             $.ajax({
                 type: 'POST',
                 url: url,
-                data: 'id=+".$this->id.";comparar=false',
+                data: 'id=+".$this->id."',
                 success: function(data){
                 	/*if(data=='true'){
 						document.getElementById('intereses').innerHTML =s+'<li class=\'list-group-item\'>".$this->nombre."</li>';
