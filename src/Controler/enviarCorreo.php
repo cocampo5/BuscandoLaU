@@ -48,13 +48,13 @@
   //El cuerpo del mensaje lo ponemos en formato html, haciendo 
   //que se vea en negrita
 
-$mensaje = utf8_decode("Felicidades, hemos registrado tu inquietud, recibirás una respuesta de parte de la universidad en las´próximas 48 horas. <br><br> Gracias por usar BuscandoLaU");
+$mensaje = utf8_decode("Felicidades, hemos registrado tu inquietud, recibirás una respuesta de parte de la universidad en las próximas 48 horas. <br><br> Gracias por usar BuscandoLaU");
 
   $mail->Subject = "Tu duda fue registrada";
   $mail->Body = $mensaje;
 
   //Definimos AltBody por si el destinatario del correo no admite email con formato html 
-  $mail->AltBody = "Felicidades, hemos registrado tu inquietud, recibirás una respuesta de parte de la universidad en las´próximas 48 horas.";
+  $mail->AltBody = "Felicidades, hemos registrado tu inquietud, recibirás una respuesta de parte de la universidad en las próximas 48 horas.";
 
   //se envia el mensaje, si no ha habido problemas 
   //la variable $exito tendra el valor true

@@ -90,7 +90,11 @@
 		        ".$this->descripcion."
 		      </div>
 		      <div class='modal-footer'>
-		        <input type='submit' class='btn btn-info' value='Contacto' data-toggle='modal' data-target='#modalC".$this->id."'>
+		      	<div class='row'>
+					<div class='col-md-12'>
+		        		<input type='submit' class='btn btn-info' value='Contacto' data-toggle='modal' data-target='#modalC".$this->id."'>
+		        	</div>
+		        </div>	
 		      </div>
 		    </div>
 		  </div>
@@ -142,20 +146,21 @@
         });
     });
 	
-
+var intereses;
 function pegar".$this->id."(){
 	var s = document.getElementById('intereses').innerHTML;
-	document.getElementById('intereses').innerHTML =s+'<li class=\'list-group-item\'>".$this->nombre."</li>';
+	//document.getElementById('intereses').innerHTML =s+'<li class=\'list-group-item\'>".$this->nombre."</li>';
 	var url = 'Comparar.php'; 
             $.ajax({
                 type: 'POST',
                 url: url,
                 data: 'id=+".$this->id."',
                 success: function(data){
-                	/*if(data=='true'){
+                	if(data != 0){
+                		intereses = data;
 						document.getElementById('intereses').innerHTML =s+'<li class=\'list-group-item\'>".$this->nombre."</li>';
-                	}*/
-                	window.alert(data);
+                	}
+                	//window.alert(data);
                 }
              });
 }

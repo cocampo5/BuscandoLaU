@@ -7,6 +7,11 @@ Se incluye el archivo de la conexión y se instancia una nueva
 require "../Controler/conexion.php";
 $objeConexion = new Conexion();
 $search;
+/*if(!empty($_SESSION['intereses'])){
+    session_destroy();    
+}*/
+   session_start();
+   $_SESSION['intereses'] = "";
 ?>
 <!DOCTYPE html>
 <html type="es">
@@ -79,7 +84,7 @@ $search;
                         </ul>
                     </div>
                     <div class='modal-footer'>
-                        <button class="btn btn-primary center-block" id="comparar" type="button" onclick="">Comparar</button>
+                        <button class="btn btn-primary center-block" id="comparar" name="comparar" type="button" onclick="comparar();">Comparar</button>
                     </div>
                 </div>
 
@@ -127,6 +132,19 @@ if($_POST["tipoBusqueda"]=="Universidades"){
 </div>
 </div>
 <script>
+function comparar(){
+    document.getElementById('comparar').value ='Comparando...';
+    var url = 'Intereses.php'; 
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: 'int='+intereses,
+                success: function(data){
+                    window.alert(data);
+                }
+             });
+}
+
     $(function(){
         $('#buscando').submit(function(){
             document.getElementById('buscar').value ='Buscando...';
@@ -137,7 +155,6 @@ if($_POST["tipoBusqueda"]=="Universidades"){
                 data: $('#buscando').serialize(),
                 success: function(data){
                   $('#resultados').html(data);
-                  document.getElementById('buscar').value ='Buscar';
                 }
              });
         return false;
