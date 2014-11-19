@@ -41,8 +41,7 @@
 				return $this->web;
 			}
 			function mostrarInicial(){
-				echo "
-				<div class='row'>
+				echo "<div class='row'>
 					<div class='col-md-11'>
 				    	<div class='panel panel-primary'>
 				    		<div class='panel-heading'>
@@ -164,10 +163,7 @@ function pegar".$this->id."(){
                 }
              });
 }
-</script>
-
-
-		";
+</script>";
 			}
 
 		}

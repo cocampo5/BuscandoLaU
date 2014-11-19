@@ -51,18 +51,7 @@ $search;
     							echo "<input type='text' name='busqueda' value='' class='form-control'>";
 
     						}
-    						?>
-							&nbsp; <b>¿Qué deseas buscar?</b>&nbsp;&nbsp;&nbsp;
-							<?php 
-								if($_POST["tipoBusqueda"]=="Universidades"){
-									echo "<input type='radio' name='tipoBusqueda' value='Pregrados'>&nbsp;&nbsp;Pregrados&nbsp;&nbsp;
-                        	<input type='radio' name='tipoBusqueda' checked='checked' value='Universidades'>&nbsp;&nbsp;Universidades";
-								}else{
-									echo "<input type='radio' name='tipoBusqueda' checked='checked' value='Pregrados'>&nbsp;&nbsp;Pregrados&nbsp;&nbsp;
-                        	<input type='radio' name='tipoBusqueda' value='Universidades'>&nbsp;&nbsp;Universidades";
-								}
-							?>
-                        	 
+    						?>                	 
     					</div>
     					<div id="b" class="col-xs-3">
     							<input type="submit" class="btn btn-primary center-block" id="buscar" name="buscar" value="Buscar" style="width:80%">
@@ -89,11 +78,8 @@ $search;
                 </div>
 
                 <div class="col-md-8" id="resultados">
-                    
-                
-
 <?php
-if($_POST["tipoBusqueda"]=="Universidades"){
+/*if($_POST["tipoBusqueda"]=="Universidades"){
         $search = $_POST["busqueda"];
         $query = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
         $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());
@@ -108,7 +94,7 @@ if($_POST["tipoBusqueda"]=="Universidades"){
     }else{
 
         $search = $_POST["busqueda"];
-        $query = "SELECT *  FROM `pregrado` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
+        $query = "SELECT *  FROM `pregrados` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
         $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());
 
         while($row = mysqli_fetch_array($result)){
@@ -119,16 +105,45 @@ if($_POST["tipoBusqueda"]=="Universidades"){
             $result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
             $row2 = mysqli_fetch_array($result2);
             $U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
-            $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['costo'],$row['titulo'],$row['duracion'],$row['iduniversidad'],$row['pensum']);
+            $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row['iduniversidad']);
               
         }
         
         for ($i=0; $i<count($pregrados);$i++) {
             $pregrados[$i]->mostrarInicial();
         }
+    }*/
+        $busqueda = $_POST["busqueda"];
+        $consultaUniversidades = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
+        $consultaPregrados = "SELECT *  FROM `pregrados` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
 
-    }
-?>
+        $resultadosUniversidades = mysqli_query($objeConexion->conectarse(), $consultaUniversidades) or die(mysqli_error());
+        $resultadosPregrados = mysqli_query($objeConexion->conectarse(), $consultaPregrados) or die(mysqli_error());
+        $universidades[] = "";
+        $pregrados[] = "";
+        while($row = mysqli_fetch_array($resultadosUniversidades)){
+            $universidades[] = new Universidad($row['iduniversidad'],$row['nombre'],$row['ubicacion'],$row['descripcion'],$row['tipo'], $row['web']);
+        }
+        while($row = mysqli_fetch_array($resultadosPregrados)){
+            $objeConexion2 = new Conexion();
+            $search2 = $row['iduniversidad'];
+            $query2 = "SELECT *  FROM `universidad` WHERE `iduniversidad` = $search2";
+            $conex = $objeConexion2->conectarse();
+            $result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
+            $row2 = mysqli_fetch_array($result2);
+            $U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
+            $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row['iduniversidad']);
+        }
+        if(count($universidades)>count($pregrados)){
+            for ($i=1; $i<count($universidades);$i++) {
+                $universidades[$i]->mostrarInicial();
+            }
+        }else{
+            for ($i=1; $i<count($pregrados);$i++) {
+                $pregrados[$i]->mostrarInicial();
+            }
+        }
+?>  
 </div>
 </div>
 <script>
@@ -155,6 +170,7 @@ function comparar(){
                 data: $('#buscando').serialize(),
                 success: function(data){
                   $('#resultados').html(data);
+                  document.getElementById('buscar').value ='Buscar';
                 }
              });
         return false;
