@@ -24,14 +24,16 @@ $busqueda = $_POST["busqueda"];
             $conex = $objeConexion2->conectarse();
             $result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
             $row2 = mysqli_fetch_array($result2);
-            $U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
-            $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row['iduniversidad']);
+            //$U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
+            $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row2['nombre']);
         }
         if(count($universidades)>count($pregrados)){
+            echo "<script>universidades = -1;</script>";
             for ($i=1; $i<count($universidades);$i++) {
                 $universidades[$i]->mostrarInicial();
             }
         }else{
+            echo "<script>universidades++;</script>";
             for ($i=1; $i<count($pregrados);$i++) {
                 $pregrados[$i]->mostrarInicial();
             }
