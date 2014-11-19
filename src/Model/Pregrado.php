@@ -151,7 +151,6 @@
 var intereses;
 function pegar".$this->id."(){
 	var s = document.getElementById('intereses').innerHTML;
-	//document.getElementById('intereses').innerHTML =s+'<li class=\'list-group-item\'>".$this->nombre."</li>';
 	var url = 'Comparar.php'; 
             $.ajax({
                 type: 'POST',

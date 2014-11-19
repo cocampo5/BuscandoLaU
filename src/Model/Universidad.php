@@ -47,7 +47,7 @@
 				    		<div class='row'>
 				    			<div class='col-md-8'>".$this->nombre." </div> <div class='col-md-1 col-md-offset-3'>
 				    			<button type='button' class='btn btn-primary'id='".$this->id."' onclick='pegar".$this->id."();' aria-label='Left Align'>
-  									<span class='glyphicon glyphicon-pushpin' aria-hidden='true'></span>
+  									<span class='glyphicon glyphicon-list' aria-hidden='true'></span>
 								</button>
 							</div>
 							</div>	
@@ -144,21 +144,16 @@
         });
     });
 	
-var intereses;
+
 function pegar".$this->id."(){
-	var s = document.getElementById('intereses').innerHTML;
-	//document.getElementById('intereses').innerHTML =s+'<li class=\'list-group-item\'>".$this->nombre."</li>';
-	var url = 'Comparar.php'; 
+	var url = 'PregradosPorU.php'; 
             $.ajax({
                 type: 'POST',
                 url: url,
                 data: 'id=+".$this->id."',
                 success: function(data){
-                	if(data != 0){
-                		intereses = data;
-						document.getElementById('intereses').innerHTML =s+'<li class=\'list-group-item\'>".$this->nombre."</li>';
-                	}
-                	//window.alert(data);
+                	data = data.replace(/<br><br><br>/g, ''); 
+					$('#panelIzquierdo').html(data);
                 }
              });
 }
