@@ -66,9 +66,7 @@ $search;
                 <div class="col-md-3" id="panelIzquierdo" name="panelIzquierdo">
                     
                 </div>
-               
                 <div class="col-md-9" id="resultados">
-                    
 <?php
         $busqueda = $_POST["busqueda"];
         $consultaUniversidades = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
@@ -88,8 +86,8 @@ $search;
             $conex = $objeConexion2->conectarse();
             $result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
             $row2 = mysqli_fetch_array($result2);
-            $U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
-            $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row['iduniversidad']);
+            //$U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
+            $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row2['nombre']);
         }
         if(count($universidades)>count($pregrados)){
             echo "<script>universidades = -1;</script>";
@@ -112,6 +110,12 @@ if(universidades==1){
     "</div><div class='modal-footer'>"+
     "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button' onclick='comparar();'>Comparar</button></div>";
 }
+var x;
+x=$("#resultados");
+var t = x.html();
+t = t.replace(/<br><br><br>/g, ""); 
+x.html(t);
+
 function comparar(){
     document.getElementById('comparar').value ='Comparando...';
     var url = 'Intereses.php'; 
@@ -120,7 +124,8 @@ function comparar(){
                 url: url,
                 data: 'int='+intereses,
                 success: function(data){
-                    $('#resultados').html(data);
+                    data = data.replace(/<br><br><br>/g, ""); 
+                  $('#resultados').html(data);
                     //window.alert(data);
                 }
              });
@@ -135,6 +140,7 @@ function comparar(){
                 url: url,
                 data: $('#buscando').serialize(),
                 success: function(data){
+                    data = data.replace(/<br><br><br>/g, ""); 
                   $('#resultados').html(data);
                   document.getElementById('buscar').value ='Buscar';
                   if(universidades == 1){

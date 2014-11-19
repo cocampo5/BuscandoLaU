@@ -1,4 +1,4 @@
-<?php 
+<?php
 		class Pregrado{
 			var $id;
 			var $nombre;
@@ -51,7 +51,7 @@
 				    	<div class='panel panel-primary'>
 				    		<div class='panel-heading'>
 				    		<div class='row'>
-				    			<div class='col-md-8'>".$this->nombre." </div> <div class='col-md-1 col-md-offset-3'>
+				    			<div class='col-md-8'>".$this->nombre." - ".$this->universidad." </div> <div class='col-md-1 col-md-offset-3'>
 				    			<button type='button' class='btn btn-primary'id='".$this->id."' onclick='pegar".$this->id."();' aria-label='Left Align'>
   									<span class='glyphicon glyphicon-pushpin' aria-hidden='true'></span>
 								</button>
