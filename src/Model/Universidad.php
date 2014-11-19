@@ -7,7 +7,6 @@
 			var $tipo;
 			var $web;
 			
-
 			function Universidad($id,$nombre,$ubicacion,$descripcion,$tipo,$web){
 				$this->id = $id; 
 				$this->nombre = utf8_encode($nombre); 

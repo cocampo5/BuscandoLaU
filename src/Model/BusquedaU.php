@@ -62,19 +62,8 @@ $search;
     		</div>
 			<br>
 			<div class="row">
-                <div class="col-md-4">
-                    <br><br>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">Lo que te interesa</div>
-                        <ul class="list-group" id="intereses">
-                            <!--<br><br><p class="text-center">
-                            Aquí apareceran los pregrados que vayas seleccionando.</p>
-                            <br><br>-->
-                        </ul>
-                    </div>
-                    <div class='modal-footer'>
-                        <button class="btn btn-primary center-block" id="comparar" name="comparar" type="button" onclick="comparar();">Comparar</button>
-                    </div>
+                <div class="col-md-4" id="panelIzquierdo" name="panelIzquierdo">
+                    
                 </div>
 
                 <div class="col-md-8" id="resultados">
@@ -135,10 +124,12 @@ $search;
             $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row['iduniversidad']);
         }
         if(count($universidades)>count($pregrados)){
+            echo "<script>var universidades = false;</script>";
             for ($i=1; $i<count($universidades);$i++) {
                 $universidades[$i]->mostrarInicial();
             }
         }else{
+            echo "<script>var universidades = true;</script>";
             for ($i=1; $i<count($pregrados);$i++) {
                 $pregrados[$i]->mostrarInicial();
             }
@@ -147,6 +138,12 @@ $search;
 </div>
 </div>
 <script>
+if(universidades){
+    document.getElementById("panelIzquierdo").innerHTML ="<br><br><div class='panel panel-primary'>"+
+    "<div class='panel-heading'>Lo que te interesa</div><ul class='list-group' id='intereses'></ul>"+
+    "</div><div class='modal-footer'>"+
+    "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button' onclick='comparar();'>Comparar</button></div>";
+}
 function comparar(){
     document.getElementById('comparar').value ='Comparando...';
     var url = 'Intereses.php'; 
@@ -171,6 +168,12 @@ function comparar(){
                 success: function(data){
                   $('#resultados').html(data);
                   document.getElementById('buscar').value ='Buscar';
+                  if(universidades){
+    document.getElementById("panelIzquierdo").innerHTML ="<br><br><div class='panel panel-primary'>"+
+    "<div class='panel-heading'>Lo que te interesa</div><ul class='list-group' id='intereses'></ul>"+
+    "</div><div class='modal-footer'>"+
+    "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button' onclick='comparar();'>Comparar</button></div>";
+}
                 }
              });
         return false;
