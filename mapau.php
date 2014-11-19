@@ -1,7 +1,7 @@
 <?php
-require "src/Controler/conexion.php";
-$conexion = new Conexion();
-$coor
+	require "src/Controler/conexion.php";
+	$conexion = new Conexion();
+	$coor
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +83,7 @@ $coor
 
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBYb54ePljJW4Vm7MgvYyWAXs7K_0m0R7Q&sensor=true">
 	</script>
-	
+	<script type="text/JavaScript" src="src/Controler/maps.js"></script>
 </head>
 <body>
 	<form action="mapau.php" method="post">
