@@ -26,6 +26,7 @@ $search;
     <body>
     	 <script src="http://code.jquery.com/jquery.js"></script>
     	<script src="../web/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+        <script>var universidades = 0;</script>
 		<div class="container-fluid">
 			<br>
 			<div class="row">
@@ -62,46 +63,13 @@ $search;
     		</div>
 			<br>
 			<div class="row">
-                <div class="col-md-4" id="panelIzquierdo" name="panelIzquierdo">
+                <div class="col-md-3" id="panelIzquierdo" name="panelIzquierdo">
                     
                 </div>
-
-                <div class="col-md-8" id="resultados">
+               
+                <div class="col-md-9" id="resultados">
+                    
 <?php
-/*if($_POST["tipoBusqueda"]=="Universidades"){
-        $search = $_POST["busqueda"];
-        $query = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
-        $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());
-
-        while($row = mysqli_fetch_array($result)){
-            $universidades[] = new Universidad($row['iduniversidad'],$row['nombre'],$row['ubicacion'],$row['descripcion'],$row['tipo'], $row['web']);
-        }
-
-        for ($i=0; $i<count($universidades);$i++) {
-            $universidades[$i]->mostrarInicial();
-        }
-    }else{
-
-        $search = $_POST["busqueda"];
-        $query = "SELECT *  FROM `pregrados` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$search%')";
-        $result = mysqli_query($objeConexion->conectarse(), $query) or die(mysqli_error());
-
-        while($row = mysqli_fetch_array($result)){
-            $objeConexion2 = new Conexion();
-            $search2 = $row['iduniversidad'];
-            $query2 = "SELECT *  FROM `universidad` WHERE `iduniversidad` = $search2";
-            $conex = $objeConexion2->conectarse();
-            $result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
-            $row2 = mysqli_fetch_array($result2);
-            $U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
-            $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row['iduniversidad']);
-              
-        }
-        
-        for ($i=0; $i<count($pregrados);$i++) {
-            $pregrados[$i]->mostrarInicial();
-        }
-    }*/
         $busqueda = $_POST["busqueda"];
         $consultaUniversidades = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
         $consultaPregrados = "SELECT *  FROM `pregrados` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
@@ -124,12 +92,12 @@ $search;
             $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row['iduniversidad']);
         }
         if(count($universidades)>count($pregrados)){
-            echo "<script>var universidades = false;</script>";
+            echo "<script>universidades = -1;</script>";
             for ($i=1; $i<count($universidades);$i++) {
                 $universidades[$i]->mostrarInicial();
             }
         }else{
-            echo "<script>var universidades = true;</script>";
+            echo "<script>universidades++;</script>";
             for ($i=1; $i<count($pregrados);$i++) {
                 $pregrados[$i]->mostrarInicial();
             }
@@ -138,7 +106,7 @@ $search;
 </div>
 </div>
 <script>
-if(universidades){
+if(universidades==1){
     document.getElementById("panelIzquierdo").innerHTML ="<br><br><div class='panel panel-primary'>"+
     "<div class='panel-heading'>Lo que te interesa</div><ul class='list-group' id='intereses'></ul>"+
     "</div><div class='modal-footer'>"+
@@ -152,7 +120,8 @@ function comparar(){
                 url: url,
                 data: 'int='+intereses,
                 success: function(data){
-                    window.alert(data);
+                    $('#resultados').html(data);
+                    //window.alert(data);
                 }
              });
 }
@@ -168,7 +137,7 @@ function comparar(){
                 success: function(data){
                   $('#resultados').html(data);
                   document.getElementById('buscar').value ='Buscar';
-                  if(universidades){
+                  if(universidades == 1){
     document.getElementById("panelIzquierdo").innerHTML ="<br><br><div class='panel panel-primary'>"+
     "<div class='panel-heading'>Lo que te interesa</div><ul class='list-group' id='intereses'></ul>"+
     "</div><div class='modal-footer'>"+

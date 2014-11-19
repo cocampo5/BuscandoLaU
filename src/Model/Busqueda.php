@@ -28,12 +28,12 @@ $busqueda = $_POST["busqueda"];
             $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row['iduniversidad']);
         }
         if(count($universidades)>count($pregrados)){
-            echo "<script>var universidades = false;</script>";
+            echo "<script>universidades = -1;</script>";
             for ($i=1; $i<count($universidades);$i++) {
                 $universidades[$i]->mostrarInicial();
             }
         }else{
-            echo "<script>var universidades = true;</script>";
+            echo "<script>universidades++;</script>";
             for ($i=1; $i<count($pregrados);$i++) {
                 $pregrados[$i]->mostrarInicial();
             }
