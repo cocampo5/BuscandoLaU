@@ -1,3 +1,5 @@
+var u1=new google.maps.LatLng(6.20122,-75.57843);
+var home;
 function initialize()
 {
   var mapProp = {
@@ -13,6 +15,11 @@ function initialize()
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = new google.maps.LatLng(position.coords.latitude,
        position.coords.longitude);
+      alert(pos);
+      
+      home = new google.maps.Marker({
+        position:pos,
+      });
 
       var infowindow = new google.maps.InfoWindow({
         map: map,
@@ -28,7 +35,14 @@ function initialize()
     handleNoGeolocation(false);
   }
 
-  
+  var uni1=new google.maps.Marker({
+    position:u1,
+  });
+
+  uni1.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
+  uni1.setMap(map);
+
+  home.setMap(map);
 }
 
 function handleNoGeolocation(errorFlag) {
