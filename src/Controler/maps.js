@@ -1,5 +1,5 @@
-var u1=new google.maps.LatLng(6.20122,-75.57843);
-var home;
+var u1=new google.maps.LatLng(6.20122,-75.57843); //Coordenadas de EAFIT
+
 function initialize()
 {
   var mapProp = {
@@ -11,16 +11,17 @@ function initialize()
   var map=new google.maps.Map(document.getElementById("googleMap")
     ,mapProp);
 
+
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = new google.maps.LatLng(position.coords.latitude,
        position.coords.longitude);
       alert(pos);
       
-      home = new google.maps.Marker({
+      var h = new google.maps.Marker({
         position:pos,
       });
-
+      h.setMap(map);
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
@@ -41,8 +42,6 @@ function initialize()
 
   uni1.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
   uni1.setMap(map);
-
-  home.setMap(map);
 }
 
 function handleNoGeolocation(errorFlag) {
