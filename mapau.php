@@ -101,9 +101,7 @@ $coor
 	?>
 	
 	<div id="googleMap" style="width:500px;height:380px;">
-		<?php 
-		echo $coor;
-		?>
+
 	</div>
 </body>
 
