@@ -2,8 +2,10 @@
 <html>
 <head>
   <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBYb54ePljJW4Vm7MgvYyWAXs7K_0m0R7Q&sensor=true">
-  </script>
 
+  </script>
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=true">
+  </script>
   <script type="text/JavaScript" src="src/Controler/maps.js"></script>
 
   <link href="src/web/imagenes/Birrete.png" rel="icon" type="image/x-icon" />
@@ -16,6 +18,12 @@
 <body>
 
   <div id="googleMap" style="width:500px;height:380px;"></div>
-
+  <div>
+    <button id="botoncito">Botoncito</button>
+  </div>
+  <script type="text/javascript">
+    document.getElementById("botoncito").addEventListener("click", markers);
+  </script>
 </body>
+
 </html>
