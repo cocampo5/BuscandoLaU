@@ -47,49 +47,42 @@ function initialize()
 
   uni1.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
   uni1.setMap(map);
-
-
-
 }
 
 function markers(){
-    
-    var u2=new google.maps.LatLng(6.267186,-75.569153);
-    var u3=new google.maps.LatLng(6.20122,-75.57843);
-    var u4=new google.maps.LatLng(6.24204,-75.5895);
-    var u5=new google.maps.LatLng(6.2295797,-75.6079949);
-    var u6=new google.maps.LatLng(6.244711,-75.550232);
 
-    var uni2=new google.maps.Marker({
-      position:u2,
-    });
+    var u2=new google.maps.LatLng(6.157372,-75.516751); //EIA
+    var u3=new google.maps.LatLng(6.20122,-75.57843); //EAFIT
+    var u4=new google.maps.LatLng(6.24204,-75.5895); //UPB
+    var u5=new google.maps.LatLng(6.293875,-75.568888); //ITM
+    var u6=new google.maps.LatLng(6.2085137,-75.5534149); //CES
+    var u7=new google.maps.LatLng(6.27557,-75.59162); //Nacho
+    var u8=new google.maps.LatLng(6.2110075,-75.5772149); //Jaime Isaza Cadavid
+    var u9=new google.maps.LatLng(6.251126,-75.573947); //UNAULA
+    var u10=new google.maps.LatLng(6.250869,-75.568427); //Remington
+    var u11=new google.maps.LatLng(6.23193,-75.61094); //U de M
 
-    var uni3=new google.maps.Marker({
-      position:u3,
-    });
-
-    var uni4=new google.maps.Marker({
-      position:u4,
-    });
-
-    var uni5=new google.maps.Marker({
-      position:u5,
-    });
-
-    var uni6=new google.maps.Marker({
-      position:u6,
-    });
 
     var markers = [];
 
-    //markers.push(u1);
     markers.push(u2);
     markers.push(u3);
     markers.push(u4);
     markers.push(u5);
     markers.push(u6);
-    alert(markers);
-     uni6.setMap(map);
+    markers.push(u7);
+    markers.push(u8);
+    markers.push(u9);
+    markers.push(u10);
+    markers.push(u11);
+
+    var distancia = [];
+
+    for (var i = 0; i < markers.length; i++) {
+      //var minor = markers[i];
+      var interno = google.maps.geometry.spherical.computeDistanceBetween(pos,markers[i]);
+      alert(interno);
+    };
   }
 
   function handleNoGeolocation(errorFlag) {
