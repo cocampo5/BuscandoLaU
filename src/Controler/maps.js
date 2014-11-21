@@ -20,7 +20,7 @@ function initialize()
       //alert(pos);
       
       var show = google.maps.geometry.spherical.computeDistanceBetween(pos,u1);
-      alert(show);
+      //alert(show);
 
       var h = new google.maps.Marker({
         position:pos,
@@ -77,13 +77,24 @@ function markers(){
     markers.push(u11);
 
     var distancia = [];
-
+    //var menor = google.maps.geometry.spherical.computeDistanceBetween(pos,markers[i]);
     for (var i = 0; i < markers.length; i++) {
+      
       //var minor = markers[i];
       var interno = google.maps.geometry.spherical.computeDistanceBetween(pos,markers[i]);
-      alert(interno);
+      distancia.push(interno);
+      //distancia.sort();
+      //alert(interno);
+      //if(menor > interno){
+      //  menor = interno;
+      //}
     };
-  }
+    distancia.sort();
+    for (var i = 0; i < distancia.length; i++) {
+      alert(distancia[i]);
+
+    };
+}
 
   function handleNoGeolocation(errorFlag) {
     if (errorFlag) {
@@ -101,7 +112,6 @@ function markers(){
     var infowindow = new google.maps.InfoWindow(options);
     map.setCenter(options.position);
   }
-
 
 
   google.maps.event.addDomListener(window, 'load', initialize);
