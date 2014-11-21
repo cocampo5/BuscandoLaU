@@ -15,7 +15,6 @@
 				$this->titulo = utf8_encode($titulo);
 				$this->duracion = $duracion;
 				$this->universidad = utf8_encode($universidad);
-				//echo $this->$universidad;
 				//$this->pensum = $pensum;
 			}
 

@@ -64,9 +64,10 @@ $search;
 			<br>
 			<div class="row">
                 <div class="col-md-3" id="panelIzquierdo" name="panelIzquierdo">
-                    
+                   
                 </div>
-                <div class="col-md-9" id="resultados">
+            <div class="col-md-9" id="resultados">
+            <br>
 <?php
         $busqueda = $_POST["busqueda"];
         $consultaUniversidades = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
