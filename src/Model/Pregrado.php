@@ -159,7 +159,7 @@ function pegar".$this->id."(){
                 success: function(data){
                 	if(data != 0){
                 		intereses = data;
-						document.getElementById('intereses').innerHTML =s+'<li class=\'list-group-item\'>".$this->nombre."</li>';
+						document.getElementById('intereses').innerHTML =s+'<li class=\'list-group-item\'>".$this->nombre." - ".$this->universidad."</li>';
                 	}
                 	//window.alert(data);
                 }

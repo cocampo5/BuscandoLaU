@@ -20,7 +20,7 @@ while($row = mysqli_fetch_array($resultadosPregrados)){
         	$li = $li."<li class='list-group-item'>".$row['nombre']."</li>";
         }
 
-$lista = "<br><br><div class='panel panel-primary'>
+$lista = "<br> <br> <br><br><div class='panel panel-primary'>
 <div class='panel-heading'>Pregrados</div><ul class='list-group' id='intereses'>".utf8_encode($li)."</ul></div>";
 echo $lista;
 ?>

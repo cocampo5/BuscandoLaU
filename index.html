@@ -6,63 +6,132 @@ Este archivo contiene la página principal del proyecto
     <head>
         <link href="src/web/imagenes/Birrete.png" rel="icon" type="image/x-icon" />
         
-        <title>BuscadoLaU</title>
+        <title>BuscandoLaU</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
          <link href="src/web/bootstrap-3.2.0-dist/css/bootstrap.css" rel="stylesheet">
-         <script>
-           
-         </script>
     </head>
     <body>
+        <script src="src/Controler/jquery.js"></script>
+        <script src="src/web/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="col-md-2">
+                    <a href="index.html"><img alt="Algo" src="src/web/imagenes/Birrete.png"width="1000%" height="1000%"></a>
+                </div>
+                
+            </div>
+            <div class="col-md-7 col-md-offset-3">
+            <div class="col-md-10 col-md-offset-2">
+
+            <div class="col-md-2">
+                <a href="index.html"><h5 id='universidades'><font color="#ffffff"><b>Universidades</b></a>
+                </font></h5>
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+                <a href="index.html"><h5 id='universidades'><b><font color="#ffffff">Pregrados</a>
+                </b></font></h5>
+            </div>
+            <div class="col-md-5">
+                <a href="index.html"><h5 id='universidades'><b><font color="#ffffff">¿Qué es BuscandoLaU?</a>
+                </b></font></h5>
+            </div>
+            <div class="col-md-2 ">
+                <a href="index.html"><h5 id='universidades'><b><font color="#ffffff">Contáctenos</a>
+                </b></font></h5>
+            </div>
+           </div>
+           </div>
+        </div>
+    </nav>
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
             <br>
-        	<div class="row">
-        		<div class = "col-md-6">
-                    <a href="index.html"><img src="src/web/imagenes/logo.png" width="100%" height="100%"></a>
+            <br>
+            <br>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="src/web/imagenes/eafit.png" alt="...">
+    </div>
+    <div class="item">
+      <img src="src/web/imagenes/upb.png" alt="...">
+    </div>
+    <div class="item">
+      <img src="src/web/imagenes/autonoma.png" alt="...">
+    </div>
+    <div class="item">
+      <img src="src/web/imagenes/ces.png" alt="...">
+    </div>
+    <div class="item">
+      <img src="src/web/imagenes/medellin.png" alt="...">
+    </div>
+    <div class="item">
+      <img src="src/web/imagenes/eia.png" alt="...">
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col-md-11">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-4">
+                <img src="src/web/imagenes/question.png" alt="Question">                    
                 </div>
-        		<div class="col-md-6">
-        		  <div class="row">
-        			<br>
-        			<br>
-        			<br>
-        			<br>
-        			<br>
-        			 <div class="col-md-10 col-md-offset-1">
-                        <!--Este método POST envia la busqueda de usuario al archivo BusquedaU.php
-                        que procesará la solicitud
-                        -->
-                        <center>
-                            <form action="src/Model/BusquedaU.php" method="post">
-                                <input id="textfield" type="text" name="busqueda" class="form-control" placeholder="¿Qué quieres estudiar?">
-                        </center>
-                    </div>
-                    <!--<div class="col-md-9 col-md-offset-1">
-                        &nbsp; <b>¿Qué deseas buscar?</b>&nbsp;&nbsp;&nbsp;
-                        <input type="radio" name="tipoBusqueda" checked="checked" value="Pregrados">&nbsp;&nbsp;Pregrados&nbsp;&nbsp;
-                        <input type="radio" name="tipoBusqueda" value="Universidades">&nbsp;&nbsp;Universidades 
-                    </div>-->
-        			<br>
-        			<br>
-        			 <div class="col-md-2 col-md-offset-5">
-                            <input type="submit" name="buscar" class="btn btn-primary center-block" style="width:80%" value="Buscar">
-                            </form>
-                    </div>
-        		  </div>
+                <div class="col-md-8">
+                ¿No sabes qué estudiar?, entonces nuestro test de aptitud es perfecto para ti. Responde algunas preguntas y te daremos algunas opciones que se adapten a tus capacidades e intereses. ¡Anímate a probarlo! <br>
+                <button type='button' class='btn btn-primary center-block'id='".$this->id."' onclick='pegar".$this->id."();' aria-label='Left Align'>
+                                    <span class='glyphicon glyphicon-edit' aria-hidden='true'></span> Test de Aptitud
+                </button>
                 </div>
-       		</div>
-       		<div class="row">
-       			<br><br><br><br>
-       			<div class="col-md-6 col-md-offset-3">
-                    <center><h4>¿No sabes que estudiar?, prueba nuestro </h4></center>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                <center><a href="index.html"><img src="src/web/imagenes/logo.png" width="90%" height="90%"></a></center>
+                <br>
+                <br>
+                <br>
+                <br>
+                    <center>
+                        <form action="src/Model/BusquedaU.php" method="post">
+                            <input id="textfield" type="text" name="busqueda" class="form-control" placeholder="¿Qué quieres buscar?">
+                    </center>
+                    <br><br>
+                    
+                    <input type="submit" name="buscar" class="btn btn-primary center-block"  value="Buscar">
+                            
                 </div>
-       		   <div class="col-md-2 col-md-offset-5 ">
-                 <form action="src/Model/Test.php" method="post">
-                    <input type="submit" class="btn btn-primary center-block" value="Test De Aptitud">
-                </form>
-                </div>
-       		</div>
-    	</div>
-    </body>
+            </div>
+        </div>
+    </div>
+</div>
+   </body>
 </html>
