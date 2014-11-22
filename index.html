@@ -6,14 +6,14 @@ Este archivo contiene la página principal del proyecto
     <head>
         <link href="src/web/imagenes/Birrete.png" rel="icon" type="image/x-icon" />
         
-        <title>BuscadoLaU</title>
+        <title>BuscandoLaU</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
          <link href="src/web/bootstrap-3.2.0-dist/css/bootstrap.css" rel="stylesheet">
     </head>
     <body>
-        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="src/Controler/jquery.js"></script>
         <script src="src/web/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
@@ -53,6 +53,9 @@ Este archivo contiene la página principal del proyecto
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
+            <br>
+            <br>
+            <br>
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -85,8 +88,26 @@ Este archivo contiene la página principal del proyecto
       <img src="src/web/imagenes/eia.png" alt="...">
     </div>
   </div>
-
-
+</div>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col-md-11">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-4">
+                <img src="src/web/imagenes/question.png" alt="Question">                    
+                </div>
+                <div class="col-md-8">
+                ¿No sabes qué estudiar?, entonces nuestro test de aptitud es perfecto para ti. Responde algunas preguntas y te daremos algunas opciones que se adapten a tus capacidades e intereses. ¡Anímate a probarlo! <br>
+                <button type='button' class='btn btn-primary center-block'id='".$this->id."' onclick='pegar".$this->id."();' aria-label='Left Align'>
+                                    <span class='glyphicon glyphicon-edit' aria-hidden='true'></span> Test de Aptitud
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
         </div>
