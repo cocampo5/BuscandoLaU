@@ -24,7 +24,7 @@ $search;
         <link href="../web/bootstrap-3.2.0-dist/css/bootstrap.css" rel="stylesheet">        
     </head>
     <body>
-    	 <script src="http://code.jquery.com/jquery.js"></script>
+    	 <script src="../Controler/jquery.js"></script>
     	<script src="../web/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
         <script>var universidades = 0;</script>
 		<div class="container-fluid">
