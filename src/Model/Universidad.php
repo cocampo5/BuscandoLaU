@@ -106,8 +106,7 @@
 		        <h4 class='modal-title' id='myModalLabel'>".$this->nombre."</h4>
 		      </div>
 		      <div id='cuerpo' class='modal-body'>
-		        ".$this->descripcion."<br> Ubicación:
-  					<div id='googleMap' style='width:400px;height:280px;'></div>
+		        ".$this->descripcion."<br>
 		      </div>
 		      <div class='modal-footer'>
 		      	<div class='row'>

@@ -27,19 +27,19 @@ Este archivo contiene la página principal del proyecto
             <div class="col-md-10 col-md-offset-2">
 
             <div class="col-md-2">
-                <a href="index.html"><h5 id='universidades'><font color="#ffffff"><b>Universidades</b></a>
+                <a href=""><h5 id='universidades'><font color="#ffffff"><b>Universidades</b></a>
                 </font></h5>
             </div>
             <div class="col-md-2 col-md-offset-1">
-                <a href="index.html"><h5 id='universidades'><b><font color="#ffffff">Pregrados</a>
+                <a href=""><h5 id='pregrados'><b><font color="#ffffff">Pregrados</a>
                 </b></font></h5>
             </div>
             <div class="col-md-5">
-                <a href="index.html"><h5 id='universidades'><b><font color="#ffffff">¿Qué es BuscandoLaU?</a>
+                <a href="index.html"><h5 id='about'><b><font color="#ffffff">¿Qué es BuscandoLaU?</a>
                 </b></font></h5>
             </div>
             <div class="col-md-1 ">
-                <a href="index.html"><h5 id='universidades'><b><font color="#ffffff">Contáctenos</a>
+                <a href="index.html"><h5 id='contacto'><b><font color="#ffffff">Contáctenos</a>
                 </b></font></h5>
             </div>
            </div>
@@ -117,8 +117,8 @@ Este archivo contiene la página principal del proyecto
                 </div>
                 <div class="col-md-8">
                 ¿No sabes qué estudiar?, entonces nuestro test de aptitud es perfecto para ti. Responde algunas preguntas y te daremos algunas opciones que se adapten a tus capacidades e intereses. ¡Anímate a probarlo! <br>
-                <button type='button' class='btn btn-primary center-block'id='".$this->id."' onclick='pegar".$this->id."();' aria-label='Left Align'>
-                                    <span class='glyphicon glyphicon-edit' aria-hidden='true'></span> Test de Aptitud
+                <button type='button' class='btn btn-primary center-block'aria-label='Left Align'>
+                    <span class='glyphicon glyphicon-edit' aria-hidden='true'></span> Test de Aptitud
                 </button>
                 </div>
             </div>
@@ -129,6 +129,7 @@ Este archivo contiene la página principal del proyecto
         </div>
 
         <div class="col-md-6">
+
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                 <center><a href="index.html"><img src="src/web/imagenes/logo.png" width="90%" height="90%"></a></center>
@@ -138,7 +139,7 @@ Este archivo contiene la página principal del proyecto
                 <br>
                     <center>
                         <form action="src/Model/BusquedaU.php" method="post">
-                            <input id="textfield" type="text" name="busqueda" class="form-control" placeholder="¿Qué quieres buscar?">
+                            <input id="busqueda" type="text" name="busqueda" class="form-control" placeholder="¿Qué quieres buscar?">
                     </center>
                     <br><br>
                     <input type="submit" name="buscar" class="btn btn-primary center-block"  value="Buscar">
@@ -148,5 +149,20 @@ Este archivo contiene la página principal del proyecto
         </div>
     </div>
 </div>
+<script>
+    function pregrados(){
+    document.getElementById('busqueda').value ='Comparando...';
+    /*var url = 'Intereses.php'; 
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: 'int='+intereses,
+                success: function(data){
+                    data = data.replace(/<br><br><br>/g, ""); 
+                  $('#resultados').html(data);
+                }
+             });*/
+}    
+</script>
    </body>
 </html>
