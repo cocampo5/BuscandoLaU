@@ -26,6 +26,8 @@ $search;
     <body>
     	 <script src="../Controler/jquery.js"></script>
     	<script src="../web/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+          <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBYb54ePljJW4Vm7MgvYyWAXs7K_0m0R7Q&sensor=true"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=true"></script>
         <script>var universidades = 0;</script>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
@@ -187,6 +189,7 @@ function comparar(){
         });
     });
 </script>
+<script type="text/JavaScript" src="../Controler/maps.js"></script>
 </body>
 </html>
 <!--
