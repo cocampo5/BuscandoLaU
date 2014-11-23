@@ -14,6 +14,27 @@
 				$this->descripcion = utf8_encode($descripcion);
 				$this->tipo = $tipo;
 				$this->web = $web;
+				if($id==1){
+					$this->ubicacion = "var u1 = new google.maps.LatLng(6.20122,-75.57843);";	
+				}else if($id==2){
+					$this->ubicacion = "var u1 = new google.maps.LatLng(6.24204,-75.5895);";	
+				}else if($id==3){
+					$this->ubicacion = "var u1 = new google.maps.LatLng(6.251126,-75.573947);";	
+				}else if($id==4){
+					$this->ubicacion = "var u1 = new google.maps.LatLng(6.2085137,-75.5534149);";	
+				}else if($id==5){
+					$this->ubicacion = "var u1 = new google.maps.LatLng(6.157372,-75.516751);";	
+				}else if($id==6){
+					$this->ubicacion = "var u1 = new google.maps.LatLng(6.27557,-75.59162);";	
+				}else if($id==7){
+					$this->ubicacion = "var u1 = new google.maps.LatLng(6.250869,-75.568427);";	
+				}else if($id==8){
+					$this->ubicacion = "var u1 = new google.maps.LatLng(6.23193,-75.61094);";	
+				}else if($id==9){
+					$this->ubicacion = "var u1 = new google.maps.LatLng(6.293875,-75.568888);";	
+				}else if($id==10){
+					$this->ubicacion = "var u1 = new google.maps.LatLng(6.24204,-75.5895);";	
+				}
 			}
 
 			function getId(){
@@ -85,7 +106,8 @@
 		        <h4 class='modal-title' id='myModalLabel'>".$this->nombre."</h4>
 		      </div>
 		      <div id='cuerpo' class='modal-body'>
-		        ".$this->descripcion."
+		        ".$this->descripcion."<br> Ubicación
+  					<div id='googleMap".$this->id."' style='width:500px;height:380px;'></div>
 		      </div>
 		      <div class='modal-footer'>
 		      	<div class='row'>
@@ -157,7 +179,54 @@ function pegar".$this->id."(){
                 }
              });
 }
-</script>";
+</script>
+<script src='http://maps.googleapis.com/maps/api/js?key=AIzaSyBYb54ePljJW4Vm7MgvYyWAXs7K_0m0R7Q&sensor=true'></script>
+<script src='http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=true'></script>
+<script>
+var pos".$this->id.";
+var map".$this->id.";
+".$this->ubicacion."
+function initialize".$this->id."(){
+  var mapProp = {
+    zoom:12,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+  map".$this->id."=new google.maps.Map(document.getElementById('googleMap".$this->id."')
+    ,mapProp);
+
+
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      pos".$this->id." = new google.maps.LatLng(position.coords.latitude,
+       position.coords.longitude);
+      var show = google.maps.geometry.spherical.computeDistanceBetween(pos".$this->id.",u1);
+      var h = new google.maps.Marker({
+        position:pos".$this->id.",
+      });
+      h.setMap(map".$this->id.");
+
+      map".$this->id.".setCenter(pos".$this->id.");
+    }, function() {
+      handleNoGeolocation(true);
+    });
+  } else {
+    handleNoGeolocation(false);
+  }
+
+  var uni1=new google.maps.Marker({
+    position:u1,
+  });
+
+
+  uni1.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
+  uni1.setMap(map".$this->id.");
+}
+google.maps.event.addDomListener(window, 'load', initialize".$this->id.");
+
+</script>
+
+";
 			}
 
 		}
