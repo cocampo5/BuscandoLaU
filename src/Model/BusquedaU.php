@@ -17,7 +17,7 @@ $search;
 <html type="es">
 <head>
 	<link href="../web/imagenes/Birrete.png" rel="icon" type="image/x-icon" />
-   <title>BuscadoLaU</title>
+   <title>BuscandoLaU</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -80,8 +80,10 @@ $search;
                 <div class="col-md-2"><center>    
                 <img src="../web/imagenes/bom.png" width="60%" height="60%"></center>                        
                 </div>
-                <div class="col-md-9">
-                    
+                <div class="col-md-9" id="bombillo" name="bombillo">
+                    Que carrera estudiar es una de las deciciones más importantes que tomarás en tu vida, así que no lo tomes a la ligera
+                    y analiza bien todas las opciones. Acontinuación encontrarás los pregrados que coiciden con tu búsqueda, si hay 
+                    te interesa puedes añadirlo a tus intereses y luego compararlo con otras carreas.
                 </div>
             </div>
         </div>
@@ -98,7 +100,10 @@ $search;
     </div>
     <div class="row">
         <div class="col-md-3" id="panelIzquierdo" name="panelIzquierdo">
-            
+            <div class='panel panel-primary'>
+                <div class='panel-heading'>Pregrados</div>
+                    <h5>Selecciona una universidad y se mostrarán todos sus pregrados aquí.</h5>
+            </div>
         </div>
         <div class="col col-md-8" id="resultados">
 <?php
@@ -124,7 +129,12 @@ $search;
             $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row2['nombre']);
         }
         if(count($universidades)>count($pregrados)){
-            echo "<script>universidades = -1;</script>";
+            echo "<script>universidades = -1;
+            $('#bombillo').html('A continuación encontrarás las universidades que coiciden con tu criterio de búsqueda, puedes '+
+                'consultar toda su información y si te queda alguna duda puedes comunicarte directamente con la universidad,'+
+                'lo único que tienes que hacer es utilizar la opción contacto de la ventana de <i> \"Más información \" </i>'+
+                'escribe tu correo, tu pregunta y recibirá una respuesta directamente de la universidad en las próximas horas.');
+            </script>";
             for ($i=1; $i<count($universidades);$i++) {
                 $universidades[$i]->mostrarInicial();
             }
@@ -161,6 +171,10 @@ function comparar(){
                 success: function(data){
                     data = data.replace(/<br><br><br>/g, ""); 
                   $('#resultados').html(data);
+                  $('#bombillo').html("En la siguente tabla encontrarás un resumen de las principales características de los pregrados que"+
+                    " seleccionaste; también hemos construido un mapa que muestra tu ubicación y la de las universidades que dictan los "+
+                    "pregrados que seleccionaste para que mires cuál te universidad te queda más cerca. Analíza los datos con atención, "+
+                    "saca tus conclusiones y selecciona el que que más se adapte a ti.");
                 }
              });
 }
