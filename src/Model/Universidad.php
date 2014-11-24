@@ -62,7 +62,7 @@
 			}
 			function mostrarInicial(){
 				echo "<div class='row'>
-					<div class='col-md-11'>
+					<div class='col-md-12'>
 				    	<div class='panel panel-primary'>
 				    		<div class='panel-heading'>
 				    		<div class='row'>
@@ -173,7 +173,7 @@ function pegar".$this->id."(){
                 url: url,
                 data: 'id=+".$this->id."',
                 success: function(data){
-                	data = data.replace(/<br><br><br>/g, ''); 
+                	data = data.replace(/<br>/g, ''); 
 					$('#panelIzquierdo').html(data);
                 }
              });

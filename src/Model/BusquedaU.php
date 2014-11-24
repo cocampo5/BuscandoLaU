@@ -105,7 +105,7 @@ $search;
                     <h5>Selecciona una universidad y se mostrarán todos sus pregrados aquí.</h5>
             </div>
         </div>
-        <div class="col col-md-8" id="resultados">
+        <div class="col col-md-6" id="resultados">
 <?php
         $busqueda = $_POST["busqueda"];
         $consultaUniversidades = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
@@ -134,23 +134,31 @@ $search;
                 'consultar toda su información y si te queda alguna duda puedes comunicarte directamente con la universidad,'+
                 'lo único que tienes que hacer es utilizar la opción contacto de la ventana de <i> \"Más información \" </i>'+
                 'escribe tu correo, tu pregunta y recibirá una respuesta directamente de la universidad en las próximas horas.');
+            $('#label').html('<h6>&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($universidades)-1)."</b> universidades</h6><br>');
             </script>";
             for ($i=1; $i<count($universidades);$i++) {
                 $universidades[$i]->mostrarInicial();
             }
         }else{
-            echo "<script>universidades++;</script>";
+            echo "<script>universidades++;
+            $('#label').html('<h6>&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($pregrados)-1)."</b> pregrados</h6><br>');
+            </script>";
             for ($i=1; $i<count($pregrados);$i++) {
                 $pregrados[$i]->mostrarInicial();
             }
         }
 ?>
         </div>
+        <div class='col-md-3'>
+            <div class='panel panel-primary'>
+                <div class='panel-heading'><center><b>Filtros</b></center></div>
+                    
+                </div>
     </div>
 </div>  
 <script>
 if(universidades==1){
-    document.getElementById("panelIzquierdo").innerHTML ="<br><br><div class='panel panel-primary'>"+
+    document.getElementById("panelIzquierdo").innerHTML ="<br><div class='panel panel-primary'>"+
     "<div class='panel-heading'>Lo que te interesa</div><ul class='list-group' id='intereses'></ul>"+
     "</div><div class='modal-footer'>"+
     "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button' onclick='comparar();'>Comparar</button></div>";
@@ -202,8 +210,6 @@ function comparar(){
         return false;
         });
     });
-</script>
-
 </script>
 </body>
 </html>
