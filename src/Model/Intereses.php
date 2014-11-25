@@ -77,8 +77,9 @@ $tabla = "<div class='table-responsive'>
                         </table>
                 </div>
 <br>
+<b>Ubicación de las universidades respecto a la tuya: </b><br>
 <div class='col-md-8'>
-    <div id='mapa' style='width:500px;height:380px;'></div>
+    <div id='mapa' style='width:520px;height:380px;'></div>
 </div>
 <div class='col-md-4'>
     <br><br><br><br><br>

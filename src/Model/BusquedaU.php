@@ -130,7 +130,11 @@ $search;
             $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row2['nombre']);
         }
         if(count($universidades)>count($pregrados)){
-            echo "<script>universidades = -1;
+            echo "<script>if(universidades!=-1){
+                universidades = -1;
+                intereses = '';
+                reset();
+            }
             $('#bombillo').html('A continuación encontrarás las universidades que coiciden con tu criterio de búsqueda, puedes '+
                 'consultar toda su información y si te queda alguna duda puedes comunicarte directamente con la universidad,'+
                 'lo único que tienes que hacer es utilizar la opción contacto de la ventana de <i> \"Más información \" </i>'+
@@ -141,7 +145,11 @@ $search;
                 $universidades[$i]->mostrarInicial();
             }
         }else{
-            echo "<script>universidades++;
+            echo "<script>if(universidades==-1){
+                universidades = 1;
+            }else{
+                universidades++;
+            }
             $('#label').html('<h6>&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($pregrados)-1)."</b> pregrados</h6>');
             </script>";
             for ($i=1; $i<count($pregrados);$i++) {
@@ -186,7 +194,7 @@ function comparar(){
                 success: function(data){
                     data = data.replace(/<br><br><br>/g, ""); 
                   $('#centro').html(data);
-                //$('#resultados').html("");
+                  $('#label').html("<b>Tabla de Comparación</b>");
                   $('#bombillo').html("En la siguente tabla encontrarás un resumen de las principales características de los pregrados que"+
                     " seleccionaste; también hemos construido un mapa que muestra tu ubicación y la de las universidades que dictan los "+
                     "pregrados que seleccionaste para que mires cuál te universidad te queda más cerca. Analíza los datos con atención, "+
@@ -232,13 +240,17 @@ function reset(){
                   $('#resultados').html(data);
                   document.getElementById('buscar').value ='Buscar';
                   if(universidades == 1){
-    document.getElementById("panelIzquierdo").innerHTML ="<br><br><div class='panel panel-primary'>"+
-    "<div class='panel-heading'><div class='col-md-10'>Lo que te interesa</div>"+
-    "div class='col-md-2'><button type='button' class='btn btn-primary'id='' onclick='' aria-label='Left Align'>"+
-    "<span class='glyphicon glyphicon-list' aria-hidden='true'></span></button></div>"+
-    "</div><ul class='list-group' id='intereses'></ul></div><div class='modal-footer'>"+
-    "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button'"
-    " onclick='comparar();'>Comparar</button></div>";
+    document.getElementById("panelIzquierdo").innerHTML ="<br><div class='panel panel-primary'>"+
+    "<div class='panel-heading'><div class='row'><div class='col-md-8'><b>Lo que te interesa</b></div>"+
+    "<div class='col-md-2 col-md-offset-1'>"+
+    "<button type='button' class='btn btn-primary'id='' onclick='reset();' aria-label='Left Align'>"+
+    "<span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span></button></div></div></div>"+
+    "<div><ul class='list-group' id='intereses'></ul></div><div class='modal-footer'>"+
+    "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button' onclick='comparar();'>"+
+    "Comparar</button></div>";
+}else if(universidades==-1){
+document.getElementById("panelIzquierdo").innerHTML ="<div class='panel panel-primary'><div class='panel-heading'>"+
+"Pregrados</div><h5>Selecciona una universidad y se mostrarán todos sus pregrados aquí.</h5></div>";
 }
                 }
              });

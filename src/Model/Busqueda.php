@@ -28,7 +28,12 @@ $busqueda = $_POST["busqueda"];
             $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row2['nombre']);
         }
         if(count($universidades)>count($pregrados)){
-            echo "<script>universidades = -1;
+            echo "<script>
+            if(universidades!=-1){
+                universidades = -1;
+                intereses = '';
+                reset();
+            }
             $('#bombillo').html('A continuación encontrarás las universidades que coiciden con tu criterio de búsqueda, puedes '+
                 'consultar toda su información y si te queda alguna duda puedes comunicarte directamente con la universidad,'+
                 'lo único que tienes que hacer es utilizar la opción contacto de la ventana de <i> \"Más información \" </i>'+
@@ -39,11 +44,18 @@ $busqueda = $_POST["busqueda"];
                 $universidades[$i]->mostrarInicial();
             }
         }else{
-            echo "<script>universidades++;
+            echo "<script>
+            if(universidades==-1){
+                universidades = 1;
+                intereses = '';
+                reset();
+            }else{
+                universidades++;
+            }
             $('#label').html('<h6>&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($pregrados)-1)."</b> pregrados</h6>');
             </script>";
             for ($i=1; $i<count($pregrados);$i++) {
                 $pregrados[$i]->mostrarInicial();
             }
         }
-?>
+?>´+
