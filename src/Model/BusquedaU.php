@@ -105,7 +105,8 @@ $search;
                     <h5>Selecciona una universidad y se mostrarán todos sus pregrados aquí.</h5>
             </div>
         </div>
-        <div class="col col-md-6" id="resultados">
+        <div class="col col-md-9" id="centro">
+            <div class="col-md-8" id="resultados">
 <?php
         $busqueda = $_POST["busqueda"];
         $consultaUniversidades = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
@@ -149,22 +150,25 @@ $search;
         }
 ?>
         </div>
-        <div class='col-md-3'><br>
+        <div class='col-md-4'><br>
             <div class='panel panel-primary'>
                 <div class='panel-heading'><center><b>Filtros</b></center></div>
                     
                 </div>
     </div>
 </div>
-<div class="row">
-      <div class="col-md-12" id ="compara"></div>
-  </div>  
+        </div>
+
 <script>
 if(universidades==1){
     document.getElementById("panelIzquierdo").innerHTML ="<br><div class='panel panel-primary'>"+
-    "<div class='panel-heading'>Lo que te interesa</div><ul class='list-group' id='intereses'></ul>"+
-    "</div><div class='modal-footer'>"+
-    "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button' onclick='comparar();'>Comparar</button></div>";
+    "<div class='panel-heading'><div class='row'><div class='col-md-8'><b>Lo que te interesa</b></div>"+
+    "<div class='col-md-2 col-md-offset-1'>"+
+    "<button type='button' class='btn btn-primary'id='' onclick='reset();' aria-label='Left Align'>"+
+    "<span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span></button></div></div></div>"+
+    "<div><ul class='list-group' id='intereses'></ul></div><div class='modal-footer'>"+
+    "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button' onclick='comparar();'>"+
+    "Comparar</button></div>";
 }
 var x;
 x=$("#resultados");
@@ -181,12 +185,33 @@ function comparar(){
                 data: 'int='+intereses,
                 success: function(data){
                     data = data.replace(/<br><br><br>/g, ""); 
-                  $('#compara').html(data);
-                   $('#resultados').html("");
+                  $('#centro').html(data);
+                //$('#resultados').html("");
                   $('#bombillo').html("En la siguente tabla encontrarás un resumen de las principales características de los pregrados que"+
                     " seleccionaste; también hemos construido un mapa que muestra tu ubicación y la de las universidades que dictan los "+
                     "pregrados que seleccionaste para que mires cuál te universidad te queda más cerca. Analíza los datos con atención, "+
                     "saca tus conclusiones y selecciona el que que más se adapte a ti.");
+                }
+             });
+}
+
+function reset(){
+    var url = 'Comparar.php'; 
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: 'id=-2',
+                success: function(data){
+                    intereses = "";
+                  document.getElementById("panelIzquierdo").innerHTML ="<br><div class='panel panel-primary'>"+
+    "<div class='panel-heading'><div class='row'><div class='col-md-8'><b>Lo que te interesa</b></div>"+
+    "<div class='col-md-2 col-md-offset-1'>"+
+    "<button type='button' class='btn btn-primary'id='' onclick='reset();' aria-label='Left Align'>"+
+    "<span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span></button></div></div></div>"+
+    "<div><ul class='list-group' id='intereses'></ul></div><div class='modal-footer'>"+
+    "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button' onclick='comparar();'>"+
+    "Comparar</button></div>";   
+
                 }
              });
 }
@@ -201,13 +226,19 @@ function comparar(){
                 data: $('#buscando').serialize(),
                 success: function(data){
                     data = data.replace(/<br><br><br>/g, ""); 
+                    $('#centro').html("<div class='col-md-8' id='resultados'></div>"+
+                        "<div class='col-md-4'><br><div class='panel panel-primary'>"+
+                        "<div class='panel-heading'><center><b>Filtros</b></center></div></div></div>");
                   $('#resultados').html(data);
                   document.getElementById('buscar').value ='Buscar';
                   if(universidades == 1){
     document.getElementById("panelIzquierdo").innerHTML ="<br><br><div class='panel panel-primary'>"+
-    "<div class='panel-heading'>Lo que te interesa</div><ul class='list-group' id='intereses'></ul>"+
-    "</div><div class='modal-footer'>"+
-    "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button' onclick='comparar();'>Comparar</button></div>";
+    "<div class='panel-heading'><div class='col-md-10'>Lo que te interesa</div>"+
+    "div class='col-md-2'><button type='button' class='btn btn-primary'id='' onclick='' aria-label='Left Align'>"+
+    "<span class='glyphicon glyphicon-list' aria-hidden='true'></span></button></div>"+
+    "</div><ul class='list-group' id='intereses'></ul></div><div class='modal-footer'>"+
+    "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button'"
+    " onclick='comparar();'>Comparar</button></div>";
 }
                 }
              });
