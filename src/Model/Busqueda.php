@@ -38,7 +38,7 @@ $busqueda = $_POST["busqueda"];
                 'consultar toda su información y si te queda alguna duda puedes comunicarte directamente con la universidad,'+
                 'lo único que tienes que hacer es utilizar la opción contacto de la ventana de <i> \"Más información \" </i>'+
                 'escribe tu correo, tu pregunta y recibirá una respuesta directamente de la universidad en las próximas horas.');
-            $('#label').html('<h6>&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($universidades)-1)."</b> universidades</h6>');
+            $('#label').html('<div class=\'col-md-7 alert alert-success\' >&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($universidades)-1)."</b> universidades</div>');
             </script>";
             for ($i=1; $i<count($universidades);$i++) {
                 $universidades[$i]->mostrarInicial();
@@ -52,7 +52,7 @@ $busqueda = $_POST["busqueda"];
             }else{
                 universidades++;
             }
-            $('#label').html('<h6>&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($pregrados)-1)."</b> pregrados</h6>');
+            $('#label').html('<div class=\'col-md-7 alert alert-success\' >&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($pregrados)-1)."</b> pregrados</div>');
             </script>";
             for ($i=1; $i<count($pregrados);$i++) {
                 $pregrados[$i]->mostrarInicial();
