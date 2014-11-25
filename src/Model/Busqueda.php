@@ -9,6 +9,9 @@ $objeConexion = new Conexion();
 $busqueda = $_POST["busqueda"];
         $consultaUniversidades = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
         $consultaPregrados = "SELECT *  FROM `pregrados` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
+        if($busqueda==-123){
+            $consultaPregrados = "SELECT *  FROM `pregrados`";
+        }
 
         $resultadosUniversidades = mysqli_query($objeConexion->conectarse(), $consultaUniversidades) or die(mysqli_error());
         $resultadosPregrados = mysqli_query($objeConexion->conectarse(), $consultaPregrados) or die(mysqli_error());

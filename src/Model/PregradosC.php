@@ -40,15 +40,7 @@ $search;
             <div class="col-md-6">
                 <form class="navbar-form navbar-left" role="search" action="BusquedaU.php" id="buscando" method="post">
                     <div class="form-group">
-                        <?php
-                            if ($_POST['buscar'] && ($_POST["busqueda"]!="")) {
-                                echo "<input type='text' name='busqueda' value=".$_POST['busqueda']." class='form-control'>";
-                            }   else{
-
-                                echo "<input type='text' name='busqueda' placeholder='¿Qué quieres buscar?' class='form-control'>";
-
-                            }
-                            ?>
+                        <input type='text' name='busqueda' placeholder='¿Qué quieres buscar?' class='form-control'>
                     </div>
                     <button type="submit" id="buscar" name="buscar" class="btn btn-default">Buscar</button>
                 </form>
@@ -82,8 +74,8 @@ $search;
                 </div>
                 <div class="col-md-9" id="bombillo" name="bombillo">
                     Que carrera estudiar es una de las deciciones más importantes que tomarás en tu vida, así que no lo tomes a la ligera
-                    y analiza bien todas las opciones. Acontinuación encontrarás los pregrados que coiciden con tu búsqueda, si hay 
-                    te interesa puedes añadirlo a tus intereses y luego compararlo con otras carreas.
+                    y analiza bien todas las opciones. Acontinuación encontrarás todos los pregrados que dictan las universidades de tu 
+                    región con las que estamos aliados, si hay te interesa puedes añadirlo a tus intereses y luego compararlo con otras carreas.
                 </div>
             </div>
         </div>
@@ -100,63 +92,18 @@ $search;
     </div>
     <div class="row">
         <div class="col-md-3" id="panelIzquierdo" name="panelIzquierdo">
-            <div class='panel panel-primary'>
-                <div class='panel-heading'>Pregrados</div>
-                    <h5>Selecciona una universidad y se mostrarán todos sus pregrados aquí.</h5>
-            </div>
+        <br><div class='panel panel-primary'>
+    <div class='panel-heading'><div class='row'><div class='col-md-8'><b>Lo que te interesa</b></div>
+    <div class='col-md-2 col-md-offset-1'>
+    <button type='button' class='btn btn-primary'id='' onclick='reset();' aria-label='Left Align'>
+    <span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span></button></div></div></div>
+    <div><ul class='list-group' id='intereses'></ul></div><div class='modal-footer'>
+    <button class='btn btn-primary center-block' id='comparar' name='comparar' type='button' onclick='comparar();'>
+    Comparar</button></div>
         </div>
+         </div>   
         <div class="col col-md-9" id="centro">
             <div class="col-md-8" id="resultados">
-<?php
-        $busqueda = $_POST["busqueda"];
-        $consultaUniversidades = "SELECT *  FROM `universidad` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
-        $consultaPregrados = "SELECT *  FROM `pregrados` WHERE (CONVERT(`nombre` USING utf8) LIKE '%$busqueda%')";
-
-        $resultadosUniversidades = mysqli_query($objeConexion->conectarse(), $consultaUniversidades) or die(mysqli_error());
-        $resultadosPregrados = mysqli_query($objeConexion->conectarse(), $consultaPregrados) or die(mysqli_error());
-        $universidades[] = "";
-        $pregrados[] = "";
-        while($row = mysqli_fetch_array($resultadosUniversidades)){
-            $universidades[] = new Universidad($row['iduniversidad'],$row['nombre'],$row['ubicacion'],$row['descripcion'],$row['tipo'], $row['web']);
-        }
-        while($row = mysqli_fetch_array($resultadosPregrados)){
-            $objeConexion2 = new Conexion();
-            $search2 = $row['iduniversidad'];
-            $query2 = "SELECT *  FROM `universidad` WHERE `iduniversidad` = $search2";
-            $conex = $objeConexion2->conectarse();
-            $result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
-            $row2 = mysqli_fetch_array($result2);
-            //$U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
-            $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],$row2['nombre']);
-        }
-        if(count($universidades)>count($pregrados)){
-            echo "<script>if(universidades!=-1){
-                universidades = -1;
-                intereses = '';
-                reset();
-            }
-            $('#bombillo').html('A continuación encontrarás las universidades que coiciden con tu criterio de búsqueda, puedes '+
-                'consultar toda su información y si te queda alguna duda puedes comunicarte directamente con la universidad,'+
-                'lo único que tienes que hacer es utilizar la opción contacto de la ventana de <i> \"Más información \" </i>'+
-                'escribe tu correo, tu pregunta y recibirá una respuesta directamente de la universidad en las próximas horas.');
-            $('#label').html('<div class=\'col-md-7 alert alert-success\' >&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($universidades)-1)."</b> universidades</div>');
-            </script>";
-            for ($i=1; $i<count($universidades);$i++) {
-                $universidades[$i]->mostrarInicial();
-            }
-        }else{
-            echo "<script>if(universidades==-1){
-                universidades = 1;
-            }else{
-                universidades++;
-            }
-            $('#label').html('<div class=\'col-md-7 alert alert-success\' >&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($pregrados)-1)."</b> pregrados</div>');
-            </script>";
-            for ($i=1; $i<count($pregrados);$i++) {
-                $pregrados[$i]->mostrarInicial();
-            }
-        }
-?>
         </div>
         <div class='col-md-4'><br>
             <div class='panel panel-primary'>
@@ -183,6 +130,21 @@ x=$("#resultados");
 var t = x.html();
 t = t.replace(/<br><br><br>/g, ""); 
 x.html(t);
+
+$.ajax({
+                type: 'POST',
+                url:'busqueda.php',
+                data: 'busqueda=-123',
+                success: function(data){
+                    data = data.replace(/<br><br><br>/g, "");
+                    $('#resultados').html(data);
+                    if(universidades==-1){
+                universidades = 1;
+            }else{
+                universidades++;
+            }
+                }
+                });
 
 function comparar(){
     document.getElementById('comparar').value ='Comparando...';
@@ -225,7 +187,7 @@ function reset(){
              });
 }
 
-$(function(){
+    $(function(){
         $('#buscando').submit(function(){
             document.getElementById('buscar').value ='Buscando...';
             var url = 'busqueda.php'; 
