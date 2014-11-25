@@ -11,13 +11,16 @@ $objeConexion = new Conexion();
 			if(($i+1)<strlen($int)){
 				$i++;
 				if(is_numeric($int[$i])){
-					$intereses[] = $d.$int[$i];
-				}else{
-					$intereses[] = $d;
+					$d = $d.$int[$i];
+          if(($i+1)<strlen($int)){
+            $i++;
+            if(is_numeric($int[$i])){
+              $d = $d.$int[$i];
+            }
+          }
 				}
-			}else{
-				$intereses[] = $d;
 			}
+      $intereses[] = $d;
 		}
 	}
 $l1 = "";

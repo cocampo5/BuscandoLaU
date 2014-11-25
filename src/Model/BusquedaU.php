@@ -134,14 +134,14 @@ $search;
                 'consultar toda su información y si te queda alguna duda puedes comunicarte directamente con la universidad,'+
                 'lo único que tienes que hacer es utilizar la opción contacto de la ventana de <i> \"Más información \" </i>'+
                 'escribe tu correo, tu pregunta y recibirá una respuesta directamente de la universidad en las próximas horas.');
-            $('#label').html('<h6>&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($universidades)-1)."</b> universidades</h6><br>');
+            $('#label').html('<h6>&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($universidades)-1)."</b> universidades</h6>');
             </script>";
             for ($i=1; $i<count($universidades);$i++) {
                 $universidades[$i]->mostrarInicial();
             }
         }else{
             echo "<script>universidades++;
-            $('#label').html('<h6>&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($pregrados)-1)."</b> pregrados</h6><br>');
+            $('#label').html('<h6>&nbsp;&nbsp;&nbsp;Se encontraron <b>".(count($pregrados)-1)."</b> pregrados</h6>');
             </script>";
             for ($i=1; $i<count($pregrados);$i++) {
                 $pregrados[$i]->mostrarInicial();
@@ -149,13 +149,16 @@ $search;
         }
 ?>
         </div>
-        <div class='col-md-3'>
+        <div class='col-md-3'><br>
             <div class='panel panel-primary'>
                 <div class='panel-heading'><center><b>Filtros</b></center></div>
                     
                 </div>
     </div>
-</div>  
+</div>
+<div class="row">
+      <div class="col-md-12" id ="compara"></div>
+  </div>  
 <script>
 if(universidades==1){
     document.getElementById("panelIzquierdo").innerHTML ="<br><div class='panel panel-primary'>"+
@@ -178,7 +181,8 @@ function comparar(){
                 data: 'int='+intereses,
                 success: function(data){
                     data = data.replace(/<br><br><br>/g, ""); 
-                  $('#resultados').html(data);
+                  $('#compara').html(data);
+                   $('#resultados').html("");
                   $('#bombillo').html("En la siguente tabla encontrarás un resumen de las principales características de los pregrados que"+
                     " seleccionaste; también hemos construido un mapa que muestra tu ubicación y la de las universidades que dictan los "+
                     "pregrados que seleccionaste para que mires cuál te universidad te queda más cerca. Analíza los datos con atención, "+

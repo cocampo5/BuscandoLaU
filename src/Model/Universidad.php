@@ -66,7 +66,8 @@
 				    	<div class='panel panel-primary'>
 				    		<div class='panel-heading'>
 				    		<div class='row'>
-				    			<div class='col-md-8'>".$this->nombre." </div> <div class='col-md-1 col-md-offset-3'>
+				    			<div class='col-md-8'>".$this->nombre." </div> <div class='col-md-2 col-md-offset-2'>
+				    			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				    			<button type='button' class='btn btn-primary'id='".$this->id."' onclick='pegar".$this->id."();' aria-label='Left Align'>
   									<span class='glyphicon glyphicon-list' aria-hidden='true'></span>
 								</button>
@@ -76,7 +77,7 @@
 				    			<div class='panel-body'>
 				    				<div class='row'>
 				    					<div class='col-xs-3'>
-				    						<img src='../web/imagenes/".$this->id."1.png' width='100%' height='100%'>
+				    						<center><img src='../web/imagenes/".$this->id."1.png' width='100%' height='100%'></center>
 				    					</div>
 				    					<div class='col-xs-9'>
 				    						".$this->descripcion." 
@@ -91,7 +92,6 @@
 					    					<input type='submit' class='btn btn-info' onclick='//initialize();' value='Mas informacion' data-toggle='modal' data-target='#modalU".$this->id."'>
 					    				</div>
 					    			</div>
-					    			<br> 	
 				    			</div>		
 						</div>
 					</div>
