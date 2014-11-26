@@ -42,10 +42,10 @@ $search;
                     <div class="form-group">
                         <?php
                             if ($_POST['buscar'] && ($_POST["busqueda"]!="")) {
-                                echo "<input type='text' name='busqueda' value=".$_POST['busqueda']." class='form-control'>";
+                                echo "<input type='text' name='busqueda' id='busqueda' value=".$_POST['busqueda']." class='form-control'>";
                             }   else{
 
-                                echo "<input type='text' name='busqueda' placeholder='¿Qué quieres buscar?' class='form-control'>";
+                                echo "<input type='text' name='busqueda' id='busqueda' placeholder='¿Qué quieres buscar?' class='form-control'>";
 
                             }
                             ?>
@@ -160,14 +160,79 @@ $search;
         </div>
         <div class='col-md-4'><br>
             <div class='panel panel-primary'>
-                <div class='panel-heading'><center><b>Filtros</b></center></div>
-                    
+                <div class='panel-heading'><center><b>Filtros</b></center>  </div>  
+                    <ul class='list-group'>
+                        <li class='list-group-item'>
+                            <b>Costo matrícula</b><br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="todos">&nbsp;&nbsp;&nbsp;Todos <br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="p1">&nbsp;&nbsp;&nbsp;1.000.000$ - 2.000.000$ <br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="p2">&nbsp;&nbsp;&nbsp;2.000.000$ - 3.000.000$ <br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="p3">&nbsp;&nbsp;&nbsp;4.000.000$ - 5.000.000$ <br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="p4">&nbsp;&nbsp;&nbsp;6.000.000$ o más
+                        </li>
+                    </ul>
                 </div>
     </div>
 </div>
         </div>
 
 <script>
+var filtros = "";
+$("#todos").change(function(){
+    filtrar();
+});
+$("#p1").change(function(){
+    filtrar();
+});
+$("#p2").change(function(){
+    filtrar();
+});
+$("#p3").change(function(){
+    filtrar();
+});
+$("#p4").change(function(){
+    filtrar();
+});
+
+function filtrar(){
+    filtros = document.getElementById("busqueda").value;
+if(document.getElementById("todos").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("p1").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("p2").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("p3").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("p4").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+//alert(filtros);
+$.ajax({
+                type: 'POST',
+                url: 'BusquedaFiltros.php',
+                data: 'filtros='+filtros,
+                success: function(data){
+                    data = data.replace(/<br><br><br>/g, ""); 
+                    $('#resultados').html(data);
+                }
+            });
+}
+
 if(universidades==1){
     document.getElementById("panelIzquierdo").innerHTML ="<br><div class='panel panel-primary'>"+
     "<div class='panel-heading'><div class='row'><div class='col-md-8'><b>Lo que te interesa</b></div>"+
