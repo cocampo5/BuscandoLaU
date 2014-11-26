@@ -28,34 +28,101 @@ for ($i=0; $i<strlen($filtros);$i++){
             $result2 = mysqli_query($conex, $query2) or die(mysqli_error($conex));
             $row2 = mysqli_fetch_array($result2);
             //$U = new Universidad($row2['iduniversidad'],$row2['nombre'],$row2['ubicacion'],$row2['descripcion'],$row2['tipo'], $row2['web']);
+
+            $fp = false;
+            $fd = false;
+
             if($f[0]==1){
-                 $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],
-                    $row2['nombre']);
+                $fp = true;
             }else{
                 if($f[1]==1){
                     if($row['precio']<2000000){
-                        $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],
-                    $row2['nombre']);
+                        $fp = true;
                     }
                 }
                 if($f[2]==1){
                     if($row['precio']>2000000 & $row['precio']<3000000){
-                        $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],
-                    $row2['nombre']);
+    $fp = true;
                     }
                 }
                 if($f[3]==1){
                     if($row['precio']>4000000 & $row['precio']<5000000){
-                        $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],
-                    $row2['nombre']);
+$fp = true;
                     }
                 }
                 if($f[4]==1){
                     if($row['precio']>6000000){
-                        $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],
-                    $row2['nombre']);
+$fp = true;
                     }
                 }
+                if($f[5]==1){
+                    if($row['disciplina']=="Economia"){
+$fd = true;
+                    }
+                }
+                if($f[6]==1){
+                    if($row['disciplina']=="Ciencias Sociales y Humanas"){
+$fd = true;
+                    }
+                }
+                if($f[7]==1){
+                    if($row['disciplina']=="Ingenierias"){
+$fd = true;
+                    }
+                }
+                if($f[8]==1){
+                    if($row['disciplina']=="Ciencias Naturales y Matematicas"){
+$fd = true;
+                    }
+                }
+                if($f[9]==1){
+                    if($row['disciplina']=="Artes"){
+$fd = true;
+                    }
+                }
+                if($f[10]==1){
+                    if($row['disciplina']=="Administrativas"){
+$fd = true;
+                    }
+                }
+                if($f[11]==1){
+                    if($row['disciplina']=="Ciencias de la Salud"){
+$fp = true;
+                    }
+                }
+                if($f[12]==1){
+                    if($row['disciplina']=="Ciencias Ambientales"){
+$fd = true;
+                    }
+                }
+                if($f[13]==1){
+                    if($row['disciplina']=="Ciencias de la Educacion"){
+$fd = true;
+                    }
+                }
+            }
+            $o = false;
+            for ($i=5; $i<count($f);$i++) {
+                if($f[$i]==1){
+                    $o = true;
+                }
+            }
+            if(!$o){
+                $fd = true;
+            }
+            $u = false;
+            for ($i=0; $i<5;$i++) {
+                if($f[$i]==1){
+                    $u = true;
+                }
+            }
+            if(!$u){
+                $fp = true;
+            }
+
+            if($fp & $fd){
+                 $pregrados[] = new Pregrado($row['idpregrado'],$row['nombre'],$row['precio'],$row['titulo'],$row['duracion'],
+                    $row2['nombre']);
             }
            
 

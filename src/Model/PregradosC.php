@@ -40,7 +40,7 @@ $search;
             <div class="col-md-6">
                 <form class="navbar-form navbar-left" role="search" action="BusquedaU.php" id="buscando" method="post">
                     <div class="form-group">
-                        <input type='text' name='busqueda' placeholder='¿Qué quieres buscar?' class='form-control'>
+                        <input type='text' name='busqueda'  id='busqueda'  placeholder='¿Qué quieres buscar?' class='form-control'>
                     </div>
                     <button type="submit" id="buscar" name="buscar" class="btn btn-default">Buscar</button>
                 </form>
@@ -107,14 +107,168 @@ $search;
         </div>
         <div class='col-md-4'><br>
             <div class='panel panel-primary'>
-                <div class='panel-heading'><center><b>Filtros</b></center></div>
-                    
+                <div class='panel-heading'><center><b>Filtros</b></center>  </div>  
+                    <ul class='list-group'>
+                        <li class='list-group-item'>
+                            <b>Costo matrícula</b><br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="todos">&nbsp;&nbsp;&nbsp;Todos <br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="p1">&nbsp;&nbsp;&nbsp;1.000.000$ - 2.000.000$ <br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="p2">&nbsp;&nbsp;&nbsp;2.000.000$ - 3.000.000$ <br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="p3">&nbsp;&nbsp;&nbsp;4.000.000$ - 5.000.000$ <br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="p4">&nbsp;&nbsp;&nbsp;6.000.000$ o más
+                        </li>
+                        <li class='list-group-item'>
+                            <b>Disciplinas</b><br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="economia">&nbsp;&nbsp;&nbsp;Economía <br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="humanidades">&nbsp;&nbsp;&nbsp;Ciencias sociales y humanas<br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="ingenieria">&nbsp;&nbsp;&nbsp;Ingeniería<br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="csociales">&nbsp;&nbsp;&nbsp;Ciencias Naturales y Matemáticas<br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="ciencias">&nbsp;&nbsp;&nbsp;Artes<br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="artes">&nbsp;&nbsp;&nbsp;Administración <br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="cnaturales">&nbsp;&nbsp;&nbsp;Ciencias de la salud <br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="admin">&nbsp;&nbsp;&nbsp;Ciencias Ambientales<br>
+                            &nbsp;&nbsp;&nbsp;<input type="checkbox" id="csociales y humanas">&nbsp;&nbsp;&nbsp;Ciencias de educación<br>
+
+                        </li>
+                    </ul>
                 </div>
     </div>
 </div>
         </div>
 
 <script>
+var filtros = "";
+$("#todos").change(function(){
+    filtrar();
+});
+$("#p1").change(function(){
+    filtrar();
+});
+$("#p2").change(function(){
+    filtrar();
+});
+$("#p3").change(function(){
+    filtrar();
+});
+$("#p4").change(function(){
+    filtrar();
+});
+$("#economia").change(function(){
+    filtrar();
+});
+$("#humanidades").change(function(){
+    filtrar();
+});
+$("#ingenieria").change(function(){
+    filtrar();
+});
+$("#csociales").change(function(){
+    filtrar();
+});
+$("#ciencias").change(function(){
+    filtrar();
+});
+$("#artes").change(function(){
+    filtrar();
+});
+$("#cnaturales").change(function(){
+    filtrar();
+});
+$("#admin").change(function(){
+    filtrar();
+});
+$("#csociales y humanas").change(function(){
+    filtrar();
+});
+
+
+function filtrar(){
+    filtros = document.getElementById("busqueda").value;
+if(document.getElementById("todos").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("p1").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("p2").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("p3").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("p4").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+
+////////////////////////////////////////////
+
+if(document.getElementById("economia").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("humanidades").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("ingenieria").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("csociales").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("ciencias").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("artes").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("cnaturales").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("admin").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+if(document.getElementById("csociales y humanas").checked){
+filtros = filtros+"1";
+}else{
+    filtros = filtros+"0";
+}
+
+//alert(filtros);
+$.ajax({
+                type: 'POST',
+                url: 'BusquedaFiltros.php',
+                data: 'filtros='+filtros,
+                success: function(data){
+                    data = data.replace(/<br><br><br>/g, ""); 
+                    $('#resultados').html(data);
+                }
+            });
+}
 if(universidades==1){
     document.getElementById("panelIzquierdo").innerHTML ="<br><div class='panel panel-primary'>"+
     "<div class='panel-heading'><div class='row'><div class='col-md-8'><b>Lo que te interesa</b></div>"+
@@ -198,8 +352,29 @@ function reset(){
                 success: function(data){
                     data = data.replace(/<br><br><br>/g, ""); 
                     $('#centro').html("<div class='col-md-8' id='resultados'></div>"+
-                        "<div class='col-md-4'><br><div class='panel panel-primary'>"+
-                        "<div class='panel-heading'><center><b>Filtros</b></center></div></div></div>");
+"<div class='col-md-4'><br><div class='panel panel-primary'><div class='panel-heading'><center><b>Filtros</b></center></div>"+  
+"<ul class='list-group'><li class='list-group-item'><b>Costo matrícula</b><br>"+
+ "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='todos'>&nbsp;&nbsp;&nbsp;Todos <br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='p1'>&nbsp;&nbsp;&nbsp;1.000.000$ - 2.000.000$ <br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='p2'>&nbsp;&nbsp;&nbsp;2.000.000$ - 3.000.000$ <br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='p3'>&nbsp;&nbsp;&nbsp;4.000.000$ - 5.000.000$ <br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='p4'>&nbsp;&nbsp;&nbsp;6.000.000$ o más"+
+                        "</li>"+
+                        "<li class='list-group-item'>"+
+                            "<b>Disciplinas</b><br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='economia'>&nbsp;&nbsp;&nbsp;Economía <br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='humanidades'>&nbsp;&nbsp;&nbsp;Ciencias sociales y humanas<br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='ingenieria'>&nbsp;&nbsp;&nbsp;Ingeniería<br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='csociales'>&nbsp;&nbsp;&nbsp;Ciencias Naturales y Matemáticas<br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='ciencias'>&nbsp;&nbsp;&nbsp;Artes<br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='artes'>&nbsp;&nbsp;&nbsp;Administración <br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='cnaturales'>&nbsp;&nbsp;&nbsp;Ciencias de la salud <br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='admin'>&nbsp;&nbsp;&nbsp;Ciencias Ambientales<br>"+
+                            "&nbsp;&nbsp;&nbsp;<input type='checkbox' id='csociales y humanas'>&nbsp;&nbsp;&nbsp;Ciencias de educación<br>"+
+                        "</li>"+
+                    "</ul>"+
+                "</div>"+
+    "</div>");
                   $('#resultados').html(data);
                   document.getElementById('buscar').value ='Buscar';
                   if(universidades == 1){
