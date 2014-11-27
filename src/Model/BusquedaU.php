@@ -81,7 +81,7 @@ $search;
                 <img src="../web/imagenes/bom.png" width="60%" height="60%"></center>                        
                 </div>
                 <div class="col-md-9" id="bombillo" name="bombillo">
-                    Que carrera estudiar es una de las deciciones más importantes que tomarás en tu vida, así que no lo tomes a la ligera
+                    Que carrera estudiar es una de las decisiones más importantes que tomarás en tu vida, así que no lo tomes a la ligera
                     y analiza bien todas las opciones. Acontinuación encontrarás los pregrados que coiciden con tu búsqueda, si hay 
                     te interesa puedes añadirlo a tus intereses y luego compararlo con otras carreas.
                 </div>
