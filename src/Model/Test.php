@@ -3651,25 +3651,69 @@
             }
 
         </script>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="col-md-2">
+                    <a href="../../index.html"><img alt="Algo" src="../web/imagenes/Birrete.png"width="1000%" height="1000%"></a>
+                </div>
+                
+            </div>
+            <div class="col-md-6 col-md-offset-4">
+            <div class="col-md-10 col-md-offset-2">
 
+            <div class="col-md-2">
+                <a href="src/Model/UniversidadesC.php"><h5 id='universidades'><font color="#ffffff"><b>Universidades</b></a>
+                </font></h5>
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+                <a href="src/Model/PregradosC.php"><h5 id='pregrados'><b><font color="#ffffff">Pregrados</a>
+                </b></font></h5>
+            </div>
+            <div class="col-md-5">
+                <a href="index.html"><h5 id='about'><b><font color="#ffffff">¿Qué es BuscandoLaU?</a>
+                </b></font></h5>
+            </div>
+            <div class="col-md-1 ">
+                <a href="index.html"><h5 id='contacto'><b><font color="#ffffff">Contáctenos</a>
+                </b></font></h5>
+            </div>
+           </div>
+           </div>
+        </div>
+    </nav>
+<br><br>
         <div class="container-fluid">
             <br>
             <div class="row">
-                <div class = "col-md-6">
-                    <a href="../../index.html"><img src="../web/imagenes/logo.png" width="100%" height="100%"></a>
-
+        <div class="col-md-9">
+            <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-2"><center>    
+                <img src="../web/imagenes/bom.png" width="60%" height="60%"></center>                        
                 </div>
-                <div class="col-md-6">
-                    <h1 class="text-right">TEST DE APTITUD</h1>
+                <div class="col-md-9" id="bombillo" name="bombillo">
+                    Acontinuación responderás una serie de preguntas que nos servirán para conocer a cerca de tus intereses y aptitudes.
+                    Por favor léeas con atención y responde cuidadosamente, cada una de ellas es indispensable para la 
+                    selección de los resultados.<br>
+                    <b>¡Gracias por usar BuscandoLaU!</b>
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        </div>
+        </div>
+        <div class="col-md-3">
+            <a href="../../index.html"><img src="../web/imagenes/logo.png" width="100%" height="100%"></a>
+        </div>
+    </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <img src="../web/imagenes/t.png" width="100%" height="100%"></a>
+                </div>
+            </div>
             <div class="row">
                 <div id="test" class="col-md-7   col-md-offset-3">
+                    <div class="panel panel-default">
+            <div class="panel-body">
                         <center><b><div id="enunciado">Supón que en tu colegio hay una niña que está embarazada 
                             y va a ser expulsada. ¿Qué harías?</div></b>
                         <br></center>
@@ -3707,5 +3751,6 @@
                 <br>
                 <br>
             </div>
+</div></div>
     </body>
 </html>
