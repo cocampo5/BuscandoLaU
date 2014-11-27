@@ -74,8 +74,8 @@ $search;
                 </div>
                 <div class="col-md-9" id="bombillo" name="bombillo">
                     Que carrera estudiar es una de las deciciones más importantes que tomarás en tu vida, así que no lo tomes a la ligera
-                    y analiza bien todas las opciones. Acontinuación encontrarás todos los pregrados que dictan las universidades de tu 
-                    región con las que estamos aliados, si hay te interesa puedes añadirlo a tus intereses y luego compararlo con otras carreas.
+                    y analiza bien todas las opciones. A continuación encontrarás todos los pregrados que dictan las universidades de tu 
+                    región con las que estamos aliados, si hay alguno que te interese puedes añadirlo a tus intereses y luego compararlo con otros.
                 </div>
             </div>
         </div>
@@ -388,7 +388,7 @@ function reset(){
     "Comparar</button></div>"
     $('#bombillo').html('Que carrera estudiar es una de las deciciones más importantes que tomarás en tu vida,'+
         'así que no lo tomes a la ligera y analiza bien todas las opciones. Acontinuación encontrarás los pregrados'+
-        'que coiciden con tu búsqueda, si hay te interesa puedes añadirlo a tus intereses y luego compararlo con otras carreas.');
+        'que coiciden con tu búsqueda, si hay alguno que te interese puedes añadirlo a tus intereses y luego compararlo con otros.');
 }else if(universidades==-1){
 document.getElementById("panelIzquierdo").innerHTML ="<div class='panel panel-primary'><div class='panel-heading'>"+
 "Pregrados</div><h5>Selecciona una universidad y se mostrarán todos sus pregrados aquí.</h5></div>";

@@ -424,8 +424,8 @@ $(function(){
     "<button class='btn btn-primary center-block' id='comparar' name='comparar' type='button' onclick='comparar();'>"+
     "Comparar</button></div>"
     $('#bombillo').html('Que carrera estudiar es una de las deciciones más importantes que tomarás en tu vida,'+
-        'así que no lo tomes a la ligera y analiza bien todas las opciones. Acontinuación encontrarás los pregrados'+
-        'que coiciden con tu búsqueda, si hay te interesa puedes añadirlo a tus intereses y luego compararlo con otras carreas.');
+        'así que no lo tomes a la ligera y analiza bien todas las opciones. A continuación encontrarás los pregrados'+
+        'que coiciden con tu búsqueda, si hay te interesa puedes añadirlo a tus intereses y luego compararlo con otras carreras.');
 }else if(universidades==-1){
 document.getElementById("panelIzquierdo").innerHTML ="<div class='panel panel-primary'><div class='panel-heading'>"+
 "Pregrados</div><h5>Selecciona una universidad y se mostrarán todos sus pregrados aquí.</h5></div>";
